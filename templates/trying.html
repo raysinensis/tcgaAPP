@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+    <head>
+        <meta charset="utf-8">
+        <title>Results</title>
+
+    </head>
+    <body>
+    <h1>Results{{filelink}}</h1>
+      <p>
+    <input type='Download' value='Download' onClick="window.location.href='{{filelink}}'" />
+      </p>
+<div>
+<table border=1 cellpaddings=7>
+            <tr>
+                <th>Gene</th>
+                <th>Tumor</th>
+                <th>Cutpoint</th>
+                <th>FDR</th>
+		<th>Mutations</th>
+                <th>Insertions</th>
+                <th>Deletions</th>
+            </tr>
+            {% for obj in object_list %}
+            <tr>
+                <td>{{ obj.V1 }}</td>
+                <td>{{ obj.V2 }}</td>
+                <td>{{ obj.V5 }}</td>
+                <td>{{ obj.V7 }}</td>
+		<td>{{ obj.V8 }}</td>
+                <td>{{ obj.V9 }}</td>
+		<td>{{ obj.V10 }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+ </div>
+<div>
+	<img src='/static/OUT/RSEM.png'> 
+ </div>
+	<img src='/static/OUT/km.png' style="width:500px;height:500px;"> 
+    </body>
+</html>

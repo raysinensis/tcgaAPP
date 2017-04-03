@@ -1,0 +1,20 @@
+{
+":integrationId": "TCGA.LAML.sampleMap.integrationID", 
+"domain": "TCGA", 
+"name": "TCGA.LAML.sampleMap", 
+"anatomical_origin": [
+"White blood cell"
+], 
+"primary_disease": "acute myeloid leukemia", 
+"tags": [
+"cancer"
+], 
+"sample_type": [
+"tumor"
+], 
+"VIS": 5, 
+"version": "2015-01-28", 
+"owner": "TCGA", 
+"type": "sampleMap", 
+"cgDataVersion": 1
+}

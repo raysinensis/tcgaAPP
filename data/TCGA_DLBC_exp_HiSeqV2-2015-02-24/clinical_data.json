@@ -1,0 +1,18 @@
+{
+":dataSubType": "phenotype", 
+"cohort": "TCGA Large B-cell Lymphoma", 
+"wrangler": "cgData TCGAscript Clinical processed on 2015-02-24,cgData TCGAscript survival processed on 2015-02-24,cgData TCGAscript Clinical processed on 2015-02-24,cgData TCGAscript Clinical processed on 2015-02-24,cgData TCGAscript Clinical processed on 2015-02-24", 
+":clinicalFeature": "DLBC_clinicalFeature", 
+"url": "https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/dlbc/bcr/", 
+"type": "clinicalMatrix", 
+"description": "This dataset is the TCGA Large B-cell Lymphoma (DLBC) clinical data.", 
+":sampleMap": "TCGA.DLBC.sampleMap", 
+"label": "Phenotypes", 
+"upToDate": "4.4_nte,4.4", 
+"version": "2015-02-24", 
+"dataProducer": "TCGA biospecimen core resource,https://www.synapse.org/#!Synapse:syn1756922,https://www.synapse.org/#!Synapse:syn2487022,https://www.synapse.org/#!Synapse:2027079,https://www.synapse.org/#!Synapse:syn1715788,UCSC,https://www.synapse.org/#!Synapse:syn1712142,https://www.synapse.org/#!Synapse:syn2492003,TCGA biospecimen core resource,https://www.synapse.org/#!Synapse:1875816,TCGA biospecimen core resource,TCGA biospecimen core resource", 
+"redistribution": true, 
+"cgDataVersion": 1, 
+"wrangling_procedure": "Clinical data download from TCGA DCC, processed at UCSC into cgData repository,https://groups.google.com/forum/?fromgroups#!topic/ucsc-cancer-genomics-browser/YvKnWZSsw1Q,Clinical data download from TCGA DCC, processed at UCSC into cgData repository,Clinical data download from TCGA DCC, processed at UCSC into cgData repository,Clinical data download from TCGA DCC, processed at UCSC into cgData repository", 
+"name": "DLBC_clinicalMatrix"
+}

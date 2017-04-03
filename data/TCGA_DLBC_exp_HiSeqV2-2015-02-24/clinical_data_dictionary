@@ -1,0 +1,1010 @@
+#feature	attribute	value
+bcr_followup_barcode	shortTitle	bcr_followup_barcode
+bcr_followup_barcode	longTitle	bcr_followup_barcode
+bcr_followup_barcode	valueType	category
+bcr_followup_barcode	state	TCGA-FA-8693-F42020
+bcr_followup_barcode	state	TCGA-FA-A4BB-F49912
+bcr_followup_barcode	state	TCGA-FA-A4XK-F49350
+bcr_followup_barcode	state	TCGA-FA-A6HN-F63567
+bcr_followup_barcode	state	TCGA-FA-A6HO-F63570
+bcr_followup_barcode	state	TCGA-FA-A7DS-F59956
+bcr_followup_barcode	state	TCGA-FA-A7Q1-F63621
+bcr_followup_barcode	state	TCGA-FA-A82F-F65335
+bcr_followup_barcode	state	TCGA-FF-8041-F30778
+bcr_followup_barcode	state	TCGA-FF-8042-F30771
+bcr_followup_barcode	state	TCGA-FF-8043-F30759
+bcr_followup_barcode	state	TCGA-FF-8046-F30762
+bcr_followup_barcode	state	TCGA-FF-8047-F30870
+bcr_followup_barcode	state	TCGA-FF-8061-F30766
+bcr_followup_barcode	state	TCGA-FF-8062-F30774
+bcr_followup_barcode	state	TCGA-FF-A7CQ-F50787
+bcr_followup_barcode	state	TCGA-FF-A7CR-F50793
+bcr_followup_barcode	state	TCGA-FF-A7CW-F50791
+bcr_followup_barcode	state	TCGA-FF-A7CX-F50789
+bcr_followup_barcode	state	TCGA-FM-8000-F64268
+bcr_followup_barcode	state	TCGA-G8-6324-F37605
+bcr_followup_barcode	state	TCGA-G8-6325-F40599
+bcr_followup_barcode	state	TCGA-G8-6326-F40595
+bcr_followup_barcode	state	TCGA-G8-6906-F32214
+bcr_followup_barcode	state	TCGA-G8-6909-F43062
+bcr_followup_barcode	state	TCGA-G8-6914-F43065
+bcr_followup_barcode	state	TCGA-GR-7351-F55516
+bcr_followup_barcode	state	TCGA-GR-7353-F55519
+bcr_followup_barcode	state	TCGA-GR-A4D4-F55574
+bcr_followup_barcode	state	TCGA-GR-A4D5-F55579
+bcr_followup_barcode	state	TCGA-GR-A4D6-F55581
+bcr_followup_barcode	state	TCGA-GR-A4D9-F55583
+bcr_followup_barcode	state	TCGA-GS-A9TQ-F66357
+bcr_followup_barcode	state	TCGA-GS-A9TT-F66756
+bcr_followup_barcode	state	TCGA-GS-A9TU-F66757
+bcr_followup_barcode	state	TCGA-GS-A9TV-F66758
+bcr_followup_barcode	state	TCGA-GS-A9TW-F66759
+bcr_followup_barcode	state	TCGA-GS-A9TX-F66760
+bcr_followup_barcode	state	TCGA-GS-A9TY-F66822
+bcr_followup_barcode	state	TCGA-GS-A9TZ-F66823
+bcr_followup_barcode	state	TCGA-GS-A9U3-F66824
+bcr_followup_barcode	state	TCGA-GS-A9U4-F66825
+bcr_followup_barcode	state	TCGA-RQ-A68N-F64642
+bcr_followup_barcode	stateOrder	"TCGA-FA-8693-F42020","TCGA-FA-A4BB-F49912","TCGA-FA-A4XK-F49350","TCGA-FA-A6HN-F63567","TCGA-FA-A6HO-F63570","TCGA-FA-A7DS-F59956","TCGA-FA-A7Q1-F63621","TCGA-FA-A82F-F65335","TCGA-FF-8041-F30778","TCGA-FF-8042-F30771","TCGA-FF-8043-F30759","TCGA-FF-8046-F30762","TCGA-FF-8047-F30870","TCGA-FF-8061-F30766","TCGA-FF-8062-F30774","TCGA-FF-A7CQ-F50787","TCGA-FF-A7CR-F50793","TCGA-FF-A7CW-F50791","TCGA-FF-A7CX-F50789","TCGA-FM-8000-F64268","TCGA-G8-6324-F37605","TCGA-G8-6325-F40599","TCGA-G8-6326-F40595","TCGA-G8-6906-F32214","TCGA-G8-6909-F43062","TCGA-G8-6914-F43065","TCGA-GR-7351-F55516","TCGA-GR-7353-F55519","TCGA-GR-A4D4-F55574","TCGA-GR-A4D5-F55579","TCGA-GR-A4D6-F55581","TCGA-GR-A4D9-F55583","TCGA-GS-A9TQ-F66357","TCGA-GS-A9TT-F66756","TCGA-GS-A9TU-F66757","TCGA-GS-A9TV-F66758","TCGA-GS-A9TW-F66759","TCGA-GS-A9TX-F66760","TCGA-GS-A9TY-F66822","TCGA-GS-A9TZ-F66823","TCGA-GS-A9U3-F66824","TCGA-GS-A9U4-F66825","TCGA-RQ-A68N-F64642"
+days_to_new_tumor_event_after_initial_treatment	shortTitle	days to new tumor after initial Tx
+days_to_new_tumor_event_after_initial_treatment	longTitle	days to new tumor event after initial treatment
+days_to_new_tumor_event_after_initial_treatment	valueType	category
+days_to_new_tumor_event_after_initial_treatment	state	24
+days_to_new_tumor_event_after_initial_treatment	state	106
+days_to_new_tumor_event_after_initial_treatment	state	255
+days_to_new_tumor_event_after_initial_treatment	state	290
+days_to_new_tumor_event_after_initial_treatment	state	338
+days_to_new_tumor_event_after_initial_treatment	state	1218
+days_to_new_tumor_event_after_initial_treatment	state	3255
+days_to_new_tumor_event_after_initial_treatment	state	3669
+days_to_new_tumor_event_after_initial_treatment	state	6383
+days_to_new_tumor_event_after_initial_treatment	stateOrder	"24","106","255","290","338","1218","3255","3669","6383"
+first_progression_histology_type	shortTitle	first_progression_histology_type
+first_progression_histology_type	longTitle	first_progression_histology_type
+first_progression_histology_type	valueType	category
+first_progression_histology_type	state	Diffuse Large B-Cell Lymphoma
+first_progression_histology_type	state	Other Histological Type
+first_progression_histology_type	stateOrder	"Diffuse Large B-Cell Lymphoma","Other Histological Type"
+first_progression_histology_type_other	shortTitle	first_progression_histology_type_other
+first_progression_histology_type_other	longTitle	first_progression_histology_type_other
+first_progression_histology_type_other	valueType	category
+first_progression_histology_type_other	state	Composite Lymphoma: B-FL-3A (60%) & B-DLCL-NC (40%)
+first_progression_histology_type_other	stateOrder	"Composite Lymphoma: B-FL-3A (60%) & B-DLCL-NC (40%)"
+first_recurrence_biopsy_confirmed	shortTitle	first_recurrence_biopsy_confirmed
+first_recurrence_biopsy_confirmed	longTitle	first_recurrence_biopsy_confirmed
+first_recurrence_biopsy_confirmed	valueType	category
+first_recurrence_biopsy_confirmed	state	NO
+first_recurrence_biopsy_confirmed	state	YES
+first_recurrence_biopsy_confirmed	stateOrder	"NO","YES"
+followup_treatment_success	shortTitle	followup Tx success
+followup_treatment_success	longTitle	followup treatment success
+followup_treatment_success	valueType	category
+followup_treatment_success	state	Complete Remission/Response
+followup_treatment_success	state	Progressive Disease
+followup_treatment_success	state	Stable Disease
+followup_treatment_success	stateOrder	"Complete Remission/Response","Progressive Disease","Stable Disease"
+new_neoplasm_event_occurrence_anatomic_site	shortTitle	new neoplasm occur site
+new_neoplasm_event_occurrence_anatomic_site	longTitle	new neoplasm event occurrence anatomic site
+new_neoplasm_event_occurrence_anatomic_site	valueType	category
+new_neoplasm_event_occurrence_anatomic_site	state	Brain
+new_neoplasm_event_occurrence_anatomic_site	state	Cervical Lymph Node
+new_neoplasm_event_occurrence_anatomic_site	state	Leptomeninges
+new_neoplasm_event_occurrence_anatomic_site	state	Other, specify
+new_neoplasm_event_occurrence_anatomic_site	state	Pleura/Pleural effusion
+new_neoplasm_event_occurrence_anatomic_site	state	Soft Tissue
+new_neoplasm_event_occurrence_anatomic_site	state	Supraclavicular lymph nodes
+new_neoplasm_event_occurrence_anatomic_site	stateOrder	"Brain","Cervical Lymph Node","Leptomeninges","Other, specify","Pleura/Pleural effusion","Soft Tissue","Supraclavicular lymph nodes"
+new_neoplasm_occurrence_anatomic_site_text	shortTitle	new neoplasm occur site text
+new_neoplasm_occurrence_anatomic_site_text	longTitle	new neoplasm occurrence anatomic site text
+new_neoplasm_occurrence_anatomic_site_text	valueType	category
+new_neoplasm_occurrence_anatomic_site_text	state	Skin (Calf and Chest wall)
+new_neoplasm_occurrence_anatomic_site_text	stateOrder	"Skin (Calf and Chest wall)"
+pet_scan_results	shortTitle	pet_scan_results
+pet_scan_results	longTitle	pet_scan_results
+pet_scan_results	valueType	category
+pet_scan_results	state	Indeterminate
+pet_scan_results	state	Negative
+pet_scan_results	state	Not Done
+pet_scan_results	state	Positive
+pet_scan_results	stateOrder	"Indeterminate","Negative","Not Done","Positive"
+days_to_death	shortTitle	days to death
+days_to_death	longTitle	days to death
+days_to_death	valueType	category
+days_to_death	state	58
+days_to_death	state	248
+days_to_death	state	313
+days_to_death	state	391
+days_to_death	state	595
+days_to_death	state	1252
+days_to_death	state	3553
+days_to_death	state	6425
+days_to_death	stateOrder	"58","248","313","391","595","1252","3553","6425"
+days_to_last_followup	shortTitle	days to last followup
+days_to_last_followup	longTitle	days to last followup
+days_to_last_followup	valueType	float
+followup_case_report_form_submission_reason	shortTitle	followup case report form submission reason
+followup_case_report_form_submission_reason	longTitle	followup case report form submission reason
+followup_case_report_form_submission_reason	valueType	category
+followup_case_report_form_submission_reason	state	Additional New Tumor Event
+followup_case_report_form_submission_reason	state	Scheduled Follow-up Submission
+followup_case_report_form_submission_reason	stateOrder	"Additional New Tumor Event","Scheduled Follow-up Submission"
+form_completion_date	shortTitle	form_completion_date
+form_completion_date	longTitle	form_completion_date
+form_completion_date	valueType	category
+form_completion_date	state	2011-12-14
+form_completion_date	state	2012-1-5
+form_completion_date	state	2012-1-17
+form_completion_date	state	2012-5-17
+form_completion_date	state	2012-12-5
+form_completion_date	state	2013-2-25
+form_completion_date	state	2013-4-9
+form_completion_date	state	2013-5-9
+form_completion_date	state	2013-5-10
+form_completion_date	state	2013-10-7
+form_completion_date	state	2013-10-14
+form_completion_date	state	2013-10-30
+form_completion_date	state	2014-1-3
+form_completion_date	state	2014-5-27
+form_completion_date	state	2014-7-1
+form_completion_date	state	2014-7-28
+form_completion_date	state	2014-8-13
+form_completion_date	state	2014-8-28
+form_completion_date	state	2014-9-9
+form_completion_date	state	2014-9-22
+form_completion_date	state	2014-11-6
+form_completion_date	state	2014-12-11
+form_completion_date	stateOrder	"2011-12-14","2012-1-5","2012-1-17","2012-5-17","2012-12-5","2013-2-25","2013-4-9","2013-5-9","2013-5-10","2013-10-7","2013-10-14","2013-10-30","2014-1-3","2014-5-27","2014-7-1","2014-7-28","2014-8-13","2014-8-28","2014-9-9","2014-9-22","2014-11-6","2014-12-11"
+lost_follow_up	shortTitle	lost follow up
+lost_follow_up	longTitle	lost follow up
+lost_follow_up	valueType	category
+lost_follow_up	state	NO
+lost_follow_up	state	YES
+lost_follow_up	stateOrder	"NO","YES"
+new_tumor_event_after_initial_treatment	shortTitle	new tumor event after initial treatment
+new_tumor_event_after_initial_treatment	longTitle	new tumor event after initial treatment
+new_tumor_event_after_initial_treatment	valueType	category
+new_tumor_event_after_initial_treatment	state	NO
+new_tumor_event_after_initial_treatment	state	YES
+new_tumor_event_after_initial_treatment	stateOrder	"NO","YES"
+person_neoplasm_cancer_status	shortTitle	person neoplasm cancer status
+person_neoplasm_cancer_status	longTitle	person neoplasm cancer status
+person_neoplasm_cancer_status	valueType	category
+person_neoplasm_cancer_status	state	TUMOR FREE
+person_neoplasm_cancer_status	state	WITH TUMOR
+person_neoplasm_cancer_status	stateOrder	"TUMOR FREE","WITH TUMOR"
+primary_therapy_outcome_success	shortTitle	primary therapy outcome success
+primary_therapy_outcome_success	longTitle	primary therapy outcome success
+primary_therapy_outcome_success	valueType	category
+primary_therapy_outcome_success	state	Complete Remission/Response
+primary_therapy_outcome_success	state	Progressive Disease
+primary_therapy_outcome_success	state	Stable Disease
+primary_therapy_outcome_success	stateOrder	"Complete Remission/Response","Progressive Disease","Stable Disease"
+radiation_therapy	shortTitle	radiation therapy
+radiation_therapy	longTitle	radiation therapy
+radiation_therapy	valueType	category
+radiation_therapy	state	NO
+radiation_therapy	state	YES
+radiation_therapy	stateOrder	"NO","YES"
+targeted_molecular_therapy	shortTitle	targeted molecular therapy
+targeted_molecular_therapy	longTitle	targeted molecular therapy
+targeted_molecular_therapy	valueType	category
+targeted_molecular_therapy	state	NO
+targeted_molecular_therapy	state	YES
+targeted_molecular_therapy	stateOrder	"NO","YES"
+vital_status	shortTitle	vital status
+vital_status	longTitle	vital status
+vital_status	valueType	category
+vital_status	state	DECEASED
+vital_status	state	LIVING
+vital_status	stateOrder	"LIVING","DECEASED"
+vital_status	stateOrderRelax	true
+_EVENT	shortTitle	overall survival indicator
+_EVENT	longTitle	_EVENT overall survival indicator 1=death 0=censor
+_EVENT	valueType	category
+_EVENT	state	0
+_EVENT	state	1
+_EVENT	stateOrder	"0","1"
+_TIME_TO_EVENT	shortTitle	OVERALL SURVIVAL
+_TIME_TO_EVENT	longTitle	_TIME_TO_EVENT overall survival in days
+_TIME_TO_EVENT	valueType	float
+_OS_IND	shortTitle	overall survival indicator
+_OS_IND	longTitle	_OS_IND overall survival indicator 1=death 0=censor
+_OS_IND	valueType	category
+_OS_IND	state	0
+_OS_IND	state	1
+_OS_IND	stateOrder	"0","1"
+_OS	shortTitle	OVERALL SURVIVAL
+_OS	longTitle	_OS overall survival in days
+_OS	valueType	float
+_RFS_IND	shortTitle	recurrence free survival indicator
+_RFS_IND	longTitle	_RFS_IND recurrence free survival indicator 1=new tumor; 0=otherwise
+_RFS_IND	valueType	category
+_RFS_IND	state	0
+_RFS_IND	state	1
+_RFS_IND	stateOrder	"0","1"
+_RFS	shortTitle	RECURRENCE FREE SURVIVAL
+_RFS	longTitle	_RFS recurrence free survival in days
+_RFS	valueType	float
+days_to_collection	shortTitle	days to collection
+days_to_collection	longTitle	days to collection
+days_to_collection	valueType	float
+initial_weight	shortTitle	initial weight
+initial_weight	longTitle	initial weight
+initial_weight	valueType	float
+intermediate_dimension	shortTitle	intmed dimension
+intermediate_dimension	longTitle	intermediate dimension
+intermediate_dimension	valueType	category
+intermediate_dimension	state	0
+intermediate_dimension	state	0.3
+intermediate_dimension	state	0.4
+intermediate_dimension	state	0.5
+intermediate_dimension	state	0.6
+intermediate_dimension	state	0.8
+intermediate_dimension	state	0.9
+intermediate_dimension	state	1
+intermediate_dimension	state	1.5
+intermediate_dimension	stateOrder	"0","0.3","0.4","0.5","0.6","0.8","0.9","1","1.5"
+is_ffpe	shortTitle	is_ffpe
+is_ffpe	longTitle	is_ffpe
+is_ffpe	valueType	category
+is_ffpe	state	NO
+is_ffpe	stateOrder	"NO"
+longest_dimension	shortTitle	longest dimension
+longest_dimension	longTitle	longest dimension
+longest_dimension	valueType	float
+oct_embedded	shortTitle	oct embedded
+oct_embedded	longTitle	OCT embedded (OCT is an embedding medium used for frozen tissue)
+oct_embedded	valueType	category
+oct_embedded	state	false
+oct_embedded	state	true
+oct_embedded	stateOrder	"false","true"
+pathology_report_file_name	shortTitle	pathology_report_file_name
+pathology_report_file_name	longTitle	pathology_report_file_name
+pathology_report_file_name	valueType	category
+pathology_report_file_name	state	TCGA-FA-A4BB.05B34041-D414-4215-9A66-2B7E4D09F4D5.pdf
+pathology_report_file_name	state	TCGA-FA-A4XK.05EFF049-BF35-4D89-8968-5442C5FF375A.pdf
+pathology_report_file_name	state	TCGA-FA-A6HN.8776C20D-275D-4859-86E3-0CE38C5B7912.pdf
+pathology_report_file_name	state	TCGA-FA-A6HO.E2645414-D707-419D-B43D-92AE9D56DCD1.pdf
+pathology_report_file_name	state	TCGA-FA-A7DS.F36A477E-88C9-476A-BF68-61CA129A30A1.pdf
+pathology_report_file_name	state	TCGA-FA-A7Q1.D9C18E71-3D93-4B22-87B7-E5C34CC670C5.pdf
+pathology_report_file_name	state	TCGA-FA-A82F.9BDF3D5C-8203-4F43-9BE5-8F1F278C124B.pdf
+pathology_report_file_name	state	TCGA-FA-A86F.6D34FB3F-83A5-4B8D-AB2A-76931ED85F9F.pdf
+pathology_report_file_name	state	TCGA-FF-8046.78b14526-0c81-4065-8c26-46197a6b2324.pdf
+pathology_report_file_name	state	TCGA-FF-A7CQ.3CCFB076-52BE-4A5D-9E49-65516AA9C349.pdf
+pathology_report_file_name	state	TCGA-FF-A7CR.C522C0BD-7968-48C0-8E96-6143740993E7.pdf
+pathology_report_file_name	state	TCGA-FF-A7CW.FF947398-211F-4ED6-A157-B86B7198B1B9.pdf
+pathology_report_file_name	state	TCGA-FF-A7CX.7CABE1CC-F2F2-4B54-9568-DCFE2065C86B.pdf
+pathology_report_file_name	state	TCGA-FM-8000.a30ee8fa-e177-458d-b0db-2637de27c3d7.pdf
+pathology_report_file_name	state	TCGA-G8-6324.d42f1d12-1281-4822-8342-a9b14729432a.pdf
+pathology_report_file_name	state	TCGA-G8-6325.addc26cd-1381-4a9b-882a-e55287f791ef.pdf
+pathology_report_file_name	state	TCGA-G8-6326.3e506666-5cef-4416-9c02-1df6982b4ed1.pdf
+pathology_report_file_name	state	TCGA-G8-6906.78e17250-f41c-49af-8738-945cbba5c937.pdf
+pathology_report_file_name	state	TCGA-G8-6907.47b6eb78-0dcf-4105-8cca-1835ecf8033d.pdf
+pathology_report_file_name	state	TCGA-G8-6914.db52dbf0-0988-4c64-abc5-6c38fe32da83.pdf
+pathology_report_file_name	state	TCGA-GR-7351.32fa61f2-a17b-40da-b80d-1338a7bb9a7d.pdf
+pathology_report_file_name	state	TCGA-GR-7353.48694664-5b9f-4888-a14b-ca352a2378a7.pdf
+pathology_report_file_name	state	TCGA-GR-A4D4.5545A881-6000-458C-B133-39AA45CA10EE.pdf
+pathology_report_file_name	state	TCGA-GR-A4D5.97EAEC1D-1C5A-4FE8-8D2B-80DD433DB18C.pdf
+pathology_report_file_name	state	TCGA-GR-A4D6.ABBC803D-EFC5-4223-8309-0F06F6AAAF9E.pdf
+pathology_report_file_name	state	TCGA-GS-A9TQ.FA3E9D38-9A2D-43EC-AEBD-DDDA323F8BB2.pdf
+pathology_report_file_name	state	TCGA-GS-A9TT.7F403F75-9100-4C68-8F36-14AD78B954FD.pdf
+pathology_report_file_name	state	TCGA-GS-A9TU.4311425D-5160-4EED-BE1F-8532320AAF39.pdf
+pathology_report_file_name	state	TCGA-GS-A9TV.2197BDCD-266C-4256-A18A-D0E8EAA63518.pdf
+pathology_report_file_name	state	TCGA-GS-A9TW.2D2E6687-CD36-42F1-A091-7B249A2FAFF6.pdf
+pathology_report_file_name	state	TCGA-GS-A9TX.B7674358-B4F0-4348-954A-E6A2CBD9C076.pdf
+pathology_report_file_name	state	TCGA-GS-A9TY.E7D2AFFA-14B9-436F-B76F-C1F5B88D7600.pdf
+pathology_report_file_name	state	TCGA-GS-A9TZ.9A705521-237B-429B-B4F6-5CBF2854E252.pdf
+pathology_report_file_name	state	TCGA-GS-A9U3.B4BF1DF0-5250-49DB-86C9-1C17AE27D51E.pdf
+pathology_report_file_name	state	TCGA-GS-A9U4.599B4A65-9372-43BC-9236-0C49CD264979.pdf
+pathology_report_file_name	state	TCGA-RQ-A6JB.0250A7AA-A53D-4DCB-BF74-04FABD979B25.pdf
+pathology_report_file_name	state	TCGA-RQ-A68N.B40907C0-DA7B-436F-993A-53DA4C9A56A9.pdf
+pathology_report_file_name	state	TCGA-RQ-AAAT.66B90AE3-785B-4866-8B56-7B3B37EF38B5.pdf
+pathology_report_file_name	state	TCGA-VB-A8QN.A661F75B-6FD2-4294-8103-969308EFF4EF.pdf
+pathology_report_file_name	stateOrder	"TCGA-FA-A4BB.05B34041-D414-4215-9A66-2B7E4D09F4D5.pdf","TCGA-FA-A4XK.05EFF049-BF35-4D89-8968-5442C5FF375A.pdf","TCGA-FA-A6HN.8776C20D-275D-4859-86E3-0CE38C5B7912.pdf","TCGA-FA-A6HO.E2645414-D707-419D-B43D-92AE9D56DCD1.pdf","TCGA-FA-A7DS.F36A477E-88C9-476A-BF68-61CA129A30A1.pdf","TCGA-FA-A7Q1.D9C18E71-3D93-4B22-87B7-E5C34CC670C5.pdf","TCGA-FA-A82F.9BDF3D5C-8203-4F43-9BE5-8F1F278C124B.pdf","TCGA-FA-A86F.6D34FB3F-83A5-4B8D-AB2A-76931ED85F9F.pdf","TCGA-FF-8046.78b14526-0c81-4065-8c26-46197a6b2324.pdf","TCGA-FF-A7CQ.3CCFB076-52BE-4A5D-9E49-65516AA9C349.pdf","TCGA-FF-A7CR.C522C0BD-7968-48C0-8E96-6143740993E7.pdf","TCGA-FF-A7CW.FF947398-211F-4ED6-A157-B86B7198B1B9.pdf","TCGA-FF-A7CX.7CABE1CC-F2F2-4B54-9568-DCFE2065C86B.pdf","TCGA-FM-8000.a30ee8fa-e177-458d-b0db-2637de27c3d7.pdf","TCGA-G8-6324.d42f1d12-1281-4822-8342-a9b14729432a.pdf","TCGA-G8-6325.addc26cd-1381-4a9b-882a-e55287f791ef.pdf","TCGA-G8-6326.3e506666-5cef-4416-9c02-1df6982b4ed1.pdf","TCGA-G8-6906.78e17250-f41c-49af-8738-945cbba5c937.pdf","TCGA-G8-6907.47b6eb78-0dcf-4105-8cca-1835ecf8033d.pdf","TCGA-G8-6914.db52dbf0-0988-4c64-abc5-6c38fe32da83.pdf","TCGA-GR-7351.32fa61f2-a17b-40da-b80d-1338a7bb9a7d.pdf","TCGA-GR-7353.48694664-5b9f-4888-a14b-ca352a2378a7.pdf","TCGA-GR-A4D4.5545A881-6000-458C-B133-39AA45CA10EE.pdf","TCGA-GR-A4D5.97EAEC1D-1C5A-4FE8-8D2B-80DD433DB18C.pdf","TCGA-GR-A4D6.ABBC803D-EFC5-4223-8309-0F06F6AAAF9E.pdf","TCGA-GS-A9TQ.FA3E9D38-9A2D-43EC-AEBD-DDDA323F8BB2.pdf","TCGA-GS-A9TT.7F403F75-9100-4C68-8F36-14AD78B954FD.pdf","TCGA-GS-A9TU.4311425D-5160-4EED-BE1F-8532320AAF39.pdf","TCGA-GS-A9TV.2197BDCD-266C-4256-A18A-D0E8EAA63518.pdf","TCGA-GS-A9TW.2D2E6687-CD36-42F1-A091-7B249A2FAFF6.pdf","TCGA-GS-A9TX.B7674358-B4F0-4348-954A-E6A2CBD9C076.pdf","TCGA-GS-A9TY.E7D2AFFA-14B9-436F-B76F-C1F5B88D7600.pdf","TCGA-GS-A9TZ.9A705521-237B-429B-B4F6-5CBF2854E252.pdf","TCGA-GS-A9U3.B4BF1DF0-5250-49DB-86C9-1C17AE27D51E.pdf","TCGA-GS-A9U4.599B4A65-9372-43BC-9236-0C49CD264979.pdf","TCGA-RQ-A6JB.0250A7AA-A53D-4DCB-BF74-04FABD979B25.pdf","TCGA-RQ-A68N.B40907C0-DA7B-436F-993A-53DA4C9A56A9.pdf","TCGA-RQ-AAAT.66B90AE3-785B-4866-8B56-7B3B37EF38B5.pdf","TCGA-VB-A8QN.A661F75B-6FD2-4294-8103-969308EFF4EF.pdf"
+sample_type	shortTitle	sample type
+sample_type	longTitle	sample type
+sample_type	valueType	category
+sample_type	state	Additional - New Primary
+sample_type	state	Additional Metastatic
+sample_type	state	Blood Derived Normal
+sample_type	state	Bone Marrow Normal
+sample_type	state	Buccal Cell Normal
+sample_type	state	Cell Line Derived Xenograft Tissue
+sample_type	state	Cell Lines
+sample_type	state	Control Analyte
+sample_type	state	EBV Immortalized Normal
+sample_type	state	Human Tumor Original Cells
+sample_type	state	Metastatic
+sample_type	state	Primary Blood Derived Cancer - Bone Marrow
+sample_type	state	Primary Blood Derived Cancer - Peripheral Blood
+sample_type	state	Primary Tumor
+sample_type	state	Primary Xenograft Tissue
+sample_type	state	Primary solid Tumor
+sample_type	state	Recurrent Blood Derived Cancer - Bone Marrow
+sample_type	state	Recurrent Blood Derived Cancer - Peripheral Blood
+sample_type	state	Recurrent Solid Tumor
+sample_type	state	Recurrent Tumor
+sample_type	state	Solid Tissue Normal
+sample_type	stateOrder	"Primary Tumor","Primary solid Tumor","Primary Blood Derived Cancer - Peripheral Blood","Primary Blood Derived Cancer - Bone Marrow","Recurrent Tumor","Recurrent Solid Tumor","Recurrent Blood Derived Cancer - Peripheral Blood","Recurrent Blood Derived Cancer - Bone Marrow","Additional - New Primary","Metastatic","Additional Metastatic","Human Tumor Original Cells","Blood Derived Normal","Solid Tissue Normal","Buccal Cell Normal","EBV Immortalized Normal","Bone Marrow Normal","Cell Lines","Primary Xenograft Tissue","Cell Line Derived Xenograft Tissue","Control Analyte"
+sample_type	stateOrderRelax	true
+sample_type_id	shortTitle	sample type id
+sample_type_id	longTitle	sample type id
+sample_type_id	valueType	category
+sample_type_id	state	01
+sample_type_id	stateOrder	"01"
+shortest_dimension	shortTitle	shortest dimension
+shortest_dimension	longTitle	shortest dimension
+shortest_dimension	valueType	category
+shortest_dimension	state	0
+shortest_dimension	state	0.1
+shortest_dimension	state	0.2
+shortest_dimension	state	0.3
+shortest_dimension	state	0.4
+shortest_dimension	state	0.5
+shortest_dimension	stateOrder	"0","0.1","0.2","0.3","0.4","0.5"
+vial_number	shortTitle	vial number
+vial_number	longTitle	vial number
+vial_number	valueType	category
+vial_number	state	A
+vial_number	state	B
+vial_number	stateOrder	"A","B"
+percent_lymphocyte_infiltration_BOTTOM	shortTitle	percent_lymphocyte_infiltration_BOTTOM
+percent_lymphocyte_infiltration_BOTTOM	longTitle	percent_lymphocyte_infiltration_BOTTOM
+percent_lymphocyte_infiltration_BOTTOM	valueType	category
+percent_lymphocyte_infiltration_BOTTOM	state	2
+percent_lymphocyte_infiltration_BOTTOM	state	8
+percent_lymphocyte_infiltration_BOTTOM	state	9
+percent_lymphocyte_infiltration_BOTTOM	state	18
+percent_lymphocyte_infiltration_BOTTOM	state	80
+percent_lymphocyte_infiltration_BOTTOM	state	90
+percent_lymphocyte_infiltration_BOTTOM	stateOrder	"2","8","9","18","80","90"
+percent_lymphocyte_infiltration_TOP	shortTitle	percent_lymphocyte_infiltration_TOP
+percent_lymphocyte_infiltration_TOP	longTitle	percent_lymphocyte_infiltration_TOP
+percent_lymphocyte_infiltration_TOP	valueType	float
+percent_monocyte_infiltration_BOTTOM	shortTitle	percent_monocyte_infiltration_BOTTOM
+percent_monocyte_infiltration_BOTTOM	longTitle	percent_monocyte_infiltration_BOTTOM
+percent_monocyte_infiltration_BOTTOM	valueType	category
+percent_monocyte_infiltration_BOTTOM	state	0
+percent_monocyte_infiltration_BOTTOM	stateOrder	"0"
+percent_monocyte_infiltration_TOP	shortTitle	percent_monocyte_infiltration_TOP
+percent_monocyte_infiltration_TOP	longTitle	percent_monocyte_infiltration_TOP
+percent_monocyte_infiltration_TOP	valueType	category
+percent_monocyte_infiltration_TOP	state	0
+percent_monocyte_infiltration_TOP	state	1
+percent_monocyte_infiltration_TOP	state	2
+percent_monocyte_infiltration_TOP	state	5
+percent_monocyte_infiltration_TOP	state	10
+percent_monocyte_infiltration_TOP	state	15
+percent_monocyte_infiltration_TOP	state	20
+percent_monocyte_infiltration_TOP	stateOrder	"0","1","2","5","10","15","20"
+percent_necrosis_BOTTOM	shortTitle	percent_necrosis_BOTTOM
+percent_necrosis_BOTTOM	longTitle	percent_necrosis_BOTTOM
+percent_necrosis_BOTTOM	valueType	category
+percent_necrosis_BOTTOM	state	0
+percent_necrosis_BOTTOM	state	1
+percent_necrosis_BOTTOM	state	15
+percent_necrosis_BOTTOM	stateOrder	"0","1","15"
+percent_necrosis_TOP	shortTitle	percent_necrosis_TOP
+percent_necrosis_TOP	longTitle	percent_necrosis_TOP
+percent_necrosis_TOP	valueType	category
+percent_necrosis_TOP	state	0
+percent_necrosis_TOP	state	2
+percent_necrosis_TOP	state	5
+percent_necrosis_TOP	state	10
+percent_necrosis_TOP	stateOrder	"0","2","5","10"
+percent_neutrophil_infiltration_BOTTOM	shortTitle	percent_neutrophil_infiltration_BOTTOM
+percent_neutrophil_infiltration_BOTTOM	longTitle	percent_neutrophil_infiltration_BOTTOM
+percent_neutrophil_infiltration_BOTTOM	valueType	category
+percent_neutrophil_infiltration_BOTTOM	state	0
+percent_neutrophil_infiltration_BOTTOM	state	5
+percent_neutrophil_infiltration_BOTTOM	stateOrder	"0","5"
+percent_neutrophil_infiltration_TOP	shortTitle	percent_neutrophil_infiltration_TOP
+percent_neutrophil_infiltration_TOP	longTitle	percent_neutrophil_infiltration_TOP
+percent_neutrophil_infiltration_TOP	valueType	category
+percent_neutrophil_infiltration_TOP	state	0
+percent_neutrophil_infiltration_TOP	state	2
+percent_neutrophil_infiltration_TOP	state	5
+percent_neutrophil_infiltration_TOP	state	10
+percent_neutrophil_infiltration_TOP	stateOrder	"0","2","5","10"
+percent_normal_cells_BOTTOM	shortTitle	percent_normal_cells_BOTTOM
+percent_normal_cells_BOTTOM	longTitle	percent_normal_cells_BOTTOM
+percent_normal_cells_BOTTOM	valueType	category
+percent_normal_cells_BOTTOM	state	0
+percent_normal_cells_BOTTOM	state	7
+percent_normal_cells_BOTTOM	state	10
+percent_normal_cells_BOTTOM	state	14
+percent_normal_cells_BOTTOM	stateOrder	"0","7","10","14"
+percent_normal_cells_TOP	shortTitle	percent_normal_cells_TOP
+percent_normal_cells_TOP	longTitle	percent_normal_cells_TOP
+percent_normal_cells_TOP	valueType	category
+percent_normal_cells_TOP	state	0
+percent_normal_cells_TOP	state	3
+percent_normal_cells_TOP	state	5
+percent_normal_cells_TOP	state	10
+percent_normal_cells_TOP	state	13
+percent_normal_cells_TOP	state	15
+percent_normal_cells_TOP	state	40
+percent_normal_cells_TOP	stateOrder	"0","3","5","10","13","15","40"
+percent_stromal_cells_BOTTOM	shortTitle	percent_stromal_cells_BOTTOM
+percent_stromal_cells_BOTTOM	longTitle	percent_stromal_cells_BOTTOM
+percent_stromal_cells_BOTTOM	valueType	category
+percent_stromal_cells_BOTTOM	state	0
+percent_stromal_cells_BOTTOM	state	3
+percent_stromal_cells_BOTTOM	state	5
+percent_stromal_cells_BOTTOM	state	10
+percent_stromal_cells_BOTTOM	stateOrder	"0","3","5","10"
+percent_stromal_cells_TOP	shortTitle	percent_stromal_cells_TOP
+percent_stromal_cells_TOP	longTitle	percent_stromal_cells_TOP
+percent_stromal_cells_TOP	valueType	category
+percent_stromal_cells_TOP	state	0
+percent_stromal_cells_TOP	state	2
+percent_stromal_cells_TOP	state	5
+percent_stromal_cells_TOP	state	10
+percent_stromal_cells_TOP	state	15
+percent_stromal_cells_TOP	state	20
+percent_stromal_cells_TOP	state	25
+percent_stromal_cells_TOP	state	30
+percent_stromal_cells_TOP	state	35
+percent_stromal_cells_TOP	stateOrder	"0","2","5","10","15","20","25","30","35"
+percent_tumor_cells_BOTTOM	shortTitle	percent_tumor_cells_BOTTOM
+percent_tumor_cells_BOTTOM	longTitle	percent_tumor_cells_BOTTOM
+percent_tumor_cells_BOTTOM	valueType	category
+percent_tumor_cells_BOTTOM	state	85
+percent_tumor_cells_BOTTOM	state	90
+percent_tumor_cells_BOTTOM	state	95
+percent_tumor_cells_BOTTOM	state	100
+percent_tumor_cells_BOTTOM	stateOrder	"85","90","95","100"
+percent_tumor_cells_TOP	shortTitle	percent_tumor_cells_TOP
+percent_tumor_cells_TOP	longTitle	percent_tumor_cells_TOP
+percent_tumor_cells_TOP	valueType	category
+percent_tumor_cells_TOP	state	50
+percent_tumor_cells_TOP	state	60
+percent_tumor_cells_TOP	state	65
+percent_tumor_cells_TOP	state	70
+percent_tumor_cells_TOP	state	80
+percent_tumor_cells_TOP	state	85
+percent_tumor_cells_TOP	state	90
+percent_tumor_cells_TOP	state	95
+percent_tumor_cells_TOP	state	100
+percent_tumor_cells_TOP	stateOrder	"50","60","65","70","80","85","90","95","100"
+percent_tumor_nuclei_BOTTOM	shortTitle	percent_tumor_nuclei_BOTTOM
+percent_tumor_nuclei_BOTTOM	longTitle	percent_tumor_nuclei_BOTTOM
+percent_tumor_nuclei_BOTTOM	valueType	category
+percent_tumor_nuclei_BOTTOM	state	75
+percent_tumor_nuclei_BOTTOM	state	80
+percent_tumor_nuclei_BOTTOM	state	85
+percent_tumor_nuclei_BOTTOM	state	90
+percent_tumor_nuclei_BOTTOM	state	91
+percent_tumor_nuclei_BOTTOM	state	95
+percent_tumor_nuclei_BOTTOM	stateOrder	"75","80","85","90","91","95"
+percent_tumor_nuclei_TOP	shortTitle	percent_tumor_nuclei_TOP
+percent_tumor_nuclei_TOP	longTitle	percent_tumor_nuclei_TOP
+percent_tumor_nuclei_TOP	valueType	category
+percent_tumor_nuclei_TOP	state	60
+percent_tumor_nuclei_TOP	state	70
+percent_tumor_nuclei_TOP	state	75
+percent_tumor_nuclei_TOP	state	80
+percent_tumor_nuclei_TOP	state	85
+percent_tumor_nuclei_TOP	state	88
+percent_tumor_nuclei_TOP	state	90
+percent_tumor_nuclei_TOP	state	95
+percent_tumor_nuclei_TOP	stateOrder	"60","70","75","80","85","88","90","95"
+abnormality_tested_methodology	shortTitle	abnormality_tested_methodology
+abnormality_tested_methodology	longTitle	abnormality_tested_methodology
+abnormality_tested_methodology	valueType	category
+abnormality_tested_methodology	state	Cytogenetics
+abnormality_tested_methodology	state	FISH
+abnormality_tested_methodology	state	FISH|FISH
+abnormality_tested_methodology	state	FISH|FISH|FISH
+abnormality_tested_methodology	state	FISH|FISH|FISH|FISH
+abnormality_tested_methodology	stateOrder	"Cytogenetics","FISH","FISH|FISH","FISH|FISH|FISH","FISH|FISH|FISH|FISH"
+abnormality_tested_results	shortTitle	abnormality_tested_results
+abnormality_tested_results	longTitle	abnormality_tested_results
+abnormality_tested_results	valueType	category
+abnormality_tested_results	state	Loss
+abnormality_tested_results	state	Normal
+abnormality_tested_results	state	Normal|Normal
+abnormality_tested_results	state	Normal|Normal|Normal
+abnormality_tested_results	state	Normal|Normal|Normal|Normal
+abnormality_tested_results	state	Normal|Translocation
+abnormality_tested_results	state	Normal|Translocation|Normal|Normal
+abnormality_tested_results	stateOrder	"Loss","Normal","Normal|Normal","Normal|Normal|Normal","Normal|Normal|Normal|Normal","Normal|Translocation","Normal|Translocation|Normal|Normal"
+age_at_initial_pathologic_diagnosis	shortTitle	age Dx
+age_at_initial_pathologic_diagnosis	longTitle	age at initial pathologic diagnosis
+age_at_initial_pathologic_diagnosis	valueType	float
+b_lymphocyte_genotyping_method	shortTitle	b_lymphocyte_genotyping_method
+b_lymphocyte_genotyping_method	longTitle	b_lymphocyte_genotyping_method
+b_lymphocyte_genotyping_method	valueType	category
+b_lymphocyte_genotyping_method	state	IgH PCR
+b_lymphocyte_genotyping_method	state	IgH Southern Blot
+b_lymphocyte_genotyping_method	stateOrder	"IgH PCR","IgH Southern Blot"
+bone_marrow_biopsy_done	shortTitle	bone_marrow_biopsy_done
+bone_marrow_biopsy_done	longTitle	bone_marrow_biopsy_done
+bone_marrow_biopsy_done	valueType	category
+bone_marrow_biopsy_done	state	NO
+bone_marrow_biopsy_done	state	YES
+bone_marrow_biopsy_done	stateOrder	"NO","YES"
+bone_marrow_involvement	shortTitle	bone_marrow_involvement
+bone_marrow_involvement	longTitle	bone_marrow_involvement
+bone_marrow_involvement	valueType	category
+bone_marrow_involvement	state	NO
+bone_marrow_involvement	state	YES
+bone_marrow_involvement	stateOrder	"NO","YES"
+clinical_stage	shortTitle	clinical_stage
+clinical_stage	longTitle	clinical stage
+clinical_stage	valueType	category
+clinical_stage	state	Stage I
+clinical_stage	state	Stage II
+clinical_stage	state	Stage III
+clinical_stage	state	Stage IV
+clinical_stage	stateOrder	"Stage I","Stage II","Stage III","Stage IV"
+days_to_birth	shortTitle	days to birth
+days_to_birth	longTitle	days to birth
+days_to_birth	valueType	float
+days_to_initial_pathologic_diagnosis	shortTitle	days to initial path Dx
+days_to_initial_pathologic_diagnosis	longTitle	days to initial pathologic diagnosis
+days_to_initial_pathologic_diagnosis	valueType	category
+days_to_initial_pathologic_diagnosis	state	0
+days_to_initial_pathologic_diagnosis	stateOrder	"0"
+eastern_cancer_oncology_group	shortTitle	eastern cancer oncology group
+eastern_cancer_oncology_group	longTitle	eastern cancer oncology group
+eastern_cancer_oncology_group	valueType	category
+eastern_cancer_oncology_group	state	0
+eastern_cancer_oncology_group	state	1
+eastern_cancer_oncology_group	state	2
+eastern_cancer_oncology_group	state	3
+eastern_cancer_oncology_group	stateOrder	"0","1","2","3"
+ebv_antibody_status	shortTitle	ebv_antibody_status
+ebv_antibody_status	longTitle	ebv_antibody_status
+ebv_antibody_status	valueType	category
+ebv_antibody_status	state	negative
+ebv_antibody_status	state	positive
+ebv_antibody_status	stateOrder	"negative","positive"
+ebv_diagnostic_methodology	shortTitle	ebv_diagnostic_methodology
+ebv_diagnostic_methodology	longTitle	ebv_diagnostic_methodology
+ebv_diagnostic_methodology	valueType	category
+ebv_diagnostic_methodology	state	EBER in situ hybridization
+ebv_diagnostic_methodology	stateOrder	"EBER in situ hybridization"
+extranodal_disease_involvement_site	shortTitle	extranodal_disease_involvement_site
+extranodal_disease_involvement_site	longTitle	extranodal_disease_involvement_site
+extranodal_disease_involvement_site	valueType	category
+extranodal_disease_involvement_site	state	Adrenal|Bone|Bone Marrow|Liver|Pleura/Pleural Effusion|Other Extranodal Site
+extranodal_disease_involvement_site	state	Adrenal|Soft Tissue (muscle, ligaments, subcutaneous)|Brain|Thyroid|Lung
+extranodal_disease_involvement_site	state	Ascites/Peritoneum
+extranodal_disease_involvement_site	state	Ascites/Peritoneum|Other Extranodal Site
+extranodal_disease_involvement_site	state	Bone|Skin|Soft Tissue (muscle, ligaments, subcutaneous)
+extranodal_disease_involvement_site	state	Bone|Soft Tissue (muscle, ligaments, subcutaneous)
+extranodal_disease_involvement_site	state	Bone|Testes
+extranodal_disease_involvement_site	state	Brain
+extranodal_disease_involvement_site	state	Brain|Sinus
+extranodal_disease_involvement_site	state	Breast
+extranodal_disease_involvement_site	state	Colon
+extranodal_disease_involvement_site	state	Colon|Small Intestine
+extranodal_disease_involvement_site	state	Liver|Other Extranodal Site
+extranodal_disease_involvement_site	state	Other Extranodal Site
+extranodal_disease_involvement_site	state	Parotid Gland
+extranodal_disease_involvement_site	state	Small Intestine
+extranodal_disease_involvement_site	state	Soft Tissue (muscle, ligaments, subcutaneous)|Lung|Pleura/Pleural Effusion
+extranodal_disease_involvement_site	state	Stomach
+extranodal_disease_involvement_site	state	Thyroid
+extranodal_disease_involvement_site	stateOrder	"Adrenal|Bone|Bone Marrow|Liver|Pleura/Pleural Effusion|Other Extranodal Site","Adrenal|Soft Tissue (muscle, ligaments, subcutaneous)|Brain|Thyroid|Lung","Ascites/Peritoneum","Ascites/Peritoneum|Other Extranodal Site","Bone|Skin|Soft Tissue (muscle, ligaments, subcutaneous)","Bone|Soft Tissue (muscle, ligaments, subcutaneous)","Bone|Testes","Brain","Brain|Sinus","Breast","Colon","Colon|Small Intestine","Liver|Other Extranodal Site","Other Extranodal Site","Parotid Gland","Small Intestine","Soft Tissue (muscle, ligaments, subcutaneous)|Lung|Pleura/Pleural Effusion","Stomach","Thyroid"
+extranodal_disease_involvement_site_other	shortTitle	extranodal_disease_involvement_site_other
+extranodal_disease_involvement_site_other	longTitle	extranodal_disease_involvement_site_other
+extranodal_disease_involvement_site_other	valueType	category
+extranodal_disease_involvement_site_other	state	Omentum
+extranodal_disease_involvement_site_other	state	Spleen
+extranodal_disease_involvement_site_other	state	bladder
+extranodal_disease_involvement_site_other	stateOrder	"Omentum","Spleen","bladder"
+extranodal_involvement	shortTitle	extranodal_involvement
+extranodal_involvement	longTitle	extranodal_involvement
+extranodal_involvement	valueType	category
+extranodal_involvement	state	NO
+extranodal_involvement	state	YES
+extranodal_involvement	stateOrder	"NO","YES"
+gender	shortTitle	gender
+gender	longTitle	gender
+gender	valueType	category
+gender	state	FEMALE
+gender	state	MALE
+gender	stateOrder	"FEMALE","MALE"
+genetic_abnormality_tested	shortTitle	genetic_abnormality_tested
+genetic_abnormality_tested	longTitle	genetic_abnormality_tested
+genetic_abnormality_tested	valueType	category
+genetic_abnormality_tested	state	BCL2
+genetic_abnormality_tested	state	BCL2|BCL6
+genetic_abnormality_tested	state	BCL2|BCL6|CCND1
+genetic_abnormality_tested	state	C-MYC
+genetic_abnormality_tested	state	C-MYC|BCL2|BCL6|CCND1|MALT1
+genetic_abnormality_tested	state	C-MYC|BCL2|BCL6|MALT1
+genetic_abnormality_tested	stateOrder	"BCL2","BCL2|BCL6","BCL2|BCL6|CCND1","C-MYC","C-MYC|BCL2|BCL6|CCND1|MALT1","C-MYC|BCL2|BCL6|MALT1"
+height	shortTitle	height
+height	longTitle	height
+height	valueType	float
+histological_type	shortTitle	histological type
+histological_type	longTitle	histological type
+histological_type	valueType	category
+histological_type	state	Diffuse large B-cell lymphoma (DLBCL) NOS (any anatomic site nodal or extranodal)
+histological_type	state	Primary DLBCL of the CNS
+histological_type	state	Primary mediastinal (thymic) DLBCL
+histological_type	stateOrder	"Diffuse large B-cell lymphoma (DLBCL) NOS (any anatomic site nodal or extranodal)","Primary DLBCL of the CNS","Primary mediastinal (thymic) DLBCL"
+histology_of_bone_marrow_sample	shortTitle	histology_of_bone_marrow_sample
+histology_of_bone_marrow_sample	longTitle	histology_of_bone_marrow_sample
+histology_of_bone_marrow_sample	valueType	category
+histology_of_bone_marrow_sample	state	Concordant Histology
+histology_of_bone_marrow_sample	state	Discordant Histology
+histology_of_bone_marrow_sample	stateOrder	"Concordant Histology","Discordant Histology"
+history_of_neoadjuvant_treatment	shortTitle	history of neoadj Tx
+history_of_neoadjuvant_treatment	longTitle	history of neoadjuvant treatment
+history_of_neoadjuvant_treatment	valueType	category
+history_of_neoadjuvant_treatment	state	No
+history_of_neoadjuvant_treatment	state	Yes
+history_of_neoadjuvant_treatment	stateOrder	"No","Yes"
+hiv_positive_status	shortTitle	hiv_positive_status
+hiv_positive_status	longTitle	hiv_positive_status
+hiv_positive_status	valueType	category
+hiv_positive_status	state	negative
+hiv_positive_status	stateOrder	"negative"
+icd_10	shortTitle	International Classification of Diseases, tenth revision (ICD-10)
+icd_10	longTitle	International Classification of Diseases, tenth revision (ICD-10)
+icd_10	valueType	category
+icd_10	state	C16.3
+icd_10	state	C49.9
+icd_10	state	C71.1
+icd_10	state	C83.31
+icd_10	state	C83.33
+icd_10	state	C83.39
+icd_10	state	C96.9
+icd_10	stateOrder	"C16.3","C49.9","C71.1","C83.31","C83.33","C83.39","C96.9"
+icd_o_3_histology	shortTitle	ICD-O-3 histology
+icd_o_3_histology	longTitle	ICD-O-3 histology
+icd_o_3_histology	valueType	category
+icd_o_3_histology	state	9680/3
+icd_o_3_histology	stateOrder	"9680/3"
+icd_o_3_site	shortTitle	ICD-O-3 site
+icd_o_3_site	longTitle	ICD-O-3 site
+icd_o_3_site	valueType	category
+icd_o_3_site	state	C08.0
+icd_o_3_site	state	C16.3
+icd_o_3_site	state	C17.1
+icd_o_3_site	state	C17.2
+icd_o_3_site	state	C17.9
+icd_o_3_site	state	C18.9
+icd_o_3_site	state	C37.9
+icd_o_3_site	state	C49.0
+icd_o_3_site	state	C50.1
+icd_o_3_site	state	C62.9
+icd_o_3_site	state	C71.6
+icd_o_3_site	state	C71.7
+icd_o_3_site	state	C73.9
+icd_o_3_site	state	C77.0
+icd_o_3_site	state	C77.2
+icd_o_3_site	state	C77.3
+icd_o_3_site	state	C77.4
+icd_o_3_site	stateOrder	"C08.0","C16.3","C17.1","C17.2","C17.9","C18.9","C37.9","C49.0","C50.1","C62.9","C71.6","C71.7","C73.9","C77.0","C77.2","C77.3","C77.4"
+igh_genotype_results	shortTitle	igh_genotype_results
+igh_genotype_results	longTitle	igh_genotype_results
+igh_genotype_results	valueType	category
+igh_genotype_results	state	Clonal
+igh_genotype_results	state	Non-Clonal
+igh_genotype_results	stateOrder	"Clonal","Non-Clonal"
+immunophenotypic_analysis_methodology	shortTitle	immunophenotypic_analysis_methodology
+immunophenotypic_analysis_methodology	longTitle	immunophenotypic_analysis_methodology
+immunophenotypic_analysis_methodology	valueType	category
+immunophenotypic_analysis_methodology	state	Flow cytometry|Flow cytometry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Flow cytometry|Flow cytometry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Flow cytometry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Flow cytometry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Flow cytometry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry|Flow cytometry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	state	Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry
+immunophenotypic_analysis_methodology	stateOrder	"Flow cytometry|Flow cytometry|Flow cytometry","Flow cytometry|Flow cytometry|Immunohistochemistry","Flow cytometry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Flow cytometry","Flow cytometry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry","Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry","Immunohistochemistry","Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Flow cytometry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry|Flow cytometry|Flow cytometry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Flow cytometry|Immunohistochemistry|Flow cytometry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry","Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry|Immunohistochemistry"
+immunophenotypic_analysis_test	shortTitle	immunophenotypic_analysis_test
+immunophenotypic_analysis_test	longTitle	immunophenotypic_analysis_test
+immunophenotypic_analysis_test	valueType	category
+immunophenotypic_analysis_test	state	CD19|CD20|CD22
+immunophenotypic_analysis_test	state	CD19|CD 10> 30%|BCL2
+immunophenotypic_analysis_test	state	CD19|CD 10> 30%|BCL2|CD20|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD23|PAX5|CD5|CD5
+immunophenotypic_analysis_test	state	CD19|CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD5|EBER
+immunophenotypic_analysis_test	state	CD19|CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD22|BCL6 > 30%|CD23|CD79a|CD5|CD15|EBER|CD30|Cytoplasmic Ig|Surface Ig
+immunophenotypic_analysis_test	state	CD19|CD 10> 30%|BCL2|P53 >20%|CD20|CD22|BCL6 > 30%|CD23|CD79a|CD5|CD30|Cytoplasmic Ig|Surface Ig
+immunophenotypic_analysis_test	state	CD19|CD 10> 30%|BCL2|P53 >20%|CD20|MUM1 > 30%|CD22|BCL6 > 30%|CD23|CD79a|CD5|Cytoplasmic Ig
+immunophenotypic_analysis_test	state	CD19|CD 10> 30%|CD20|MUM1 > 30%|BCL6 > 30%|CD23|PAX5|CD5|Cyclin D1
+immunophenotypic_analysis_test	state	CD20
+immunophenotypic_analysis_test	state	CD20|CD23|PAX5|CD30|CD15|EBER|CD5|Cytoplasmic Ig|Surface Ig
+immunophenotypic_analysis_test	state	CD20|CD30
+immunophenotypic_analysis_test	state	CD20|PAX5
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|BCL6 > 30%|CD5|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|BCL6 > 30%|CD23|CD5|CD30
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|BCL6 > 30%|CD79a|CD30|CD15|EBER|CD5|Cytoplasmic Ig|Surface Ig
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|CD23|CD5
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|CD138|CD22|BCL6 > 30%|CD23|CD79a|CD5|CD19|P53 >20%|MUM1 > 30%|Cytoplasmic Ig|Surface Ig
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5|CD30|CD15
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5|Cytoplasmic Ig|EBER|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD22|CD5|CD30|Cytoplasmic Ig|Surface Ig
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD30|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD79a|CD5|CD19|CD22|Cytoplasmic Ig|Surface Ig|EBER
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD79a|CD5|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD30
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD30|
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD79a|CD5|CD30|CD15|EBER|ALK|Cytoplasmic Ig
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|PAX5
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|PAX5|CD5|CD30|EBER|ALK
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD138|BCL6 > 30%|CD23|CD5|CD30|EBER|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD138|BCL6 > 30%|CD30|EBER|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD138|CD15|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|CD20|MUM1 > 30%|Cyclin D1
+immunophenotypic_analysis_test	state	CD 10> 30%|BCL2|P53 >20%|CD20|MUM1 > 30%|BCL6 > 30%|CD5|Cytoplasmic Ig
+immunophenotypic_analysis_test	state	CD 10> 30%|CD20
+immunophenotypic_analysis_test	state	CD 10> 30%|CD20|BCL6 > 30%
+immunophenotypic_analysis_test	state	CD 10> 30%|CD20|BCL6 > 30%|MUM1 > 30%|CD23|CD79a|PAX5|CD5|CD30|CD15|ALK
+immunophenotypic_analysis_test	state	CD 10> 30%|CD20|CD5|Cyclin D1
+immunophenotypic_analysis_test	stateOrder	"CD19|CD20|CD22","CD19|CD 10> 30%|BCL2","CD19|CD 10> 30%|BCL2|CD20|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD23|PAX5|CD5|CD5","CD19|CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD5|EBER","CD19|CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD22|BCL6 > 30%|CD23|CD79a|CD5|CD15|EBER|CD30|Cytoplasmic Ig|Surface Ig","CD19|CD 10> 30%|BCL2|P53 >20%|CD20|CD22|BCL6 > 30%|CD23|CD79a|CD5|CD30|Cytoplasmic Ig|Surface Ig","CD19|CD 10> 30%|BCL2|P53 >20%|CD20|MUM1 > 30%|CD22|BCL6 > 30%|CD23|CD79a|CD5|Cytoplasmic Ig","CD19|CD 10> 30%|CD20|MUM1 > 30%|BCL6 > 30%|CD23|PAX5|CD5|Cyclin D1","CD20","CD20|CD23|PAX5|CD30|CD15|EBER|CD5|Cytoplasmic Ig|Surface Ig","CD20|CD30","CD20|PAX5","CD 10> 30%|BCL2|CD20","CD 10> 30%|BCL2|CD20|BCL6 > 30%|CD5|Cyclin D1","CD 10> 30%|BCL2|CD20|BCL6 > 30%|CD23|CD5|CD30","CD 10> 30%|BCL2|CD20|BCL6 > 30%|CD79a|CD30|CD15|EBER|CD5|Cytoplasmic Ig|Surface Ig","CD 10> 30%|BCL2|CD20|CD23|CD5","CD 10> 30%|BCL2|CD20|CD138|CD22|BCL6 > 30%|CD23|CD79a|CD5|CD19|P53 >20%|MUM1 > 30%|Cytoplasmic Ig|Surface Ig","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5|CD30|CD15","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD5|Cytoplasmic Ig|EBER|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD22|CD5|CD30|Cytoplasmic Ig|Surface Ig","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD30|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD79a|CD5|CD19|CD22|Cytoplasmic Ig|Surface Ig|EBER","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD23|CD79a|CD5|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD30","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD30|","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|CD79a|CD5|CD30|CD15|EBER|ALK|Cytoplasmic Ig","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|PAX5","CD 10> 30%|BCL2|CD20|MUM1 > 30%|BCL6 > 30%|PAX5|CD5|CD30|EBER|ALK","CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD138|BCL6 > 30%|CD23|CD5|CD30|EBER|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD138|BCL6 > 30%|CD30|EBER|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|CD138|CD15|Cyclin D1","CD 10> 30%|BCL2|CD20|MUM1 > 30%|Cyclin D1","CD 10> 30%|BCL2|P53 >20%|CD20|MUM1 > 30%|BCL6 > 30%|CD5|Cytoplasmic Ig","CD 10> 30%|CD20","CD 10> 30%|CD20|BCL6 > 30%","CD 10> 30%|CD20|BCL6 > 30%|MUM1 > 30%|CD23|CD79a|PAX5|CD5|CD30|CD15|ALK","CD 10> 30%|CD20|CD5|Cyclin D1"
+informed_consent_verified	shortTitle	informed consent verified
+informed_consent_verified	longTitle	informed consent verified
+informed_consent_verified	valueType	category
+informed_consent_verified	state	YES
+informed_consent_verified	stateOrder	"YES"
+ldh_lab_value	shortTitle	ldh_lab_value
+ldh_lab_value	longTitle	ldh_lab_value
+ldh_lab_value	valueType	float
+ldh_upper_limit	shortTitle	ldh_upper_limit
+ldh_upper_limit	longTitle	ldh_upper_limit
+ldh_upper_limit	valueType	category
+ldh_upper_limit	state	185
+ldh_upper_limit	state	192
+ldh_upper_limit	state	250
+ldh_upper_limit	state	260
+ldh_upper_limit	state	380
+ldh_upper_limit	state	450
+ldh_upper_limit	state	618
+ldh_upper_limit	stateOrder	"185","192","250","260","380","450","618"
+maximum_tumor_bulk_anatomic_location	shortTitle	maximum_tumor_bulk_anatomic_location
+maximum_tumor_bulk_anatomic_location	longTitle	maximum_tumor_bulk_anatomic_location
+maximum_tumor_bulk_anatomic_location	valueType	category
+maximum_tumor_bulk_anatomic_location	state	Axillary lymph nodes
+maximum_tumor_bulk_anatomic_location	state	Cervical
+maximum_tumor_bulk_anatomic_location	state	Colon
+maximum_tumor_bulk_anatomic_location	state	Jejunum
+maximum_tumor_bulk_anatomic_location	state	Lymph node, cervical
+maximum_tumor_bulk_anatomic_location	state	Lymph node, mesenteric
+maximum_tumor_bulk_anatomic_location	state	Mediastinal
+maximum_tumor_bulk_anatomic_location	state	Right central breast
+maximum_tumor_bulk_anatomic_location	state	Small Intestine
+maximum_tumor_bulk_anatomic_location	state	Submandibular
+maximum_tumor_bulk_anatomic_location	state	Supraclavicular LN
+maximum_tumor_bulk_anatomic_location	state	Thyroid
+maximum_tumor_bulk_anatomic_location	state	cervical lymph node
+maximum_tumor_bulk_anatomic_location	state	colon
+maximum_tumor_bulk_anatomic_location	state	inguinal nodule
+maximum_tumor_bulk_anatomic_location	state	mediastinal
+maximum_tumor_bulk_anatomic_location	state	paratracheal/mediastinal
+maximum_tumor_bulk_anatomic_location	state	posterior fossa tumor
+maximum_tumor_bulk_anatomic_location	state	right cervical lymph node
+maximum_tumor_bulk_anatomic_location	state	right lung nodule
+maximum_tumor_bulk_anatomic_location	state	small intestine
+maximum_tumor_bulk_anatomic_location	state	soft tissue
+maximum_tumor_bulk_anatomic_location	state	supraclavicular lymph node
+maximum_tumor_bulk_anatomic_location	stateOrder	"Axillary lymph nodes","Cervical","Colon","Jejunum","Lymph node, cervical","Lymph node, mesenteric","Mediastinal","Right central breast","Small Intestine","Submandibular","Supraclavicular LN","Thyroid","cervical lymph node","colon","inguinal nodule","mediastinal","paratracheal/mediastinal","posterior fossa tumor","right cervical lymph node","right lung nodule","small intestine","soft tissue","supraclavicular lymph node"
+maximum_tumor_dimension	shortTitle	maximum_tumor_dimension
+maximum_tumor_dimension	longTitle	maximum_tumor_dimension
+maximum_tumor_dimension	valueType	float
+mib1_positive_percentage_range	shortTitle	mib1_positive_percentage_range
+mib1_positive_percentage_range	longTitle	mib1_positive_percentage_range
+mib1_positive_percentage_range	valueType	category
+mib1_positive_percentage_range	state	0 - 25%
+mib1_positive_percentage_range	state	26 - 50%
+mib1_positive_percentage_range	state	51 - 75%
+mib1_positive_percentage_range	state	76 - 100%
+mib1_positive_percentage_range	stateOrder	"0 - 25%","26 - 50%","51 - 75%","76 - 100%"
+nodal_anatomic_site	shortTitle	nodal_anatomic_site
+nodal_anatomic_site	longTitle	nodal_anatomic_site
+nodal_anatomic_site	valueType	category
+nodal_anatomic_site	state	Axillary
+nodal_anatomic_site	state	Axillary|Inguinal
+nodal_anatomic_site	state	Axillary|cervical|Inguinal|mesenteric|supraclavicular
+nodal_anatomic_site	state	Axillary|cervical|Inguinal|retroperitoneal
+nodal_anatomic_site	state	Axillary|cervical|hilar|Iliac-common|Iliac-external|Inguinal|mediastinal|retroperitoneal|supraclavicular
+nodal_anatomic_site	state	Axillary|cervical|hilar|Iliac-common|Iliac-external|mediastinal|mesenteric|para-aortic|retroperitoneal|Splenic
+nodal_anatomic_site	state	Axillary|cervical|mediastinal|para-aortic
+nodal_anatomic_site	state	Axillary|para-aortic|Splenic|supraclavicular
+nodal_anatomic_site	state	Femoral|Inguinal
+nodal_anatomic_site	state	Inguinal
+nodal_anatomic_site	state	cervical
+nodal_anatomic_site	state	cervical|Inguinal
+nodal_anatomic_site	state	cervical|Submandibular
+nodal_anatomic_site	state	cervical|mediastinal|para-aortic|supraclavicular
+nodal_anatomic_site	state	cervical|mediastinal|supraclavicular
+nodal_anatomic_site	state	cervical|supraclavicular
+nodal_anatomic_site	state	hilar|Iliac-common|Inguinal|para-aortic|Splenic
+nodal_anatomic_site	state	mediastinal
+nodal_anatomic_site	state	mesenteric
+nodal_anatomic_site	state	other
+nodal_anatomic_site	state	para-aortic|retroperitoneal
+nodal_anatomic_site	state	retroperitoneal
+nodal_anatomic_site	state	supraclavicular|Submandibular
+nodal_anatomic_site	stateOrder	"Axillary","Axillary|Inguinal","Axillary|cervical|Inguinal|mesenteric|supraclavicular","Axillary|cervical|Inguinal|retroperitoneal","Axillary|cervical|hilar|Iliac-common|Iliac-external|Inguinal|mediastinal|retroperitoneal|supraclavicular","Axillary|cervical|hilar|Iliac-common|Iliac-external|mediastinal|mesenteric|para-aortic|retroperitoneal|Splenic","Axillary|cervical|mediastinal|para-aortic","Axillary|para-aortic|Splenic|supraclavicular","Femoral|Inguinal","Inguinal","cervical","cervical|Inguinal","cervical|Submandibular","cervical|mediastinal|para-aortic|supraclavicular","cervical|mediastinal|supraclavicular","cervical|supraclavicular","hilar|Iliac-common|Inguinal|para-aortic|Splenic","mediastinal","mesenteric","other","para-aortic|retroperitoneal","retroperitoneal","supraclavicular|Submandibular"
+number_of_involved_extranodal_sites	shortTitle	number_of_involved_extranodal_sites
+number_of_involved_extranodal_sites	longTitle	number_of_involved_extranodal_sites
+number_of_involved_extranodal_sites	valueType	category
+number_of_involved_extranodal_sites	state	0
+number_of_involved_extranodal_sites	state	1
+number_of_involved_extranodal_sites	state	2
+number_of_involved_extranodal_sites	state	3
+number_of_involved_extranodal_sites	state	4
+number_of_involved_extranodal_sites	state	6
+number_of_involved_extranodal_sites	stateOrder	"0","1","2","3","4","6"
+other_genetic_abnormality_tested	shortTitle	other_genetic_abnormality_tested
+other_genetic_abnormality_tested	longTitle	other_genetic_abnormality_tested
+other_genetic_abnormality_tested	valueType	category
+other_genetic_abnormality_tested	state	1p36
+other_genetic_abnormality_tested	state	G Band Karyotype
+other_genetic_abnormality_tested	state	IGH|PAX5
+other_genetic_abnormality_tested	state	PAX5|IGH
+other_genetic_abnormality_tested	state	PAX5|IGH|FoxP1|BCL10
+other_genetic_abnormality_tested	state	PAX5|IGH|IGK|IGL
+other_genetic_abnormality_tested	state	PAX 5|IGH
+other_genetic_abnormality_tested	state	PAX 5|IGH|BCL10
+other_genetic_abnormality_tested	stateOrder	"1p36","G Band Karyotype","IGH|PAX5","PAX5|IGH","PAX5|IGH|FoxP1|BCL10","PAX5|IGH|IGK|IGL","PAX 5|IGH","PAX 5|IGH|BCL10"
+percent_ebv_positive_malignant_cells	shortTitle	percent_ebv_positive_malignant_cells
+percent_ebv_positive_malignant_cells	longTitle	percent_ebv_positive_malignant_cells
+percent_ebv_positive_malignant_cells	valueType	category
+percent_ebv_positive_malignant_cells	state	80
+percent_ebv_positive_malignant_cells	stateOrder	"80"
+percentage_of_follicular_component	shortTitle	percentage_of_follicular_component
+percentage_of_follicular_component	longTitle	percentage_of_follicular_component
+percentage_of_follicular_component	valueType	category
+percentage_of_follicular_component	state	< or = 10%
+percentage_of_follicular_component	stateOrder	"< or = 10%"
+prior_dx	shortTitle	prior Dx
+prior_dx	longTitle	prior diagnosis
+prior_dx	valueType	category
+prior_dx	state	No
+prior_dx	stateOrder	"No"
+prior_immunologic_disease_other	shortTitle	prior_immunologic_disease_other
+prior_immunologic_disease_other	longTitle	prior_immunologic_disease_other
+prior_immunologic_disease_other	valueType	category
+prior_immunologic_disease_other	state	Behgets disease
+prior_immunologic_disease_other	state	Common variable immunodeficiency
+prior_immunologic_disease_other	state	Diverticulitis requiring colectomy
+prior_immunologic_disease_other	state	Non-insulin dependent diabetes mellitus
+prior_immunologic_disease_other	stateOrder	"Behgets disease","Common variable immunodeficiency","Diverticulitis requiring colectomy","Non-insulin dependent diabetes mellitus"
+prior_immunologic_disease_type	shortTitle	prior_immunologic_disease_type
+prior_immunologic_disease_type	longTitle	prior_immunologic_disease_type
+prior_immunologic_disease_type	valueType	category
+prior_immunologic_disease_type	state	Hashimotos Thyroiditis
+prior_immunologic_disease_type	state	Other
+prior_immunologic_disease_type	state	Rheumatoid Arthritis|Other
+prior_immunologic_disease_type	stateOrder	"Hashimotos Thyroiditis","Other","Rheumatoid Arthritis|Other"
+prior_immunosuppressive_therapy_other	shortTitle	prior_immunosuppressive_therapy_other
+prior_immunosuppressive_therapy_other	longTitle	prior_immunosuppressive_therapy_other
+prior_immunosuppressive_therapy_other	valueType	category
+prior_immunosuppressive_therapy_other	state	Immunoglobulin
+prior_immunosuppressive_therapy_other	state	Prednisone
+prior_immunosuppressive_therapy_other	stateOrder	"Immunoglobulin","Prednisone"
+prior_immunosuppressive_therapy_type	shortTitle	prior_immunosuppressive_therapy_type
+prior_immunosuppressive_therapy_type	longTitle	prior_immunosuppressive_therapy_type
+prior_immunosuppressive_therapy_type	valueType	category
+prior_immunosuppressive_therapy_type	state	Azathioprine|Other
+prior_immunosuppressive_therapy_type	state	Methotrexate
+prior_immunosuppressive_therapy_type	state	None
+prior_immunosuppressive_therapy_type	state	Other
+prior_immunosuppressive_therapy_type	stateOrder	"Azathioprine|Other","Methotrexate","None","Other"
+prior_infectious_disease	shortTitle	prior_infectious_disease
+prior_infectious_disease	longTitle	prior_infectious_disease
+prior_infectious_disease	valueType	category
+prior_infectious_disease	state	Hepatitis B Virus
+prior_infectious_disease	state	Hepatitis C
+prior_infectious_disease	stateOrder	"Hepatitis B Virus","Hepatitis C"
+result_of_immunophenotypic_analysis	shortTitle	result_of_immunophenotypic_analysis
+result_of_immunophenotypic_analysis	longTitle	result_of_immunophenotypic_analysis
+result_of_immunophenotypic_analysis	valueType	category
+result_of_immunophenotypic_analysis	state	Negative|Negative|Positive|Negative|Negative|Negative|Negative
+result_of_immunophenotypic_analysis	state	Negative|Negative|Positive|Positive|Negative|Positive|Negative|Indeterminate
+result_of_immunophenotypic_analysis	state	Negative|Positive
+result_of_immunophenotypic_analysis	state	Negative|Positive|Negative|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Negative|Negative|Positive|Negative|Negative|Positive|Positive
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Negative|Negative|Positive|Positive|Negative|Negative|Negative|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Negative|Negative|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Negative|Positive|Negative|Negative|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Negative|Positive|Negative|Positive|Negative|Positive|Negative|Indeterminate
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Negative|Positive|Positive|Negative|Positive|Positive|Positive|Positive|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Positive|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Positive|Negative|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative|Negative
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Negative|Indeterminate|Indeterminate
+result_of_immunophenotypic_analysis	state	Negative|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Negative
+result_of_immunophenotypic_analysis	state	Positive
+result_of_immunophenotypic_analysis	state	Positive|Negative|Negative|Positive|Positive|Positive|Negative|Negative|Negative
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Negative|Negative
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Negative|Positive|Positive|Positive|Positive|Negative
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative|Positive
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Positive|Negative|Negative
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Positive|Positive|Negative
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Positive|Positive|Negative|
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Negative|Positive|Indeterminate|Indeterminate
+result_of_immunophenotypic_analysis	state	Positive|Negative|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Negative|Negative
+result_of_immunophenotypic_analysis	state	Positive|Positive
+result_of_immunophenotypic_analysis	state	Positive|Positive|Negative|Negative|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Positive|Positive
+result_of_immunophenotypic_analysis	state	Positive|Positive|Positive
+result_of_immunophenotypic_analysis	state	Positive|Positive|Positive|Negative|Negative
+result_of_immunophenotypic_analysis	state	Positive|Positive|Positive|Negative|Positive|Positive|Negative|Negative|Negative|Negative
+result_of_immunophenotypic_analysis	state	Positive|Positive|Positive|Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative|Negative|Indeterminate|Positive
+result_of_immunophenotypic_analysis	state	Positive|Positive|Positive|Positive|Negative|Negative|Negative|Indeterminate|Indeterminate
+result_of_immunophenotypic_analysis	state	Positive|Positive|Positive|Positive|Positive|Negative
+result_of_immunophenotypic_analysis	state	Positive|Positive|Positive|Positive|Positive|Positive
+result_of_immunophenotypic_analysis	stateOrder	"Negative|Negative|Positive|Negative|Negative|Negative|Negative","Negative|Negative|Positive|Positive|Negative|Positive|Negative|Indeterminate","Negative|Positive","Negative|Positive|Negative|Negative","Negative|Positive|Positive","Negative|Positive|Positive|Negative|Negative|Positive|Negative|Negative|Positive|Positive","Negative|Positive|Positive|Negative|Negative|Positive|Positive|Negative|Negative|Negative|Negative","Negative|Positive|Positive|Positive|Negative|Negative|Negative","Negative|Positive|Positive|Positive|Negative|Positive|Negative|Negative|Negative","Negative|Positive|Positive|Positive|Negative|Positive|Negative|Positive|Negative|Positive|Negative|Indeterminate","Negative|Positive|Positive|Positive|Negative|Positive|Positive|Negative|Positive|Positive|Positive|Positive|Negative","Negative|Positive|Positive|Positive|Positive|Negative","Negative|Positive|Positive|Positive|Positive|Negative|Negative","Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative","Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative|Negative","Negative|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Negative|Indeterminate|Indeterminate","Negative|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Negative","Positive","Positive|Negative|Negative|Positive|Positive|Positive|Negative|Negative|Negative","Positive|Negative|Positive","Positive|Negative|Positive|Negative|Negative","Positive|Negative|Positive|Negative|Positive|Positive|Positive|Positive|Negative","Positive|Negative|Positive|Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative|Positive","Positive|Negative|Positive|Positive|Negative|Negative","Positive|Negative|Positive|Positive|Positive|Negative","Positive|Negative|Positive|Positive|Positive|Negative|","Positive|Negative|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Negative|Positive|Indeterminate|Indeterminate","Positive|Negative|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Positive|Negative|Negative","Positive|Positive","Positive|Positive|Negative|Negative|Positive|Positive|Positive|Positive|Positive|Negative|Negative|Positive|Positive","Positive|Positive|Positive","Positive|Positive|Positive|Negative|Negative","Positive|Positive|Positive|Negative|Positive|Positive|Negative|Negative|Negative|Negative","Positive|Positive|Positive|Negative|Positive|Positive|Positive|Positive|Negative|Positive|Negative|Negative|Indeterminate|Positive","Positive|Positive|Positive|Positive|Negative|Negative|Negative|Indeterminate|Indeterminate","Positive|Positive|Positive|Positive|Positive|Negative","Positive|Positive|Positive|Positive|Positive|Positive"
+system_version	shortTitle	system_version
+system_version	longTitle	system_version
+system_version	valueType	category
+system_version	state	4th
+system_version	state	5th
+system_version	state	6th
+system_version	state	7th
+system_version	stateOrder	"4th","5th","6th","7th"
+tissue_prospective_collection_indicator	shortTitle	tissue prospective collection indicator
+tissue_prospective_collection_indicator	longTitle	tissue prospective collection indicator
+tissue_prospective_collection_indicator	valueType	category
+tissue_prospective_collection_indicator	state	NO
+tissue_prospective_collection_indicator	state	YES
+tissue_prospective_collection_indicator	stateOrder	"NO","YES"
+tissue_retrospective_collection_indicator	shortTitle	tissue retrospective collection indicator
+tissue_retrospective_collection_indicator	longTitle	tissue retrospective collection indicator
+tissue_retrospective_collection_indicator	valueType	category
+tissue_retrospective_collection_indicator	state	NO
+tissue_retrospective_collection_indicator	state	YES
+tissue_retrospective_collection_indicator	stateOrder	"NO","YES"
+tissue_source_site	shortTitle	tissue source site
+tissue_source_site	longTitle	tissue source site
+tissue_source_site	valueType	category
+tissue_source_site	state	FA
+tissue_source_site	state	FF
+tissue_source_site	state	FM
+tissue_source_site	state	G8
+tissue_source_site	state	GR
+tissue_source_site	state	GS
+tissue_source_site	state	RQ
+tissue_source_site	stateOrder	"FA","FF","FM","G8","GR","GS","RQ"
+weight	shortTitle	weight
+weight	longTitle	weight
+weight	valueType	float
+year_of_initial_pathologic_diagnosis	shortTitle	year of initial pathologic diagnosis
+year_of_initial_pathologic_diagnosis	longTitle	year of initial pathologic diagnosis
+year_of_initial_pathologic_diagnosis	valueType	float
+_anatomical_origin	shortTitle	_anatomical_origin
+_anatomical_origin	longTitle	_anatomical_origin
+_cohort	shortTitle	_cohort
+_cohort	longTitle	_cohort
+_primary_disease	shortTitle	_primary_disease
+_primary_disease	longTitle	_primary_disease
+_PATIENT	shortTitle	_PATIENT_ID
+_PATIENT	longTitle	_PATIENT_ID
+_PATIENT	valueType	category
+_INTEGRATION	shortTitle	_SAMPLE_ID
+_INTEGRATION	longTitle	_SAMPLE_ID
+_INTEGRATION	valueType	category

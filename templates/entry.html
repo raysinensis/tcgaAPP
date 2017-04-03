@@ -1,0 +1,23 @@
+<!doctype html>
+<title>TCGA gene query</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<div class=page>
+  <h1>TCGA gene query</h1>
+  <div class=metanav>
+
+    <h4>
+      Enter gene of interest:
+    </h4>
+
+    <form id='userinput' method='post' action='index' >
+      <p>
+    survival analysis: <input type='text' name='name' />
+      </p>
+      <p>
+    <input type='Submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>
+</html>
