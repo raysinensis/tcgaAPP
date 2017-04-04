@@ -7,20 +7,27 @@
 
     </head>
     <body>
-    <h1>Results{{filelink}}</h1>
+    <h1>Results</h1>
       <p>
-    <input type='Download' value='Download' onClick="window.location.href='{{filelink}}'" />
+    <input type='button' value='Download' onClick="window.location.href='{{filelink}}'" />
+<button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
       </p>
 <div>
 <table border=1 cellpaddings=7>
             <tr>
                 <th>Gene</th>
-                <th>Tumor</th>
-                <th>Cutpoint</th>
-                <th>FDR</th>
-		<th>Mutations</th>
-                <th>Insertions</th>
-                <th>Deletions</th>
+                <th title="TCGA designation">Tumor</th>
+                <th title="Determind by MaxRank">Cutpoint</th>
+                <th title="Adjusted False Discovery Rate">FDR</th>
+		<th title="MUT designates significance">Mutations</th>
+                <th title="INS designates significance">Insertions</th>
+                <th title="DEL designates significance">Deletions</th>
             </tr>
             {% for obj in object_list %}
             <tr>
@@ -38,6 +45,22 @@
 <div>
 	<img src='/static/OUT/RSEM.png'> 
  </div>
-	<img src='/static/OUT/km.png' style="width:500px;height:500px;"> 
+	{% for obj in pnglist %}
+	<img src={{obj}} height="400" width="400"> 
+	{% endfor %}
+<script>
+	var myPhoto={{pnglist}};
+	for (var i=0, len = myPhoto.length; i < len; ++i) {
+    	var img = new Image();
+    	img.src = myPhoto[i];
+    	}
+</script>
+
+
+
+
+
+
+
     </body>
 </html>

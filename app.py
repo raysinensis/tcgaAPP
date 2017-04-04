@@ -45,8 +45,9 @@ def trying():
 		with zipfile.ZipFile("./static/zips/"+app.vars+".zip","r") as zip_ref:
 			zip_ref.extractall("./static/OUT/")
 		filelink="/static/zips/"+app.vars+".zip"
+		pnglist=glob.glob('./static/OUT/*km.png')
 		object_list = get_csv()
-		return render_template('trying.html', object_list=object_list, filelink=filelink)
+		return render_template('trying.html', object_list=object_list, filelink=filelink, pnglist=pnglist)
 
 	command = 'Rscript'
 	path2script = './static/TCGAkm.r'
@@ -56,8 +57,13 @@ def trying():
 
 	img = PythonMagick.Image()
 	img.density("300")
-	img.read('./static/OUT/km.pdf')
-	img.write('./static/OUT/km.png')
+	pdflist=glob.glob('./static/OUT/*.pdf')
+	pnglist=[]
+	for item in pdflist:
+		img.read(item)
+		newf=item[:-3]+'png'
+		img.write(newf)
+		pnglist.append(newf)
 
 	path2script = './static/expr_med.r'
 	cmd2 = [command, path2script]
@@ -72,7 +78,7 @@ def trying():
 	filelink="/static/zips/"+app.vars+".zip"
 		
 	object_list = get_csv()
-	return render_template('trying.html', object_list=object_list, filelink=filelink)
+	return render_template('trying.html', object_list=object_list, filelink=filelink, pnglist=pnglist)
 
 def get_csv():
 	p = './static/OUT/final.csv'

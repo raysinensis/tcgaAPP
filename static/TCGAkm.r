@@ -85,7 +85,7 @@ for(foldername in folderlist) {
 		survgene<-Surv(as.numeric(quartdata$'X_OS'),as.numeric(quartdata$'X_OS_IND'))
 		fit1 <- survfit(survgene~quartdata$geneQ)
 		setwd(paste(mainpath,"/static/OUT",sep=''))
-		pdf("km.pdf")
+		pdf(paste(cancername,"-km.pdf",sep=''))
 		plot(fit1, main=paste(genename,", ", cancername), xlab="Days", ylab="% Survival", col=c(1,2), lty=1)
 		legend(2000, 1, c("High", "Low") , col=c(1,2), lty=1)
 		dev.off()
