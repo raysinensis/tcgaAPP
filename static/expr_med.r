@@ -96,6 +96,7 @@ i=i+1
 
 widthcal=300*length(cancerlist)
 colnames(df)=c("normal_median","tumor_median","surv_cutoff","tumor_type")
+write.table(df,"level.csv",append=F, col.names = T, row.names = F, sep=",")
 library(ggplot2)
 library(reshape)
 df2 <- melt(df, id.vars = "tumor_type")

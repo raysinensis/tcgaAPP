@@ -1,7 +1,7 @@
 <!doctype html>
 <title>TCGA gene query</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
-<a href="/static/sources.html"> Data Sources </a>&nbsp;
+<a href="/static/sources.html"> Data Sources </a>&nbsp;&nbsp;&nbsp;
 <a href="/static/terms.html"> Terminology </a>
 <div class=page>
   <h1>The Cancer Genome Atlas</h1>
@@ -13,7 +13,7 @@
 
     <form id='userinput' method='post' action='index' >
       <p>
-    Gene Symbol: <input type='text' name='name' placeholder="Gene of Interest"/>
+    Gene Symbol: <input type='text' name='name' />
       </p>
       <p>
     <input type='Submit' value='Submit' />

@@ -12,6 +12,7 @@ file.remove(outputfile)
 folderlist<-list.dirs(paste(mainpath,"/data",sep=''))
 folderlist<-folderlist[-1]
 ##print(folderlist)
+genes<-myArgs
 
 for(foldername in folderlist) {
 	##folderpath<-paste0(mainpath,foldername,collapse=NULL)
@@ -27,7 +28,6 @@ for(foldername in folderlist) {
 	##head(data,5)
 
 ##filter for genes of interest
-	genes<-myArgs
 
 ##calculate and designate 25 and 75 quantile expression
 	for(genename in genes) {
