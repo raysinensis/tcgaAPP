@@ -113,7 +113,7 @@ def plot_levels():
 	fold=[]
 	for n in range(len(df5)/3):
 		for i in range(3):
-			fold.append(str(df5.iloc[n*3+i,2]/df5.iloc[n*3,2]))
+			fold.append(str(2**(df5.iloc[n*3+i,2]-df5.iloc[n*3,2])))
 	df5["folds"]=fold
 	source=ColumnDataSource(df5)
 	hover = HoverTool(tooltips=[
