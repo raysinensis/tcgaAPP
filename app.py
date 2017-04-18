@@ -128,7 +128,7 @@ def plot_levels():
 	return script,div
 
 def get_splice(gname):
-	with open('/home/rf/TCGAapp/static/TCGA_alt_spl_g.txt','r') as slist:
+	with open('./static/TCGA_alt_spl_g.txt','r') as slist:
 		rlist=slist.read().split('\n')
 		if app.vars in rlist:
 			splice="Significant Alternative Splicing"
