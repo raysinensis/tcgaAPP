@@ -19,8 +19,8 @@ from bokeh.embed import components
 from collections import OrderedDict
 
 
-app = Flask(__name__)
-#app.debug = True
+app = Flask(__name__,static_url_path='/static')
+app.debug = True
 
 app.vars=''
 
