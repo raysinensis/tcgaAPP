@@ -97,32 +97,38 @@ def get_csv():
 
 def plot_levels():
 	#read csv
-	levelp='./static/OUT/levels.csv'
+	levelp='./static/OUT/level.csv'
 	df=pandas.read_csv(levelp,header='infer')
-	df["cancers"] = df["tumor_type"] + '_' + df["condition"]
-	cancers=list(df["cancers"])
-	upperscore=list(df.iloc[:,4])
-	lowerscore=list(df.iloc[:,0])
-	q1score=list(df.iloc[:,1])
-	q2score=list(df.iloc[:,2])
-	q3score=list(df.iloc[:,3])
-	cutscore=list(df.iloc[:,5])
-	
-	#zip?
+	df2=df.set_index(df["tumor_type"])
+	df2=df2.iloc[:,:3]
+	df3=df2.stack()
+	df3.index.names=['tumor_type','condition']
+	df4=pandas.DataFrame(df3)
+	df4.columns=["RSEM"]
+	df5=df4.reset_index()
+	df5=df5.replace(0,numpy.nan)
 
-	p = figure(tools="save", background_fill_color="#EFE8E2", title="", x_range=cancers)
-	p.segment(cancers, upperscore, cancers, q3score, line_color="black")
-	p.segment(cancers, lowerscore, cancers, q1score, line_color="black")
-	p.vbar(cancers, 0.7, q2score, q3score, fill_color="#E08E79", line_color="black")
-	p.vbar(cancers, 0.7, q1score, q2score, fill_color="#3B8686", line_color="black")
-	p.rect(cancers, cutscore, 0.7, 0.01, line_color="red")
-	p.rect(cancers, lowerscore, 0.2, 0.01, line_color="black")
-	p.rect(cancers, upperscore, 0.2, 0.01, line_color="black")
 
-	p.xgrid.grid_line_color = None
-	p.ygrid.grid_line_color = "white"
-	p.grid.grid_line_width = 2
-	p.xaxis.major_label_text_font_size="12pt"
+	#plot w/ bokeh
+	fold=[]
+	for n in range(len(df5)/3):
+		for i in range(3):
+			fold.append(str(2**(df5.iloc[n*3+i,2]-df5.iloc[n*3,2])))
+	df5["folds"]=fold
+	source=ColumnDataSource(df5)
+	hover = HoverTool(tooltips=[
+		("RSEM", "@RSEM"),
+		("fold/normal", "@folds"),
+    		("condition", "@condition"),
+    		("type:", "@tumor_type"),
+		])
+	p=figure(tools=[hover])
+
+	colormap = {'surv_cutoff': 'red', 'normal_median': "green", 'tumor_median': 'blue'}
+	colors = [colormap[x] for x in df5["condition"]]
+	p.circle("folds","RSEM",color=colors, fill_alpha=0.2, size=15, source=source)
+	#li=Dot(df5, values="RSEM", label='tumor_type',
+        #   group='condition',legend='bottom_right', ylabel="RSEM(log2)",fill_alpha=1,tools=[hover])
 
 	script, div = components(p)
 	return script,div

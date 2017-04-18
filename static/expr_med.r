@@ -19,6 +19,7 @@ for (singlecsv in csvfiles) {
 
 diff.Exp.Genes = as.character(generesult$V1[1])
 df=data.frame(matrix(NA, nrow = length(cancerlist), ncol = 4))
+df2=data.frame(matrix(NA, nrow = length(cancerlist)*2, ncol = 8))
 i=1
 
 for (cancer in cancerlist){
@@ -85,18 +86,40 @@ dim(mRNA.Exp)
 normal_med=median(mRNA.Exp$expression_log2[substr(mRNA.Exp$sample_type,start=1,stop=1)=="N"])
 cancer_med=median(mRNA.Exp$expression_log2[substr(mRNA.Exp$sample_type,start=1,stop=1)=="T"])
 if (is.na(normal_med)){
-df$"X1"[i]=0}
-else{
+df$"X1"[i]=0
+} else {
 df$"X1"[i]=normal_med}
 df$"X2"[i]=cancer_med
 df$"X3"[i]=generesult$"V5"[i]
 df$"X4"[i]=cancer.Type
+normalq=quantile(mRNA.Exp$expression_log2[substr(mRNA.Exp$sample_type,start=1,stop=1)=="N"],names=FALSE)
+cancerq=quantile(mRNA.Exp$expression_log2[substr(mRNA.Exp$sample_type,start=1,stop=1)=="T"],names=FALSE)
+j=(2*i-1)
+k=j+1
+df2$"X1"[j]=normalq[1]
+df2$"X2"[j]=normalq[2]
+df2$"X3"[j]=normalq[3]
+df2$"X4"[j]=normalq[4]
+df2$"X5"[j]=normalq[5]
+df2$"X1"[k]=cancerq[1]
+df2$"X2"[k]=cancerq[2]
+df2$"X3"[k]=cancerq[3]
+df2$"X4"[k]=cancerq[4]
+df2$"X5"[k]=cancerq[5]
+df2$"X6"[k]=generesult$"V5"[i]
+#df2$"X6"[2*i-1]=generesult$"V5"[i]
+df2$"X7"[k]=cancer.Type
+df2$"X7"[j]=cancer.Type
+df2$"X8"[k]='tumor'
+df2$"X8"[j]='normal'
 i=i+1
 }
 
 widthcal=300*length(cancerlist)
 colnames(df)=c("normal_median","tumor_median","surv_cutoff","tumor_type")
 write.table(df,"level.csv",append=F, col.names = T, row.names = F, sep=",")
+colnames(df2)=c("min","25%","median","75%","max","surv_cutoff","tumor_type","condition")
+write.table(df2,"levels.csv",append=F, col.names = T, row.names = F, sep=",")
 library(ggplot2)
 library(reshape)
 df2 <- melt(df, id.vars = "tumor_type")
@@ -110,3 +133,5 @@ p<-ggplot(data=df2, aes(x=tumor_type, y=RSEM_log2, fill=condition)) +
 png("RSEM.png",width = widthcal, height = 600, res = 200)
 p
 dev.off()
+
+
