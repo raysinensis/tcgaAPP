@@ -4,7 +4,7 @@ import json
 import pandas
 import csv
 import subprocess
-import PythonMagick
+#import PythonMagick
 import os
 import glob
 import shutil
@@ -20,7 +20,7 @@ from collections import OrderedDict
 
 
 app = Flask(__name__)
-app.debug = True
+#app.debug = True
 
 app.vars=''
 
@@ -63,15 +63,15 @@ def trying():
 	cmd = [command, path2script] + args
 	x = subprocess.check_output(cmd, universal_newlines=True)
 
-	img = PythonMagick.Image()
-	img.density("300")
-	pdflist=glob.glob('./static/OUT/*.pdf')
-	pnglist=[]
-	for item in pdflist:
-		img.read(item)
-		newf=item[:-3]+'png'
-		img.write(newf)
-		pnglist.append(newf)
+	#img = PythonMagick.Image()
+	#img.density("300")
+	#pdflist=glob.glob('./static/OUT/*.pdf')
+	#pnglist=[]
+	#for item in pdflist:
+	#	img.read(item)
+	#	newf=item[:-3]+'png'
+	#	img.write(newf)
+	#	pnglist.append(newf)
 
 	path2script = './static/expr_med.r'
 	cmd2 = [command, path2script]
