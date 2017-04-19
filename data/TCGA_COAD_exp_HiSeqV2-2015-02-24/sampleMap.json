@@ -1,0 +1,19 @@
+{
+":integrationId": "TCGA.COAD.sampleMap.integrationID", 
+"domain": "TCGA", 
+"name": "TCGA.COAD.sampleMap", 
+"anatomical_origin": [
+"Colon"
+], 
+"primary_disease": "colon adenocarcinoma", 
+"tags": [
+"cancer"
+], 
+"sample_type": [
+"tumor"
+], 
+"version": "2015-01-28", 
+"owner": "TCGA", 
+"type": "sampleMap", 
+"cgDataVersion": 1
+}

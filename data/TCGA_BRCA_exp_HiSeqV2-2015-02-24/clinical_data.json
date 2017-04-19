@@ -1,0 +1,20 @@
+{
+":dataSubType": "phenotype", 
+"cohort": "TCGA Breast Cancer", 
+"wrangler": "cgData TCGAscript Clinical processed on 2015-02-24,cgData TCGAscript survival processed on 2015-02-24,cgData TCGAscript Clinical processed on 2015-02-24", 
+":clinicalFeature": "BRCA_clinicalFeature", 
+"shortTitle": "BRCA Nature 2012 STable 1 sheet 1 tumor information,PAM50_RNAseq,BRCA Nature 2012 STable 1 sheet 1 patient information", 
+"url": "https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/brca/bcr/", 
+":sampleMap": "TCGA.BRCA.sampleMap", 
+"label": "Phenotypes", 
+"name": "BRCA_clinicalMatrix", 
+"upToDate": "4.0_nte,4.0,2.1,1.5", 
+"longTitle": "TCGA BRCA clinical data from Nature 2012 STable1 sheet 1 tumor information,PAM50 calls for RNAseq,TCGA BRCA clinical data from Nature 2012 STable1 sheet 1 patient information", 
+"version": "2015-02-24", 
+"cgDataVersion": 1, 
+"dataProducer": "TCGA biospecimen core resource,http://www.nature.com/nature/journal/v490/n7418/full/nature11412.html#supplementary-information,https://www.synapse.org/#!Synapse:syn1712142,https://www.synapse.org/#!Synapse:syn1688309,TCGA biospecimen core resource,https://www.synapse.org/#!Synapse:syn1756922,https://www.synapse.org/#!Synapse:syn1701558,https://www.synapse.org/#!Synapse:syn2492003,unc,TCGA biospecimen core resource,http://www.nature.com/nature/journal/v490/n7418/full/nature11412.html#supplementary-information,UCSC,https://www.synapse.org/#!Synapse:1875816,https://www.synapse.org/#!Synapse:syn2487022,https://www.synapse.org/#!Synapse:syn1715788,TCGA biospecimen core resource,https://www.synapse.org/#!Synapse:2027079", 
+"redistribution": true, 
+"type": "clinicalMatrix", 
+"wrangling_procedure": "Clinical data download from TCGA DCC, processed at UCSC into cgData repository,https://groups.google.com/forum/?fromgroups#!topic/ucsc-cancer-genomics-browser/YvKnWZSsw1Q,Clinical data download from TCGA DCC, processed at UCSC into cgData repository", 
+"description": "This dataset is the TCGA Breast Cancer (BRCA) clinical data.,TCGA BRCA sample PAM50 call PAM50 calls for RNAseq obtained from unc,This dataset is the TCGA Breast Cancer (BRCA) clinical data.,This dataset is the TCGA Breast Cancer (BRCA) clinical data."
+}

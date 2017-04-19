@@ -4,15 +4,16 @@ import json
 import pandas
 import csv
 import subprocess
-#import PythonMagick
+import PythonMagick
 import os
 import glob
 import shutil
 import zipfile
 import numpy
+
 from flask import Flask, render_template, request, redirect, current_app
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
-from bokeh.models import Label,HoverTool
+from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
 from bokeh.plotting import figure, show, output_file
 
 from bokeh.embed import components
@@ -63,15 +64,16 @@ def trying():
 	cmd = [command, path2script] + args
 	x = subprocess.check_output(cmd, universal_newlines=True)
 
-	#img = PythonMagick.Image()
-	#img.density("300")
-	#pdflist=glob.glob('./static/OUT/*.pdf')
-	#pnglist=[]
-	#for item in pdflist:
-	#	img.read(item)
-	#	newf=item[:-3]+'png'
-	#	img.write(newf)
-	#	pnglist.append(newf)
+	img = PythonMagick.Image()
+	img.density("300")
+	pdflist=glob.glob('./static/OUT/*.pdf')
+	pnglist=[]
+	for item in pdflist:
+		img.read(item)
+		newf=item[:-3]+'png'
+		img.write(newf)
+		pnglist.append(newf)
+		os.rename(item,item[:-7]+'_tumor-km.pdf')
 
 	path2script = './static/expr_med.r'
 	cmd2 = [command, path2script]
@@ -99,31 +101,112 @@ def plot_levels():
 	#read csv
 	levelp='./static/OUT/levels.csv'
 	df=pandas.read_csv(levelp,header='infer')
+	df=df.replace(numpy.nan,0)
 	df["cancers"] = df["tumor_type"] + '_' + df["condition"]
 	cancers=list(df["cancers"])
-	upperscore=list(df.iloc[:,4])
-	lowerscore=list(df.iloc[:,0])
-	q1score=list(df.iloc[:,1])
-	q2score=list(df.iloc[:,2])
-	q3score=list(df.iloc[:,3])
-	cutscore=list(df.iloc[:,5])
+	maxy=max(df["max"])+0.5
+	
+	#upperscore=list(df.iloc[:,4])
+	#lowerscore=list(df.iloc[:,0])
+	#q1score=list(df.iloc[:,1])
+	#q2score=list(df.iloc[:,2])
+	#q3score=list(df.iloc[:,3])
+	#cutscore=list(df.iloc[:,5])
+	#folds=list(df.iloc[:,5]/df.iloc[:,2])
 	
 	#zip?
-
-	p = figure(tools="save", background_fill_color="#EFE8E2", title="", x_range=cancers)
-	p.segment(cancers, upperscore, cancers, q3score, line_color="black")
-	p.segment(cancers, lowerscore, cancers, q1score, line_color="black")
-	p.vbar(cancers, 0.7, q2score, q3score, fill_color="#E08E79", line_color="black")
-	p.vbar(cancers, 0.7, q1score, q2score, fill_color="#3B8686", line_color="black")
-	p.rect(cancers, cutscore, 0.7, 0.01, line_color="red")
-	p.rect(cancers, lowerscore, 0.2, 0.01, line_color="black")
-	p.rect(cancers, upperscore, 0.2, 0.01, line_color="black")
+	q2ratio=[]
+	for i in range(len(df)):
+		q2ratio.append(2**(df["median"][i]-df["median"][i//2*2]))
+	q1ratio=[]
+	for i in range(len(df)):
+		q1ratio.append(2**(df["25%"][i]-df["25%"][i//2*2]))
+	q3ratio=[]
+	for i in range(len(df)):
+		q3ratio.append(2**(df["75%"][i]-df["75%"][i//2*2]))
+	cutratio=[]
+	for i in range(len(df)):
+		cutratio.append(2**(df["surv_cutoff"][i]-df["median"][i//2*2]))
+	source=ColumnDataSource(
+		data=dict(
+		cancers=list(df["cancers"]),
+		upperscore=list(df.iloc[:,4]),
+		lowerscore=list(df.iloc[:,0]),
+		q1score=list(df.iloc[:,1]),
+		q2score=list(df.iloc[:,2]),
+		q3score=list(df.iloc[:,3]),
+		cutscore=list(df.iloc[:,5]),
+		ratio=q2ratio
+		)
+	)
+	source2=ColumnDataSource(
+		data=dict(
+		cancers=list(df["cancers"]),
+		upperscore=list(df.iloc[:,4]),
+		lowerscore=list(df.iloc[:,0]),
+		q1score=list(df.iloc[:,1]),
+		q2score=list(df.iloc[:,2]),
+		q3score=list(df.iloc[:,3]),
+		cutscore=list(df.iloc[:,5]),
+		ratio=cutratio,
+		)
+	)
+	source3=ColumnDataSource(
+		data=dict(
+		cancers=list(df["cancers"]),
+		upperscore=list(df.iloc[:,4]),
+		lowerscore=list(df.iloc[:,0]),
+		q1score=list(df.iloc[:,1]),
+		q2score=list(df.iloc[:,2]),
+		q3score=list(df.iloc[:,3]),
+		cutscore=list(df.iloc[:,5]),
+		ratio=q1ratio,
+		)
+	)
+	source4=ColumnDataSource(
+		data=dict(
+		cancers=list(df["cancers"]),
+		upperscore=list(df.iloc[:,4]),
+		lowerscore=list(df.iloc[:,0]),
+		q1score=list(df.iloc[:,1]),
+		q2score=list(df.iloc[:,2]),
+		q3score=list(df.iloc[:,3]),
+		cutscore=list(df.iloc[:,5]),
+		ratio=q3ratio,
+		)
+	)
+	
+	p = figure(tools=["save","hover",'pan','ywheel_zoom','reset','tap'], background_fill_color="white", title="", x_range=cancers)
+	hover = p.select(dict(type=HoverTool))
+	hover.tooltips = [('condition','@cancers'),('ratio/normal','@ratio{1.11}')]
+	hover.point_policy='snap_to_data'
+	p.segment('cancers', 'upperscore', 'cancers', 'q3score', line_color="black",source=source,legend="max")
+	p.segment('cancers', 'lowerscore', 'cancers', 'q1score', line_color="black",source=source,legend="min")
+	p.vbar('cancers', 0.35, 'q1score', 'q3score', fill_color=["#9ACD32","#FF4500"]*(len(df)/2), line_color="black",source=source,legend="quartiles")
+	p.rect('cancers', 'q2score', 0.35, 0.045, line_color="black",fill_color="black",source=source,legend="median")
+	p.rect('cancers', 'cutscore', 0.35, 0.045, line_color=["#FFFFFF","red"]*(len(df)/2),fill_color="red",source=source2,legend="cutpoint")
+	p.rect('cancers', 'lowerscore', 0.1, 0.023, line_color="black",source=source3,legend="min")
+	p.rect('cancers', 'upperscore', 0.1, 0.023, line_color="black",source=source4,legend="max")
 
 	p.xgrid.grid_line_color = None
 	p.ygrid.grid_line_color = "white"
 	p.grid.grid_line_width = 2
 	p.xaxis.major_label_text_font_size="12pt"
+	p.yaxis.major_label_text_font_size="12pt"
+	p.yaxis.axis_label_text_font_size="12pt"
+	p.y_range=Range1d(0,maxy)
+	p.yaxis.axis_label="RSEM(log2)"
+	p.yaxis.axis_label_text_font_style = "normal"
+	p.xaxis.major_label_orientation=numpy.pi/4
 
+	p.legend.location = "bottom_left"
+	p.legend.click_policy="hide"
+
+	url = "http://0.0.0.0:33507/static/OUT/@cancers"
+	url2= url+'-km.pdf'
+	taptool = p.select(type=TapTool)
+	taptool.callback = OpenURL(url=url2)
+	
 	script, div = components(p)
 	return script,div
 

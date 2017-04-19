@@ -57,12 +57,12 @@ for(foldername in folderlist) {
 ##using maxstat to determine cutoff, may need to random sample if sample size is too large
 		survdata <- as.data.frame.matrix(patientgenes) 
 		rownum <- nrow(survdata)
-		if (rownum<=800) {
+		if (rownum<=500) {
 		cutoff <- tryCatch(maxstat.test(Surv(X_OS,X_OS_IND) ~ geneofinterest, data=survdata, smethod="LogRank", pmethod="HL"),error=function(w){message("cannot run maxstat")})
 		cutnum<-as.numeric(cutoff$estimate)
 		} else {
 		##print("random sampling")
-		survdata<-survdata[sample(rownum,800), ]
+		survdata<-survdata[sample(rownum,500), ]
 		cutoff <- tryCatch(maxstat.test(Surv(X_OS,X_OS_IND) ~ geneofinterest, data=survdata, smethod="LogRank", pmethod="HL"),error=function(w){message("cannot run maxstat")})
 		cutnum<-as.numeric(cutoff$estimate)}
 		##print(cutnum)

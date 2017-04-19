@@ -1,0 +1,21 @@
+{
+":dataSubType": "phenotype", 
+"cohort": "TCGA Lung Adenocarcinoma", 
+"wrangler": "cgData TCGAscript Clinical processed on 2015-02-24,cgData TCGAscript survival processed on 2015-02-24,cgData TCGAscript Clinical processed on 2015-02-24,cgData TCGAscript Clinical processed on 2015-02-24,cgData TCGAscript Clinical processed on 2015-02-24", 
+"redistribution": true, 
+":clinicalFeature": "LUAD_clinicalFeature", 
+"shortTitle": "LUAD_AWG", 
+"url": "https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/luad/bcr/", 
+"description": "This dataset is the TCGA Lung Adenocarcinoma (LUAD) clinical data.,TCGA LUAD AWG annotation", 
+":sampleMap": "TCGA.LUAD.sampleMap", 
+"label": "Phenotypes", 
+"upToDate": "1.0", 
+"longTitle": "LUAD_AWG", 
+"version": "2015-02-24", 
+"dataProducer": "TCGA biospecimen core resource,UCSC,https://www.synapse.org/#!Synapse:syn1688309,https://www.synapse.org/#!Synapse:syn1756922,https://www.synapse.org/#!Synapse:syn2492003,https://www.synapse.org/#!Synapse:syn1715788,https://www.synapse.org/#!Synapse:syn2487022,https://www.synapse.org/#!Synapse:syn1701558,TCGA biospecimen core resource,https://www.synapse.org/#!Synapse:2027079,https://www.synapse.org/#!Synapse:syn1712142,TCGA biospecimen core resource,TCGA biospecimen core resource,https://www.synapse.org/#!Synapse:1875816,LUAD AWG", 
+"cgDataVersion": 1, 
+"type": "clinicalMatrix", 
+"outOfDate": "yes", 
+"wrangling_procedure": "Clinical data download from TCGA DCC, processed at UCSC into cgData repository,https://groups.google.com/forum/?fromgroups#!topic/ucsc-cancer-genomics-browser/YvKnWZSsw1Q,Clinical data download from TCGA DCC, processed at UCSC into cgData repository,Clinical data download from TCGA DCC, processed at UCSC into cgData repository,Clinical data download from TCGA DCC, processed at UCSC into cgData repository", 
+"name": "LUAD_clinicalMatrix"
+}

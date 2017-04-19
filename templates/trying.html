@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <title>Results-{{gname}}</title>
 
-<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.css" type="text/css" />
-        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.js"></script>
+<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" type="text/css" />
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
 
          {{ script | safe }}
 
@@ -62,19 +62,12 @@ function goBack() {
       {{ div | safe }}
 </div>
 <div>
-	<img src='/static/OUT/RSEM.png' > 
  </div>
-
+<hr>
 	{% for obj in pnglist %}
 	<img src={{obj}} height="400" width="400"> 
 	{% endfor %}
-<script>
-	var myPhoto={{pnglist}};
-	for (var i=0, len = myPhoto.length; i < len; ++i) {
-    	var img = new Image();
-    	img.src = myPhoto[i];
-    	}
-</script>
+
 
 
 

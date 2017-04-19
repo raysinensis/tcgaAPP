@@ -1,0 +1,20 @@
+{
+":integrationId": "TCGA.BRCA.sampleMap.integrationID", 
+"domain": "TCGA", 
+"name": "TCGA.BRCA.sampleMap", 
+"anatomical_origin": [
+"Breast"
+], 
+"primary_disease": "breast invasive carcinoma", 
+"tags": [
+"cancer"
+], 
+"sample_type": [
+"tumor"
+], 
+"VIS": 5, 
+"version": "2015-01-28", 
+"owner": "TCGA", 
+"type": "sampleMap", 
+"cgDataVersion": 1
+}
