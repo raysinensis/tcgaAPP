@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+    </head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css">
+
+<div id="chart" style="height: 500px;"><svg></svg></div>
+    <script type="text/javascript">
+        var chart = nv.models.multiBarChart();
+d3.select('#chart svg').datum([
+  {
+    key: "mut",
+    color: "#51A351",
+    values:
+    [      
+      { x : "BRCA", y : 596 },
+      { x : "COAD", y : 1825 },
+      { x : "LUAD",   y : 811 },
+      { x : "SKCM",   y : 967 }   
+    ]
+  },
+  {
+    key: "ins",
+    color: "#BD362F",
+    values:
+    [      
+      { x : "BRCA", y : 344 },
+      { x : "COAD", y : 257 },
+      { x : "LUAD",   y : 662 },
+      { x : "SKCM",   y : 1121 }  
+    ]
+  },
+  {
+    key: "del",
+    color: "#ADD8E6",
+    values:
+    [      
+      { x : "BRCA", y : 1488 },
+      { x : "COAD", y : 1695 },
+      { x : "LUAD",   y : 3276 },
+      { x : "SKCM",   y : 2259 }  
+    ]
+  },
+  {
+    key: "methyl",
+    color: "#FFFF00",
+    values:
+    [      
+      { x : "BRCA", y : 1681 },
+      { x : "COAD", y : 990 },
+      { x : "LUAD",   y : 1581 },
+      { x : "SKCM",   y : 2647 }  
+    ]
+  },
+]).transition().duration(500).call(chart);
+    </script>
+</body>
+</html>
