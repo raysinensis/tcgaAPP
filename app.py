@@ -4,7 +4,7 @@ import json
 import pandas
 import csv
 import subprocess
-import PythonMagick
+#import PythonMagick
 import os
 import glob
 import shutil
@@ -15,6 +15,9 @@ from flask import Flask, render_template, request, redirect, current_app
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
 from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
 from bokeh.plotting import figure, show, output_file
+from bokeh.layouts import widgetbox,column,row
+from bokeh.models.widgets import CheckboxGroup,Slider
+from bokeh.models.callbacks import CustomJS
 
 from bokeh.embed import components
 from collections import OrderedDict
@@ -35,11 +38,18 @@ def index():
   		return render_template('entry.html')
 	else:
 		app.vars=request.form['name']
-		f=open('history.txt','a')
-		f.write(app.vars)
-		f.write("\n")
-		f.close()
-		return redirect('/trying')
+		if len(app.vars)>2:
+			f=open('history.txt','a')
+			f.write(app.vars)
+			f.write("\n")
+			f.close()
+			return redirect('/trying')
+		else:
+			return render_template('entry.html')
+		
+@app.route('/genemap',methods=['GET','POST'])
+def genemap():
+	return render_template('genemap.html')
 
 @app.route('/trying',methods=['GET','POST'])
 def trying():
@@ -64,15 +74,15 @@ def trying():
 	cmd = [command, path2script] + args
 	x = subprocess.check_output(cmd, universal_newlines=True)
 
-	img = PythonMagick.Image()
-	img.density("300")
+	#img = PythonMagick.Image()
+	#img.density("300")
 	pdflist=glob.glob('./static/OUT/*.pdf')
 	pnglist=[]
 	for item in pdflist:
-		img.read(item)
-		newf=item[:-3]+'png'
-		img.write(newf)
-		pnglist.append(newf)
+		#img.read(item)
+		#newf=item[:-3]+'png'
+		#img.write(newf)
+		#pnglist.append(newf)
 		os.rename(item,item[:-7]+'_tumor-km.pdf')
 
 	path2script = './static/expr_med.r'
@@ -118,12 +128,12 @@ def plot_levels():
 	q2ratio=[]
 	for i in range(len(df)):
 		q2ratio.append(2**(df["median"][i]-df["median"][i//2*2]))
-	q1ratio=[]
+	minratio=[]
 	for i in range(len(df)):
-		q1ratio.append(2**(df["25%"][i]-df["25%"][i//2*2]))
-	q3ratio=[]
+		minratio.append(2**(df["min"][i]-df["min"][i//2*2]))
+	maxratio=[]
 	for i in range(len(df)):
-		q3ratio.append(2**(df["75%"][i]-df["75%"][i//2*2]))
+		maxratio.append(2**(df["max"][i]-df["max"][i//2*2]))
 	cutratio=[]
 	for i in range(len(df)):
 		cutratio.append(2**(df["surv_cutoff"][i]-df["median"][i//2*2]))
@@ -160,7 +170,7 @@ def plot_levels():
 		q2score=list(df.iloc[:,2]),
 		q3score=list(df.iloc[:,3]),
 		cutscore=list(df.iloc[:,5]),
-		ratio=q1ratio,
+		ratio=minratio,
 		)
 	)
 	source4=ColumnDataSource(
@@ -172,11 +182,11 @@ def plot_levels():
 		q2score=list(df.iloc[:,2]),
 		q3score=list(df.iloc[:,3]),
 		cutscore=list(df.iloc[:,5]),
-		ratio=q3ratio,
+		ratio=maxratio,
 		)
 	)
 	
-	p = figure(tools=["save","hover",'pan','ywheel_zoom','reset','tap'], background_fill_color="white", title="", x_range=cancers)
+	p = figure(tools=["save","hover",'tap'], background_fill_color="white", title="", x_range=cancers,plot_width=880)
 	hover = p.select(dict(type=HoverTool))
 	hover.tooltips = [('condition','@cancers'),('ratio/normal','@ratio{1.11}')]
 	hover.point_policy='snap_to_data'
@@ -184,9 +194,9 @@ def plot_levels():
 	p.segment('cancers', 'lowerscore', 'cancers', 'q1score', line_color="black",source=source,legend="min")
 	p.vbar('cancers', 0.35, 'q1score', 'q3score', fill_color=["#9ACD32","#FF4500"]*(len(df)/2), line_color="black",source=source,legend="quartiles")
 	p.rect('cancers', 'q2score', 0.35, 0.045, line_color="black",fill_color="black",source=source,legend="median")
-	p.rect('cancers', 'cutscore', 0.35, 0.045, line_color=["#FFFFFF","red"]*(len(df)/2),fill_color="red",source=source2,legend="cutpoint")
-	p.rect('cancers', 'lowerscore', 0.1, 0.023, line_color="black",source=source3,legend="min")
-	p.rect('cancers', 'upperscore', 0.1, 0.023, line_color="black",source=source4,legend="max")
+	p.rect('cancers', 'cutscore', 0.35, 0.045, line_color=["#FFFFFF","blue"]*(len(df)/2),fill_color="blue",source=source2,legend="cutpoint--link to KM plot",name='cut')
+	p.rect('cancers', 'lowerscore', 0.1, 0.023, line_color="black",fill_color="black",source=source3,legend="min")
+	p.rect('cancers', 'upperscore', 0.1, 0.023, line_color="black",fill_color="black",source=source4,legend="max")
 
 	p.xgrid.grid_line_color = None
 	p.ygrid.grid_line_color = "white"
@@ -205,8 +215,9 @@ def plot_levels():
 	url = "http://0.0.0.0:33507/static/OUT/@cancers"
 	url2= url+'-km.pdf'
 	taptool = p.select(type=TapTool)
+	taptool.names=['cut']
 	taptool.callback = OpenURL(url=url2)
-	
+
 	script, div = components(p)
 	return script,div
 
