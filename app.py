@@ -32,6 +32,10 @@ app.vars=''
 def main():
   return redirect('/index')
 
+@app.route('/<string:page_name>/')
+def static_page(page_name):
+    return render_template('%s.html' % page_name)
+
 @app.route('/index',methods=['GET','POST'])
 def index():
 	if request.method == 'GET':
@@ -212,7 +216,7 @@ def plot_levels():
 	p.legend.location = "bottom_left"
 	p.legend.click_policy="hide"
 
-	url = "http://0.0.0.0:33507/static/OUT/@cancers"
+	url = "/static/OUT/@cancers"
 	url2= url+'-km.pdf'
 	taptool = p.select(type=TapTool)
 	taptool.names=['cut']

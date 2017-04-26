@@ -1,43 +1,83 @@
-<!doctype html>
-<title>TCGA gene query</title>
-<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
-<a href=""> Data Sources </a>&nbsp;&nbsp;&nbsp;
-<a href=""> Terminology </a>
-<div class=page>
-  <h1>The Cancer Genome Atlas</h1>
-  <div class=metanav>
 
-    <h4>
-      Enter gene of interest:
-    </h4>
 
-    <form id='userinput' method='post' action='index' >
-      <p>
-    Gene Symbol: <input type='text' name='name' />
-      </p>
-      <p>
-    <input type='Submit' value='Submit' />
-      </p>
-    </form>
+<!DOCTYPE html>
+<title>TCGA data description</title>
+<link rel=stylesheet type=text/css href='/static/style.css'>
+<a href="/static/sources.html"> Data Sources </a>&nbsp;
+<a href="/static/terms.html"> Terminology </a>&nbsp;
+<a href="/index"> Home </a>
+<head>
+    <style>
+        
+    </style>
+    </head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css">
 
-  </div>
-</div>
-<div class=page>
-  <h1>Tumor Associated Gene Prediction</h1>
-  <div class=metanav>
-
-    <h4>
-      Enter gene of interest:
-    </h4>
-
-    <form id='userinput' method='post' action='index' >
-      <p>
-    survival analysis: <input type='text' name='name' />
-      </p>
-      <p>
-    <input type='Submit' value='Submit' />
-      </p>
-    </form>
-
-  </div>
+<div id="chart" style="height: 500px;"><svg></svg></div>
+    <script type="text/javascript">
+nv.addGraph(function() {
+        var chart = nv.models.multiBarChart();
+	chart.yAxis.tickFormat(d3.format('.f'));
+	chart.tooltip.valueFormatter(d3.format('.f'));
+d3.select('#chart svg').datum([
+  {
+    key: "mut",
+    color: "#51A351",
+    values:
+    [      
+      { x : "BRCA", y : 596 },
+      { x : "COAD", y : 1825 },
+      { x : "LUAD",   y : 811 },
+      { x : "SKCM",   y : 967 }   
+    ]
+  },
+  {
+    key: "ins",
+    color: "#BD362F",
+    values:
+    [      
+      { x : "BRCA", y : 344 },
+      { x : "COAD", y : 257 },
+      { x : "LUAD",   y : 662 },
+      { x : "SKCM",   y : 1121 }  
+    ]
+  },
+  {
+    key: "del",
+    color: "#ADD8E6",
+    values:
+    [      
+      { x : "BRCA", y : 1488 },
+      { x : "COAD", y : 1695 },
+      { x : "LUAD",   y : 3276 },
+      { x : "SKCM",   y : 2259 }  
+    ]
+  },
+  {
+    key: "methyl",
+    color: "#FFFF00",
+    values:
+    [      
+      { x : "BRCA", y : 1681 },
+      { x : "COAD", y : 990 },
+      { x : "LUAD",   y : 1581 },
+      { x : "SKCM",   y : 2647 }  
+    ]
+  },
+]).transition().duration(500).call(chart);
+  return chart;
+});
+    </script>
+<p>"The Cancer Genome Atlas (TCGA) is a collaboration between the National Cancer Institute (NCI) and the National Human Genome Research Institute (NHGRI) that has generated comprehensive, multi-dimensional maps of the key genomic changes in 33 types of cancer. The TCGA dataset, comprising more than two petabytes of genomic data, has been made publically available, and this genomic information helps the cancer research community to improve the prevention, diagnosis, and treatment of cancer."
+--<a href="https://cancergenome.nih.gov/"> https://cancergenome.nih.gov </a></p>
+<p>"Born of the desire to systematize analyses from The Cancer Genome Atlas pilot and scale their execution to the dozens of remaining diseases to be studied, GDAC Firehose now sits atop ~55 terabytes of analysis-ready TCGA data and reliably executes thousands of pipelines per month."
+--<a href="http://firebrowse.org/api-docs/"> http://firebrowse.org/api-docs </a></p>
+<p>"The cancer Gene Census is an ongoing effort to catalogue those genes for which mutations have been causally implicated in cancer. The original census and analysis was published in Nature Reviews Cancer and supplemental analysis information related to the paper is also available."
+--<a href="http://cancer.sanger.ac.uk/census/"> http://cancer.sanger.ac.uk/census </a></p>
+<p>"TCGA SpliceSeq is a resource for investigation of cross-tumor and tumor-normal alterations in mRNA splicing patterns of The Cancer Genome Atlas project (TCGA) RNASeq data."
+--<a href="http://projects.insilico.us.com/TCGASpliceSeq/"> http://projects.insilico.us.com/TCGASpliceSeq </a></p>
+</body>
 </html>
