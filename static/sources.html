@@ -12,6 +12,7 @@
     </style>
     </head>
 <body>
+<br></br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css">
@@ -30,8 +31,13 @@ d3.select('#chart svg').datum([
     [      
       { x : "BRCA", y : 596 },
       { x : "COAD", y : 1825 },
+      { x : "GBM", y : 478 },
+      { x : "KICH",   y : 967 },
       { x : "LUAD",   y : 811 },
-      { x : "SKCM",   y : 967 }   
+      { x : "PAAD", y : 983},
+      { x : "SARC", y : 382 },
+      { x : "STAD", y : 1917 }
+         
     ]
   },
   {
@@ -41,8 +47,12 @@ d3.select('#chart svg').datum([
     [      
       { x : "BRCA", y : 344 },
       { x : "COAD", y : 257 },
+      { x : "GBM", y : 218 },
+      { x : "KICH",   y : 1121 },
       { x : "LUAD",   y : 662 },
-      { x : "SKCM",   y : 1121 }  
+      { x : "PAAD", y : 2696},
+      { x : "SARC", y : 1955 },
+      { x : "STAD", y : 660}
     ]
   },
   {
@@ -52,8 +62,13 @@ d3.select('#chart svg').datum([
     [      
       { x : "BRCA", y : 1488 },
       { x : "COAD", y : 1695 },
+      { x : "GBM", y : 2531 },
+      { x : "KICH",   y : 2259 },
       { x : "LUAD",   y : 3276 },
-      { x : "SKCM",   y : 2259 }  
+      { x : "PAAD", y : 8694 },
+      { x : "SARC", y : 2927 },
+      { x : "STAD", y : 2568 }
+        
     ]
   },
   {
@@ -63,8 +78,12 @@ d3.select('#chart svg').datum([
     [      
       { x : "BRCA", y : 1681 },
       { x : "COAD", y : 990 },
+      { x : "GBM", y : 2458 },
+      { x : "KICH",   y : 2647 },
       { x : "LUAD",   y : 1581 },
-      { x : "SKCM",   y : 2647 }  
+      { x : "PAAD", y : 2458 },
+      { x : "SARC", y : 2020 },
+      { x : "STAD", y : 2108 }
     ]
   },
 ]).transition().duration(500).call(chart);

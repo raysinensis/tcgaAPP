@@ -88,13 +88,13 @@
 //Constants for the SVG
 var margin = {top: 0, right: 0, bottom: 0, left: 0},
     width = 1600 - margin.left - margin.right,
-    height = 1200 - margin.top - margin.bottom;
+    height = 900 - margin.top - margin.bottom;
 //Set up the colour scale
 var color = d3.scale.category20();
 
 //Set up the force layout
 var force = d3.layout.force()
-    .charge(0)
+    .charge(-5)
     .friction(1)
     .linkDistance(30)
     .size([width, height]);
@@ -237,11 +237,11 @@ function searchNode() {
             return neighboring(d, o) | neighboring(o, d) ? 1 : 0.01;
         });
         link.style("opacity", function (o) {
-            return d.index==o.source.index | d.index==o.target.index ? 1 : 0.01;
+            return d.index==o.source.index | d.index==o.target.index ? 1 : 0.0;
         });
 	
         d3.selectAll(".node, .link").transition()
-            .duration(10000)
+            .duration(5000)
             .style("opacity", 1);
 
 
@@ -270,7 +270,7 @@ function connectedNodes() {
             return neighboring(d, o) | neighboring(o, d) ? 1 : 0.01;
         });
         link.style("opacity", function (o) {
-            return d.index==o.source.index | d.index==o.target.index ? 1 : 0.01;
+            return d.index==o.source.index | d.index==o.target.index ? 1 : 0.0;
         });
         //Reduce the op
         toggle = 1;
@@ -329,7 +329,8 @@ container.on("mousemove", function() {
 });
 
 
-
+for (var i=1; i > 0; --i) force.tick();
+force.stop();
 </script>
 
 </body>
