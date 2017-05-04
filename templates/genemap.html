@@ -223,7 +223,7 @@ function searchNode() {
 
     //find the node
 
-    var selectedVal = document.getElementById('search').value;
+    var selectedVal = document.getElementById('search').value.toUpperCase();
     var node = svg.selectAll(".node");
 
     if (selectedVal == "none") {

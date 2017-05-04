@@ -49,6 +49,7 @@ def index():
   		return render_template('entry.html')
 	else:
 		app.vars=request.form['name']
+		app.vars=app.vars.upper()
 		if len(app.vars)>2:
 			f=open('history.txt','a')
 			f.write(app.vars)

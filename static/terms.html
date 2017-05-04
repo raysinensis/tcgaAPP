@@ -1,43 +1,162 @@
 <!doctype html>
-<title>TCGA gene query</title>
-<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
-<a href=""> Data Sources </a>&nbsp;&nbsp;&nbsp;
-<a href=""> Terminology </a>
-<div class=page>
-  <h1>The Cancer Genome Atlas</h1>
-  <div class=metanav>
-
-    <h4>
-      Enter gene of interest:
-    </h4>
-
-    <form id='userinput' method='post' action='index' >
-      <p>
-    Gene Symbol: <input type='text' name='name' />
-      </p>
-      <p>
-    <input type='Submit' value='Submit' />
-      </p>
-    </form>
-
-  </div>
-</div>
-<div class=page>
-  <h1>Tumor Associated Gene Prediction</h1>
-  <div class=metanav>
-
-    <h4>
-      Enter gene of interest:
-    </h4>
-
-    <form id='userinput' method='post' action='index' >
-      <p>
-    survival analysis: <input type='text' name='name' />
-      </p>
-      <p>
-    <input type='Submit' value='Submit' />
-      </p>
-    </form>
-
-  </div>
-</html>
+<title>TCGA glossary</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet type=text/css href='/static/style.css'>
+<a href="/static/sources.html"> Data Sources </a>&nbsp;
+<a href="/static/terms.html"> Terminology </a>&nbsp;
+<a href="/index"> Home </a>
+<div>
+<table border=1 cellpaddings=7 style='width:500px'>
+            <tr>
+                <th>Tumor Abbreviation</th>
+                <th>Tumor Name</th>
+            </tr>
+            
+<tr>
+                <td>LAML</td>
+                <td>cute Myeloid Leukemia</td>
+            </tr>
+<tr>
+                <td>ACC</td>
+                <td>Adrenocortical carcinoma</td>
+            </tr>
+<tr>
+                <td>BLCA</td>
+                <td>Bladder Urothelial Carcinoma</td>
+            </tr>
+<tr>
+                <td>LGG</td>
+                <td>Brain Lower Grade Glioma</td>
+            </tr>
+<tr>
+                <td>BRCA</td>
+                <td>Breast invasive carcinoma</td>
+            </tr>
+<tr>
+                <td>CESC</td>
+                <td>Cervical squamous cell carcinoma and endocervical adenocarcinoma</td>
+            </tr>
+<tr>
+                <td>CHOL</td>
+                <td>Cholangiocarcinoma</td>
+            </tr>
+<tr>
+                <td>LCML</td>
+                <td>Chronic Myelogenous Leukemia</td>
+            </tr>
+<tr>
+                <td>COAD</td>
+                <td>Colon adenocarcinoma</td>
+            </tr>
+<tr>
+                <td>CNTL</td>
+                <td>Controls</td>
+            </tr>
+<tr>
+                <td>ESCA</td>
+                <td>Esophageal carcinoma</td>
+            </tr>
+<tr>
+                <td>FPPP</td>
+                <td>FFPE Pilot Phase II</td>
+            </tr>
+<tr>
+                <td>GBM</td>
+                <td>Glioblastoma multiforme</td>
+            </tr>
+<tr>
+                <td>HNSC</td>
+                <td>Head and Neck squamous cell carcinoma</td>
+            </tr>
+<tr>
+                <td>KICH</td>
+                <td>Kidney Chromophobe</td>
+            </tr>
+<tr>
+                <td>KIRC</td>
+                <td>Kidney renal clear cell carcinoma</td>
+            </tr>
+<tr>
+                <td>KIRP</td>
+                <td>Kidney renal papillary cell carcinoma</td>
+            </tr>
+<tr>
+                <td>LIHC</td>
+                <td>Liver hepatocellular carcinoma</td>
+            </tr>
+<tr>
+                <td>LUAD</td>
+                <td>Lung adenocarcinoma</td>
+            </tr>
+<tr>
+                <td>LUSC</td>
+                <td>Lung squamous cell carcinoma</td>
+            </tr>
+<tr>
+                <td>DLBC</td>
+                <td>Lymphoid Neoplasm Diffuse Large B-cell Lymphoma</td>
+            </tr>
+<tr>
+                <td>MESO</td>
+                <td>Mesothelioma</td>
+            </tr>
+<tr>
+                <td>MISC</td>
+                <td>Miscellaneous</td>
+            </tr>
+<tr>
+                <td>OV</td>
+                <td>Ovarian serous cystadenocarcinoma</td>
+            </tr>
+<tr>
+                <td>PAAD</td>
+                <td>Pancreatic adenocarcinoma</td>
+            </tr>
+<tr>
+                <td>PCPG</td>
+                <td>Pheochromocytoma and Paraganglioma</td>
+            </tr>
+<tr>
+                <td>PRAD</td>
+                <td>Prostate adenocarcinoma</td>
+            </tr>
+<tr>
+                <td>READ</td>
+                <td>Rectum adenocarcinoma</td>
+            </tr>
+<tr>
+                <td>SARC</td>
+                <td>Sarcoma</td>
+            </tr>
+<tr>
+                <td>SKCM</td>
+                <td>Skin Cutaneous Melanoma</td>
+            </tr>
+<tr>
+                <td>STAD</td>
+                <td>Stomach adenocarcinoma</td>
+            </tr>
+<tr>
+                <td>TGCT</td>
+                <td>Testicular Germ Cell Tumors</td>
+            </tr>
+<tr>
+                <td>THYM</td>
+                <td>Thymoma</td>
+            </tr>
+<tr>
+                <td>THCA</td>
+                <td>Thyroid carcinoma</td>
+            </tr>
+<tr>
+                <td>UCS</td>
+                <td>Uterine Carcinosarcoma</td>
+            </tr>
+<tr>
+                <td>UCEC</td>
+                <td>Uterine Corpus Endometrial Carcinoma</td>
+            </tr>
+<tr>
+                <td>UVM</td>
+                <td>Uveal Melanoma</td>
+            </tr>

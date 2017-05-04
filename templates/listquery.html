@@ -41,15 +41,34 @@ path.link {
   stroke: #9ecae1;
   stroke-width: 1px;
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 600px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+font: 16px sans-serif;
+  border-radius: 10px;
+}
 
+#myBtn:hover {
+  background-color: #555;
+}
 </style></head>
 <hr>
 <body>
 <input type='button' value='Download' onClick="window.open('./static/listresult.txt')"/>
 <a>double click on gene links to wikipedia page</a>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <hr style='border-width: 0px'>
 <script>
-var margin = {top: 30, right: 20, bottom: 30, left: 20},
+var margin = {top: 30, right: 20, bottom: 30, left: 100},
     width = 600 - margin.left - margin.right,
     barHeight = 25,
     barWidth = width * .8;
@@ -117,7 +136,7 @@ function update(source) {
 
   nodeEnter.append("text")
       .attr("dy", 3.5)
-      .attr("dx", 15.5)
+      .attr("dx", 25.5)
       .text(function(d) { return d.name; });
 
   // Transition nodes to their new position.
@@ -198,6 +217,22 @@ function dblclick(d){
     var win=window.open("http://en.wikipedia.org/wiki/"+d.name, '_blank');
 	win.focus();}
  }
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
 </script>
 </body>
 </html>
