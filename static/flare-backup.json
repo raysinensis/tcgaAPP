@@ -1,0 +1,26 @@
+{
+ "name": "From List",
+ "children": [
+  {
+   "name": "Curated Genes",
+   "children": [
+    {"name": "ZFP36"},
+    {"name": "XRN1"}
+   ]
+  },
+  {
+   "name": "Predicted Genes",
+   "children": [
+{"name": "ZFP36"},
+    {"name": "XRN1"}
+   ]
+  },
+  {
+   "name": "Other Genes",
+   "children": [
+{"name": "ZFP36"},
+    {"name": "XRN1"}
+   ]
+  }
+ ]
+}

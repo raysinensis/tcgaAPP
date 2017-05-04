@@ -11,20 +11,27 @@ import shutil
 import zipfile
 import numpy
 
-from flask import Flask, render_template, request, redirect, current_app
+from flask import Flask, render_template, request, redirect, current_app, url_for
+from werkzeug.utils import secure_filename
+
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
 from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
 from bokeh.plotting import figure, show, output_file
 from bokeh.layouts import widgetbox,column,row
 from bokeh.models.widgets import CheckboxGroup,Slider
 from bokeh.models.callbacks import CustomJS
-
 from bokeh.embed import components
+
 from collections import OrderedDict
 
 
 app = Flask(__name__,static_url_path='/static')
 app.debug = True
+
+UPLOAD_FOLDER = './static/upload'
+ALLOWED_EXTENSIONS = set(['txt', 'csv'])
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 app.vars=''
 
@@ -50,6 +57,35 @@ def index():
 			return redirect('/trying')
 		else:
 			return render_template('entry.html')
+
+@app.after_request
+def add_header(r):
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    r.headers['Cache-Control'] = 'public, max-age=0'
+    return r
+
+@app.route('/listquery',methods=['GET','POST'])
+def listquery():
+	if request.method == 'POST':
+        # check if the post request has the file part
+		if 'file' not in request.files:
+		    result=[]
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            result=[]
+        elif file and allowed_file(file.filename):
+        	filename = secure_filename(file.filename)
+        	file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+		readpath=os.path.join(app.config['UPLOAD_FOLDER'], filename)
+		df=pandas.read_csv(readpath,header=None)
+		result=list(df[0])
+        
+	makejson(result)
+	return render_template("listquery.html")
 		
 @app.route('/genemap',methods=['GET','POST'])
 def genemap():
@@ -105,6 +141,10 @@ def trying():
 	script,div=plot_levels()
 
 	return render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist, gname=gname,script=script, div=div)
+
+def allowed_file(filename):
+    """Does filename have the right extension?"""
+    return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 def get_csv():
 	p = './static/OUT/final.csv'
@@ -233,6 +273,63 @@ def get_splice(gname):
 		else:
 			splice="No Significant Alternative Splicing"
 		return splice
+
+def makejson(listof):
+	listcosmic=pandas.read_csv('./static/COSMICcsv.csv',header=None)
+	listcosmic=list(listcosmic[0])
+	listpred=pandas.read_csv('./static/pred_pos.txt',header=None)
+	listpred=list(listpred[0])
+	if listof!=[]:
+		list1=list(set(listof).intersection(listcosmic))
+		list2=list(set(listof).intersection(listpred))
+		list3=list(set(listof)-set(list1)-set(list2))
+	else:
+		list1=listcosmic
+		list2=listpred
+		list3=[]
+	d1=[]
+	for gene in list1:
+		d1.append(("name",gene))
+	d2=[]
+	for gene in list2:
+		d2.append(("name",gene))
+	d3=[]
+	for gene in list3:
+		d3.append(("name",gene))
+	count1=len(d1)
+	count2=len(d2)
+	count3=len(d3)
+	
+	dict1='%s' % ',\n'.join(['{{"{}": {}}}'.format(action, json.dumps(dictionary)) for action, dictionary in d1])
+	dict2='%s' % ',\n'.join(['{{"{}": {}}}'.format(action, json.dumps(dictionary)) for action, dictionary in d2])
+	dict3='%s' % ',\n'.join(['{{"{}": {}}}'.format(action, json.dumps(dictionary)) for action, dictionary in d3])
+	c1='''{
+ "name": "From List",
+ "children": [
+  {
+   "name": "Curated Genes",
+   "children": ['''.replace("Genes","Genes -- "+str(count1))
+	c2=''']
+  },
+  {
+   "name": "Predicted Genes",
+   "children": ['''.replace("Genes","Genes -- "+str(count2))
+	c3='''   ]
+  },
+  {
+   "name": "Other Genes",
+   "children": ['''.replace("Genes","Genes -- "+str(count3))
+	c4='''   ]
+  }
+ ]
+}'''
+	final=c1+dict1+c2+dict2+c3+dict3+c4
+	with open('./static/flare.json','w') as f:
+		f.write(final)
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507)

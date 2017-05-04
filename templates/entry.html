@@ -1,5 +1,6 @@
 <!doctype html>
 <title>TCGA gene query</title>
+<meta charset="utf-8"/>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
 <a href="/static/sources.html"> Data Sources </a>&nbsp;
 <a href="/static/terms.html"> Terminology </a>&nbsp;
@@ -44,4 +45,23 @@
     </form>
 
   </div>
+</div>
+<div class=page>
+  <h1>Query of Curation/Prediction</h1>
+  <div class=metanav>
+
+    <h4>
+    </h4>
+
+      <p>
+      </p><h4>
+      .txt or .csv files accepted (all genes returned if left empty)
+    </h4>
+<form method=post enctype="multipart/form-data" action='listquery'>
+      <p><input type=file name='file'>
+         <input type=submit value='Upload'>
+      </p></form>
+
+  </div>
+</div>
 </html>

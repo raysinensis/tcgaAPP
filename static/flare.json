@@ -2,85 +2,82 @@
  "name": "From List",
  "children": [
   {
-   "name": "Curated Genes",
-   "children": [
-    {
-     "name": "cluster",
-     "children": [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
-     ]
-    },
-    {
-     "name": "graph",
-     "children": [
-      {"name": "BetweennessCentrality", "size": 3534},
-      {"name": "LinkDistance", "size": 5731},
-      {"name": "MaxFlowMinCut", "size": 7840},
-      {"name": "ShortestPaths", "size": 5914},
-      {"name": "SpanningTree", "size": 3416}
-     ]
-    },
-    {
-     "name": "optimization",
-     "children": [
-      {"name": "AspectRatioBanker", "size": 7074}
-     ]
-    }
-   ]
+   "name": "Curated Genes -- 67",
+   "children": [{"name": "MAP3K1"},
+{"name": "FUS"},
+{"name": "TNFRSF17"},
+{"name": "RPL5"},
+{"name": "ERCC4"},
+{"name": "NFKBIE"},
+{"name": "FOXO3"},
+{"name": "MAP2K2"},
+{"name": "DEK"},
+{"name": "TRAF7"},
+{"name": "IKZF1"},
+{"name": "CHIC2"},
+{"name": "STIL"},
+{"name": "MAML2"},
+{"name": "FAS"},
+{"name": "BCL11A"},
+{"name": "CCNE1"},
+{"name": "TPM3"},
+{"name": "GOPC"},
+{"name": "FANCF"},
+{"name": "PPP6C"},
+{"name": "H3F3B"},
+{"name": "H3F3A"},
+{"name": "PWWP2A"},
+{"name": "DDB2"},
+{"name": "CDK4"},
+{"name": "TERT"},
+{"name": "MALT1"},
+{"name": "JAK3"},
+{"name": "RPL10"},
+{"name": "RARA"},
+{"name": "NACA"},
+{"name": "TAL1"},
+{"name": "EXT2"},
+{"name": "TCF3"},
+{"name": "TAL2"},
+{"name": "ARID2"},
+{"name": "IDH1"},
+{"name": "PBRM1"},
+{"name": "PRDM1"},
+{"name": "PIK3R1"},
+{"name": "P2RY8"},
+{"name": "RHOH"},
+{"name": "CCDC6"},
+{"name": "EBF1"},
+{"name": "FIP1L1"},
+{"name": "ATRX"},
+{"name": "NPM1"},
+{"name": "BCL10"},
+{"name": "ITK"},
+{"name": "ETV6"},
+{"name": "CLP1"},
+{"name": "CD274"},
+{"name": "PTPN11"},
+{"name": "POU2AF1"},
+{"name": "SDC4"},
+{"name": "PPFIBP1"},
+{"name": "TOP1"},
+{"name": "CREB3L2"},
+{"name": "PTPN13"},
+{"name": "TFEB"},
+{"name": "CYLD"},
+{"name": "NBN"},
+{"name": "GNA11"},
+{"name": "POU5F1"},
+{"name": "PICALM"},
+{"name": "BCL2"}]
   },
   {
-   "name": "Predicted Genes",
-   "children": [
-    {"name": "Easing", "size": 17010},
-    {"name": "FunctionSequence", "size": 5842},
-    {
-     "name": "interpolate",
-     "children": [
-      {"name": "ArrayInterpolator", "size": 1983},
-      {"name": "ColorInterpolator", "size": 2047},
-      {"name": "DateInterpolator", "size": 1375},
-      {"name": "Interpolator", "size": 8746},
-      {"name": "MatrixInterpolator", "size": 2202},
-      {"name": "NumberInterpolator", "size": 1382},
-      {"name": "ObjectInterpolator", "size": 1629},
-      {"name": "PointInterpolator", "size": 1675},
-      {"name": "RectangleInterpolator", "size": 2042}
-     ]
-    },
-    {"name": "ISchedulable", "size": 1041},
-    {"name": "Parallel", "size": 5176},
-    {"name": "Pause", "size": 449},
-    {"name": "Scheduler", "size": 5593},
-    {"name": "Sequence", "size": 5534},
-    {"name": "Transition", "size": 9201},
-    {"name": "Transitioner", "size": 19975},
-    {"name": "TransitionEvent", "size": 1116},
-    {"name": "Tween", "size": 6006}
-   ]
+   "name": "Predicted Genes -- 0",
+   "children": [   ]
   },
   {
-   "name": "Other Genes",
-   "children": [
-    {
-     "name": "converters",
-     "children": [
-      {"name": "Converters", "size": 721},
-      {"name": "DelimitedTextConverter", "size": 4294},
-      {"name": "GraphMLConverter", "size": 9800},
-      {"name": "IDataConverter", "size": 1314},
-      {"name": "JSONConverter", "size": 2220}
-     ]
-    },
-    {"name": "DataField", "size": 1759},
-    {"name": "DataSchema", "size": 2165},
-    {"name": "DataSet", "size": 586},
-    {"name": "DataSource", "size": 3331},
-    {"name": "DataTable", "size": 772},
-    {"name": "DataUtil", "size": 3322}
-   ]
+   "name": "Other Genes -- 0",
+   "children": [   ]
   }
  ]
 }
