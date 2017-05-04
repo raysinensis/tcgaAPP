@@ -326,6 +326,9 @@ def makejson(listof):
 	final=c1+dict1+c2+dict2+c3+dict3+c4
 	with open('./static/flare.json','w') as f:
 		f.write(final)
+	with open('./static/listresult.txt','w') as f:
+		f.write('\n'.join(["curated:",'\n'.join(list1),"predicted:",'\n'.join(list2),"other:",'\n'.join(list3)]))
+		
 
 def allowed_file(filename):
     return '.' in filename and \
