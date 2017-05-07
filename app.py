@@ -23,6 +23,8 @@ from bokeh.models.callbacks import CustomJS
 from bokeh.embed import components
 
 from collections import OrderedDict
+import networkx as nx
+from networkx.readwrite import json_graph
 
 
 app = Flask(__name__,static_url_path='/static')
@@ -107,6 +109,7 @@ def trying():
 		pnglist=glob.glob('./static/OUT/*km.png')
 		object_list = get_csv()
 		script,div=plot_levels()
+		getsubgraph(app.vars)
 		return render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist,gname=gname,script=script, div=div)
 
 	command = 'Rscript'
@@ -140,6 +143,7 @@ def trying():
 		
 	object_list = get_csv()
 	script,div=plot_levels()
+	getsubgraph(app.vars)
 
 	return render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist, gname=gname,script=script, div=div)
 
@@ -334,6 +338,28 @@ def makejson(listof):
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def getsubgraph(gene):
+	listcosmic=pandas.read_csv('./static/COSMICcsv.csv',header=None)
+	listcosmic=list(listcosmic[0])
+	listpred=pandas.read_csv('./static/pred_pos.txt',header=None)
+	listpred=list(listpred[0])
+
+	G=nx.read_edgelist("./static/edgelist",delimiter='\t')
+	listof=list(G[gene])
+	listof.append(gene)
+	H=G.subgraph(listof)
+	for n in H:
+		H.node[n]['name'] = n
+	for n in H:
+		if H.node[n]['name'] in listcosmic:
+			H.node[n]['group'] =2
+		elif H.node[n]['name'] in listpred:
+			H.node[n]['group'] =1
+		else:
+			H.node[n]['group'] =3
+	d = json_graph.node_link_data(H)
+	json.dump(d, open('./static/onegene.json','w'))
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507)
