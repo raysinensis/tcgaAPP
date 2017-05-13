@@ -13,6 +13,8 @@ import numpy
 
 from flask import Flask, render_template, request, redirect, current_app, url_for
 from werkzeug.utils import secure_filename
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import text
 
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
 from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
@@ -34,6 +36,8 @@ UPLOAD_FOLDER = './static/upload'
 ALLOWED_EXTENSIONS = set(['txt', 'csv'])
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///static/database/methyl.db'
+db = SQLAlchemy(app)
 
 app.vars=''
 
@@ -107,7 +111,7 @@ def trying():
 			zip_ref.extractall("./static/OUT/")
 		filelink="/static/zips/"+app.vars+".zip"
 		pnglist=glob.glob('./static/OUT/*km.png')
-		object_list = get_csv()
+		object_list = get_csv(gname)
 		script,div=plot_levels()
 		getsubgraph(app.vars)
 		return render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist,gname=gname,script=script, div=div)
@@ -141,7 +145,7 @@ def trying():
 	shutil.make_archive("./static/zips/"+app.vars, 'zip', "./static/OUT/")
 	filelink="/static/zips/"+app.vars+".zip"
 		
-	object_list = get_csv()
+	object_list = get_csv(gname)
 	script,div=plot_levels()
 	getsubgraph(app.vars)
 
@@ -151,10 +155,23 @@ def allowed_file(filename):
     """Does filename have the right extension?"""
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
-def get_csv():
+def get_csv(gname):
+	gene = gname
+	qcol = ['BRCA','COAD','GBM','KICH','LUAD','PAAD','SARC','STAD']
+	qcolstr = ','.join(qcol)
+	sqlstr = 'select '+qcolstr+ ' from methyl where gene=\"'+gene+'\"'
+	sqlcmd = text(sqlstr)
+	result = db.engine.execute(sqlcmd).fetchall()
 	p = './static/OUT/final.csv'
-	f = open(p, 'r')
-	return list(csv.DictReader(f))
+	with open(p, 'r') as f:
+		count=0
+		lines=list(csv.DictReader(f))
+		newlines=[]
+		for line in lines:
+			line.update({'V11':result[0][count]})
+			newlines.append(line)
+			count+=1
+		return newlines
 
 def plot_levels():
 	#read csv
@@ -346,9 +363,14 @@ def getsubgraph(gene):
 	listpred=list(listpred[0])
 
 	G=nx.read_edgelist("./static/edgelist",delimiter='\t')
-	listof=list(G[gene])
-	listof.append(gene)
-	H=G.subgraph(listof)
+	try:
+		listof=list(G[gene])
+		listof.append(gene)
+		H=G.subgraph(listof)
+	except:
+		listof=[gene]
+		H=nx.Graph()
+		H.add_node(gene)
 	for n in H:
 		H.node[n]['name'] = n
 	for n in H:

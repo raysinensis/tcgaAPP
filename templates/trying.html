@@ -34,7 +34,7 @@
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: #4CAF50;
   color: white;
   cursor: pointer;
   padding: 10px;
@@ -43,7 +43,7 @@ font: 16px sans-serif;
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: #52ea27;
 }
   </style>
         <title>Results-{{gname}}</title>
@@ -108,7 +108,7 @@ function goBack() {
 </div>
 <div>
  </div>
-<hr>
+<hr style='width: 60%;margin-left:0';>
 <form id='userinput' method='post' action='index' >
 <div class="floatdiv">
     <button onclick="reset()">Home</button>&nbsp;
@@ -118,11 +118,12 @@ function goBack() {
 <button onclick="reset()">Reset</button>
 <font color="#ADD8E6">verified cancer association</font>
 <font color="#FF8C00">predicted association</font>
+<hr style='border-width: 0px'>
 <script type='text/javascript'>//<![CDATA[
 
 //Constants for the SVG
 var margin = {top: 0, right: 0, bottom: 0, left: 0},
-    width = 600 - margin.left - margin.right,
+    width = 900 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 //Set up the colour scale
 var color = d3.scale.category20();
