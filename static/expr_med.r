@@ -120,18 +120,18 @@ colnames(df)=c("normal_median","tumor_median","surv_cutoff","tumor_type")
 write.table(df,"level.csv",append=F, col.names = T, row.names = F, sep=",")
 colnames(df2)=c("min","25%","median","75%","max","surv_cutoff","tumor_type","condition")
 write.table(df2,"levels.csv",append=F, col.names = T, row.names = F, sep=",")
-library(ggplot2)
-library(reshape)
-df2 <- melt(df, id.vars = "tumor_type")
-colnames(df2)=c("tumor_type","condition","RSEM_log2")
-p<-ggplot(data=df2, aes(x=tumor_type, y=RSEM_log2, fill=condition)) +
-  geom_bar(stat="identity", position=position_dodge())+
-  geom_text(aes(label=sprintf("%0.2f",RSEM_log2)), vjust=1.5, color="black",
-            position = position_dodge(1), size=2.5)+
-  scale_fill_brewer(palette="Paired")+
-  theme_classic(base_size = 10, base_family = "Helvetica")
-png("RSEM.png",width = widthcal, height = 600, res = 200)
-p
-dev.off()
+#library(ggplot2)
+#library(reshape)
+#df2 <- melt(df, id.vars = "tumor_type")
+#colnames(df2)=c("tumor_type","condition","RSEM_log2")
+#p<-ggplot(data=df2, aes(x=tumor_type, y=RSEM_log2, fill=condition)) +
+#  geom_bar(stat="identity", position=position_dodge())+
+#  geom_text(aes(label=sprintf("%0.2f",RSEM_log2)), vjust=1.5, color="black",
+#            position = position_dodge(1), size=2.5)+
+#  scale_fill_brewer(palette="Paired")+
+#  theme_classic(base_size = 10, base_family = "Helvetica")
+#png("RSEM.png",width = widthcal, height = 600, res = 200)
+#p
+#dev.off()
 
 

@@ -100,10 +100,6 @@ def genemap():
 
 @app.route('/trying',methods=['GET','POST'])
 def trying():
-	##files = glob.glob('.static/OUT/*')
-	##print files
-	##for f in files:
-    	##	os.remove(f)
 	gname=app.vars
 	
 	if os.path.exists('./static/zips/'+app.vars+'.zip'):
@@ -116,6 +112,11 @@ def trying():
 		getsubgraph(app.vars)
 		return render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist,gname=gname,script=script, div=div)
 
+	#files = glob.glob('.static/OUT/*')
+	##print files
+	#for f in files:
+    	#	os.remove(f)
+	
 	command = 'Rscript'
 	path2script = './static/TCGAkm.r'
 	args = [app.vars]
@@ -124,14 +125,14 @@ def trying():
 
 	#img = PythonMagick.Image()
 	#img.density("300")
-	pdflist=glob.glob('./static/OUT/*.pdf')
+	pdflist=glob.glob('./static/OUT/*km.pdf')
 	pnglist=[]
 	for item in pdflist:
 		#img.read(item)
 		#newf=item[:-3]+'png'
 		#img.write(newf)
 		#pnglist.append(newf)
-		os.rename(item,item[:-7]+'_tumor-km.pdf')
+		os.rename(item,item[:-7]+'_tumor.pdf')
 
 	path2script = './static/expr_med.r'
 	cmd2 = [command, path2script]
@@ -157,18 +158,32 @@ def allowed_file(filename):
 
 def get_csv(gname):
 	gene = gname
-	qcol = ['BRCA','COAD','GBM','KICH','LUAD','PAAD','SARC','STAD']
+	qcol = ['BRCA','COAD','GBM','LUAD','STAD']
 	qcolstr = ','.join(qcol)
+	##methylation
 	sqlstr = 'select '+qcolstr+ ' from methyl where gene=\"'+gene+'\"'
 	sqlcmd = text(sqlstr)
 	result = db.engine.execute(sqlcmd).fetchall()
+	if len(result[0])==0:
+		result= [[1]*len(qcol)]
+	##cox coeff
+	sqlstr = 'select '+qcolstr+ ' from cox where gene=\"'+gene+'\"'
+	sqlcmd = text(sqlstr)
+	result2 = db.engine.execute(sqlcmd).fetchall()
+	if len(result2[0])==0:
+		result2 = [['NaN']*len(qcol)]
 	p = './static/OUT/final.csv'
 	with open(p, 'r') as f:
 		count=0
 		lines=list(csv.DictReader(f))
 		newlines=[]
 		for line in lines:
-			line.update({'V11':result[0][count]})
+			if result[0][count]<=0.1:
+				metp='MET'
+			else:
+				metp='-'
+			line.update({'V11':metp})
+			line.update({'V5':result2[0][count]})
 			newlines.append(line)
 			count+=1
 		return newlines
@@ -279,7 +294,7 @@ def plot_levels():
 	p.legend.click_policy="hide"
 
 	url = "/static/OUT/@cancers"
-	url2= url+'-km.pdf'
+	url2= url+'.pdf'
 	taptool = p.select(type=TapTool)
 	taptool.names=['cut']
 	taptool.callback = OpenURL(url=url2)
