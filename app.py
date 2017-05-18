@@ -61,9 +61,21 @@ def index():
 			f.write(app.vars)
 			f.write("\n")
 			f.close()
-			return redirect('/trying')
+			if validgene(app.vars):
+				return redirect('/trying')
+			else:
+				return render_template('entry-err.html')
 		else:
 			return render_template('entry.html')
+
+def validgene(gname):
+	sqlstr = 'select * from cox where gene=\"'+gname+'\"'
+	sqlcmd = text(sqlstr)
+	result = db.engine.execute(sqlcmd).fetchall()
+	if len(result)!=0:
+		return True
+	else:
+		return False
 
 @app.after_request
 def add_header(r):
@@ -101,7 +113,6 @@ def genemap():
 @app.route('/trying',methods=['GET','POST'])
 def trying():
 	gname=app.vars
-	
 	if os.path.exists('./static/zips/'+app.vars+'.zip'):
 		with zipfile.ZipFile("./static/zips/"+app.vars+".zip","r") as zip_ref:
 			zip_ref.extractall("./static/OUT/")
@@ -158,13 +169,13 @@ def allowed_file(filename):
 
 def get_csv(gname):
 	gene = gname
-	qcol = ['BRCA','COAD','GBM','LUAD','STAD']
+	qcol = ['BLCA','BRCA','CESC','COAD','GBM','HNSC','KIRC','KIRP','LIHC','LUAD','LUSC','SKCM','STAD']
 	qcolstr = ','.join(qcol)
 	##methylation
 	sqlstr = 'select '+qcolstr+ ' from methyl where gene=\"'+gene+'\"'
 	sqlcmd = text(sqlstr)
 	result = db.engine.execute(sqlcmd).fetchall()
-	if len(result[0])==0:
+	if len(result)==0:
 		result= [[1]*len(qcol)]
 	##cox coeff
 	sqlstr = 'select '+qcolstr+ ' from cox where gene=\"'+gene+'\"'
@@ -267,7 +278,7 @@ def plot_levels():
 		)
 	)
 	
-	p = figure(tools=["save","hover",'tap'], background_fill_color="white", title="", x_range=cancers,plot_width=880)
+	p = figure(tools=["save","hover",'tap'], background_fill_color="white", title="", x_range=cancers,plot_width=920)
 	hover = p.select(dict(type=HoverTool))
 	hover.tooltips = [('condition','@cancers'),('ratio/normal','@ratio{1.11}')]
 	hover.point_policy='snap_to_data'

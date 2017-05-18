@@ -1,10 +1,15 @@
 <!doctype html>
 <title>TCGA gene query</title>
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="./static/icon.ico" />
+</head>
 <meta charset="utf-8"/>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <a href="/static/sources.html"> Data Sources </a>&nbsp;
 <a href="/static/terms.html"> Terminology </a>&nbsp;
 <a href="/index"> Home </a>
+<div id="loading"></div>
 <div class=page>
   <h1>The Cancer Genome Atlas</h1>
   <div class=metanav>
@@ -18,7 +23,7 @@
     Gene Symbol: <input type='text' name='name' placeholder="Gene of Interest"/>
       </p>
       <p>
-    <input type='Submit' name='submit' value='Submit' />
+    <input type='Submit' name='submit' value='Submit' onclick="load1();"/>
       </p>
     </form>
 
@@ -65,4 +70,19 @@
 
   </div>
 </div>
+<script type="text/javascript">// <![CDATA[
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();       
+        }
+function load1() {
+    setTimeout(loading, 0);
+}
+// ]]></script>
+<footer>
+<p>v0.9: 05-17-2017
+<a href="rf@raysinensis.com">
+  rf@raysinensis.com</a>.</p>
+</footer>
 </html>
+

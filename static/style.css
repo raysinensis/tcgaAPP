@@ -27,6 +27,22 @@ tr:hover {
 th, td {
     width: 100px;
 }
+div#loading {
+    width: 500px;
+    height: 500px;
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    background: url(/static/catmix.gif) no-repeat;
+    cursor: wait;
+    }
+footer {
+   font-size:12px;
+   position:absolute;
+   right:15px;
+   bottom:15px;
+}
 
 .page           { margin: 2em auto; width: 35em; border: 5px solid #ccc;
                   padding: 0.8em; background: white; }
