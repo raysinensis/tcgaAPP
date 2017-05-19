@@ -8,6 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <a href="/static/sources.html"> Data Sources </a>&nbsp;
 <a href="/static/terms.html"> Terminology </a>&nbsp;
+<a href="/static/about.html"> Version </a>&nbsp;
 <a href="/index"> Home </a>
 <div id="loading"></div>
 <div class=page>
@@ -23,7 +24,7 @@
     Gene Symbol: <input type='text' name='name' placeholder="Gene of Interest"/>
       </p>
       <p>
-    <input type='Submit' name='submit' value='Submit' onclick="load1();"/>
+    <input type='Submit' name='submit' value='Submit' onclick="load1(event);"/>
       </p>
     </form>
 
@@ -38,15 +39,14 @@
 
     <form id='userinput' method='get' action='genemap' >
       <p>
-      </p><h4>
-      1989 predicted genes, out of 17458 total
+      </p><h4>616 positive, curated by COSMIC
     </h4>
-	<h4>(616 positive, curated by COSMIC)</h4>
+	<h4>1989 predicted genes, out of 17458 total</h4>
 	<h4>
       (Random forest method modified for "Positive Unlabeled Classification")
     </h4>
       <p>
-    <input type='Submit' value='GO' />
+    <input type='Submit' value='View in Interaction Network' />
       </p>
     </form>
 
@@ -65,7 +65,7 @@
     </h4>
 <form method=post enctype="multipart/form-data" action='listquery'>
       <p><input type=file name='file'>
-         <input type=submit value='Upload'>
+         <input type=submit value='Upload' >
       </p></form>
 
   </div>
@@ -73,16 +73,26 @@
 <script type="text/javascript">// <![CDATA[
         function loading(){
             $("#loading").show();
-            $("#content").hide();       
+            $("#content").hide();     
         }
-function load1() {
+function load1(event) {
+var x = event.clientX;     // Get the horizontal coordinate
+var y = event.clientY;     // Get the vertical coordinate
+var element = document.getElementById("loading");
+element.style.left = x -150 + "px";
+element.style.top = y -150 + "px";
+if (x==0){ 
+element.style.left = "200px";
+element.style.top = "100px";}
     setTimeout(loading, 0);
 }
 // ]]></script>
 <footer>
 <p>v0.9: 05-17-2017
-<a href="rf@raysinensis.com">
-  rf@raysinensis.com</a>.</p>
+<a href="mailto: rf@raysinensis.com">
+  email</a>
+<a href="https://github.com/raysinensis/tcgaAPP">
+  github</a></p>
 </footer>
 </html>
 

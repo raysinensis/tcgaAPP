@@ -1,0 +1,36 @@
+<!doctype html>
+<title>Version Updates</title>
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+        $.ajax({
+            url : "logs/latest.txt",
+            dataType: "text",
+            success : function (data) {
+                $("#div1").html(data);
+            }
+    });
+}); 
+</script>
+</head>
+<meta charset="utf-8"/>
+<link rel=stylesheet type=text/css href='/static/style.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<a href="/static/sources.html"> Data Sources </a>&nbsp;
+<a href="/static/terms.html"> Terminology </a>&nbsp;
+<a href="/static/about.html"> Version </a>&nbsp;
+<a href="/index"> Home </a>
+<body>
+<textarea rows="23" cols="340" id="div1"></textarea>
+  </body>
+<footer>
+<p>v0.9: 05-17-2017
+<a href="mailto: rf@raysinensis.com">
+  email</a>
+<a href="https://github.com/raysinensis/tcgaAPP">
+  github</a></p>
+</footer>
+</html>
+

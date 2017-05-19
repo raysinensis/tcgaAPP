@@ -12,6 +12,7 @@ import zipfile
 import numpy
 
 from flask import Flask, render_template, request, redirect, current_app, url_for
+#from flask_weasyprint import HTML, render_pdf
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
@@ -27,7 +28,6 @@ from bokeh.embed import components
 from collections import OrderedDict
 import networkx as nx
 from networkx.readwrite import json_graph
-
 
 app = Flask(__name__,static_url_path='/static')
 app.debug = True
@@ -67,6 +67,11 @@ def index():
 				return render_template('entry-err.html')
 		else:
 			return render_template('entry.html')
+
+def create_pdf(pdf_data):
+    pdf = StringIO()
+    pisa.CreatePDF(StringIO(pdf_data), pdf)
+    return pdf
 
 def validgene(gname):
 	sqlstr = 'select * from cox where gene=\"'+gname+'\"'
@@ -121,7 +126,9 @@ def trying():
 		object_list = get_csv(gname)
 		script,div=plot_levels()
 		getsubgraph(app.vars)
-		return render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist,gname=gname,script=script, div=div)
+		rend=render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist,gname=gname,script=script, div=div)
+		#HTML(string=rend).write_pdf('./static/OUT/gene.pdf')
+		return rend
 
 	#files = glob.glob('.static/OUT/*')
 	##print files
@@ -161,7 +168,9 @@ def trying():
 	script,div=plot_levels()
 	getsubgraph(app.vars)
 
-	return render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist, gname=gname,script=script, div=div)
+	rend=render_template('trying.html', splicing=get_splice(gname), object_list=object_list, filelink=filelink, pnglist=pnglist,gname=gname,script=script, div=div)
+	#HTML(string=rend).write_pdf('./static/OUT/gene.pdf')
+	return rend
 
 def allowed_file(filename):
     """Does filename have the right extension?"""

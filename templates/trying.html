@@ -61,7 +61,7 @@ font: 16px sans-serif;
     <h1>Results-{{gname}}</h1>
       <p>
     <input type='button' value='Download' onClick="window.location.href='{{filelink}}'" />
-<button onclick="goBack()">Go Back</button>
+<button onclick="location.href = 'index';">Home</button>
 <script>
 function goBack() {
     window.history.back();
@@ -70,9 +70,10 @@ function goBack() {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;links to:
 <a href='http://www.genenames.org/cgi-bin/gene_symbol_report?q=data/hgnc_data.php&match={{gname}}'" title="Gene Nomenclature Hub" target="_blank">HUGO</a>&nbsp;
 <a href='http://cancer.sanger.ac.uk/cosmic/gene/analysis?ln={{gname}}' title="Mutation Mapping" target="_blank">COSMIC</a>&nbsp;
+<a href='https://www.ncbi.nlm.nih.gov/pubmed/?term={{gname}}'" title="Literature Search" target="_blank">PubMed</a>&nbsp;
 <a href="/static/sources.html"> Data Sources </a>&nbsp;
 <a href="/static/terms.html"> Terminology </a>&nbsp;
-<a href="/index"> Home </a>
+<a href="/static/about.html"> Version </a>
       </p>
 <div>
 <table border=1 cellpaddings=7>
@@ -117,8 +118,8 @@ function goBack() {
     <button type="button" onclick="searchNode()">Search</button>&nbsp;
 <input type='Submit' name='submit' value='Gene Page' /></div></form>&nbsp;
 <button onclick="reset()">Reset</button>
-<font color="#ADD8E6">verified cancer association</font>
-<font color="#FF8C00">predicted association</font>
+<strong><font color="#ADD8E6">verified cancer association</font>
+<font color="#FF8C00">predicted association</font></strong>
 <hr style='border-width: 0px'>
 <script type='text/javascript'>//<![CDATA[
 

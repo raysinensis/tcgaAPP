@@ -11,6 +11,7 @@
 
 <a href="/static/sources.html"> Data Sources </a>&nbsp;
 <a href="/static/terms.html"> Terminology </a>&nbsp;
+<a href="/static/about.html"> Version </a>&nbsp;
 <a href="/index"> Home </a>
 
 <link rel=stylesheet type=text/css href='/static/style.css'>
@@ -68,6 +69,8 @@ font: 16px sans-serif;
 <a>double click on gene links to wikipedia page</a>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <hr style='border-width: 0px'>
+<div id='loading2'></div>
+<div id="content">
 <script>
 var margin = {top: 30, right: 20, bottom: 30, left: 100},
     width = 600 - margin.left - margin.right,
@@ -234,7 +237,18 @@ function topFunction() {
     document.body.scrollTop = 0; // For Chrome, Safari and Opera 
     document.documentElement.scrollTop = 0; // For IE and Firefox
 }
-</script>
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('content').style.visibility="hidden";
+  } else if (state == 'complete') {
+         document.getElementById('interactive');
+         document.getElementById('loading2').style.visibility="hidden";
+         document.getElementById('content').style.visibility="visible";
+ 
+  }
+}
+</script></div>
 </body>
 </html>
 
