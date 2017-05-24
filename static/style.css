@@ -6,6 +6,7 @@ a, h1, h2       { color: #3c89bd; }
 h1, h2          {font-family: 'Playfair Display'; margin: 0; }
 h1              { border-bottom: 2px solid #eee; }
 h2              { font-size: 1.4em; }
+h2 		{ display:inline;}
 table {
     table-layout:fixed;
     border-collapse:collapse;

@@ -1,11 +1,11 @@
 DONE:
--additional cancer types added, now 13 inn total (with available cox and normal tissue sample)
--added look up of immediate interaction partners of each queried gene
--moved some api calls to sql storage
--quality of life html/javascript changes
+- additional cancer types added, now 13 inn total (with available cox and normal tissue sample)
+- added look up of immediate interaction partners of each queried gene
+- moved some api calls to sql storage
+- quality of life html/javascript changes
 --------------------------------------------------------------------------------------------------
 ToDo:
-+more cancer types to be added, very computation heavy process
-+pubmed abstract processing to extract natural language info on relation of gene to cancer
++ more cancer types to be added, very computation heavy process
++ pubmed abstract processing to extract natural language info on relation of gene to cancer
 
-05-17-2017 RF
+05-24-2017 RF
