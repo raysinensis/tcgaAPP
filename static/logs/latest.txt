@@ -3,9 +3,10 @@ DONE:
 - added look up of immediate interaction partners of each queried gene
 - moved some api calls to sql storage
 - quality of life html/javascript changes
+- implement query strings, error handling
 --------------------------------------------------------------------------------------------------
 ToDo:
 + more cancer types to be added, very computation heavy process
 + pubmed abstract processing to extract natural language info on relation of gene to cancer
 
-05-24-2017 RF
+05-25-2017 RF

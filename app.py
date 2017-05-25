@@ -30,13 +30,13 @@ import networkx as nx
 from networkx.readwrite import json_graph
 
 app = Flask(__name__,static_url_path='/static')
-app.debug = True
+#app.debug = True
 
 UPLOAD_FOLDER = './static/upload'
 ALLOWED_EXTENSIONS = set(['txt', 'csv'])
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///static/database/methyl.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///static/database/tcga.db'
 db = SQLAlchemy(app)
 
 app.vars=''
@@ -61,10 +61,7 @@ def index():
 			f.write(app.vars)
 			f.write("\n")
 			f.close()
-			if validgene(app.vars):
-				return redirect(url_for('trying',name=app.vars))
-			else:
-				return render_template('entry-err.html')
+			return redirect(url_for('trying',name=app.vars))
 		else:
 			return render_template('entry.html')
 
@@ -119,6 +116,8 @@ def genemap():
 def trying():
 	app.vars = request.args.get('name').upper()
 	gname=app.vars
+	if not validgene(app.vars):
+		return render_template('entry-err.html')
 	if os.path.exists('./static/zips/'+app.vars+'.zip'):
 		with zipfile.ZipFile("./static/zips/"+app.vars+".zip","r") as zip_ref:
 			zip_ref.extractall("./static/OUT/")
@@ -418,6 +417,26 @@ def getsubgraph(gene):
 			H.node[n]['group'] =3
 	d = json_graph.node_link_data(H)
 	json.dump(d, open('./static/onegene.json','w'))
+
+from config import ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+if not app.debug:
+#email alert
+    import logging
+    from logging.handlers import SMTPHandler
+    credentials = None
+    if MAIL_USERNAME or MAIL_PASSWORD:
+        credentials = (MAIL_USERNAME, MAIL_PASSWORD)
+    mail_handler = SMTPHandler((MAIL_SERVER, MAIL_PORT), 'no-reply@' + MAIL_SERVER, ADMINS, 'TCGAapp failure', credentials)
+    mail_handler.setLevel(logging.ERROR)
+    app.logger.addHandler(mail_handler)
+#logging to file
+    from logging.handlers import RotatingFileHandler
+    file_handler = RotatingFileHandler('static/logs/errors.log', 'a', 1 * 1024 * 1024, 10)
+    file_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
+    app.logger.setLevel(logging.INFO)
+    file_handler.setLevel(logging.INFO)
+    app.logger.addHandler(file_handler)
+    app.logger.info('TCGAapp startup')
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507)
