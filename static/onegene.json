@@ -1,1 +1,1 @@
-{"directed": false, "graph": {}, "nodes": [{"group": 3, "name": "PNPT1", "id": "PNPT1"}, {"group": 3, "name": "PRKDC", "id": "PRKDC"}], "links": [{"source": 0, "target": 1}], "multigraph": false}
+{"directed": false, "graph": {}, "nodes": [{"group": 3, "name": "DIS3L2", "id": "DIS3L2"}], "links": [], "multigraph": false}

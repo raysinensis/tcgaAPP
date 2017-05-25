@@ -62,7 +62,7 @@ def index():
 			f.write("\n")
 			f.close()
 			if validgene(app.vars):
-				return redirect('/trying')
+				return redirect(url_for('trying',name=app.vars))
 			else:
 				return render_template('entry-err.html')
 		else:
@@ -117,6 +117,7 @@ def genemap():
 
 @app.route('/trying',methods=['GET','POST'])
 def trying():
+	app.vars = request.args.get('name').upper()
 	gname=app.vars
 	if os.path.exists('./static/zips/'+app.vars+'.zip'):
 		with zipfile.ZipFile("./static/zips/"+app.vars+".zip","r") as zip_ref:
