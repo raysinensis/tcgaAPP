@@ -8,3 +8,9 @@ MAIL_PASSWORD = 'botbotbot'
 
 # administrator list
 ADMINS = ['rf@raysinensis.com']
+
+# available languages
+LANGUAGES = {
+    'en': 'English',
+    'zh': 'Chinese'
+}

@@ -17,6 +17,8 @@ from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
 from config import ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+from config import LANGUAGES
+from flask_babel import Babel,gettext
 
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
 from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
@@ -39,6 +41,8 @@ ALLOWED_EXTENSIONS = set(['txt', 'csv'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///static/database/tcga.db'
 db = SQLAlchemy(app)
+babel = Babel(app)
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
 app.vars=''
 
@@ -496,6 +500,10 @@ def sorry():
 		server.sendmail(MAIL_USERNAME, ADMINS, textfb)
 		server.close()
 		return redirect('/index')
+
+@babel.localeselector
+def get_locale():
+    return 'zh'#request.accept_languages.best_match(LANGUAGES.keys())
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507)

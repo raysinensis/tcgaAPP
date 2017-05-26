@@ -1,0 +1,48 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-05-26 16:58-0400\n"
+"PO-Revision-Date: 2017-05-26 16:59-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: templates/listquery.html:12
+msgid "Data Sources"
+msgstr ""
+
+#: templates/listquery.html:13
+msgid "Terminology"
+msgstr ""
+
+#: templates/listquery.html:14
+msgid "Version"
+msgstr ""
+
+#: templates/listquery.html:15
+msgid "Home"
+msgstr ""
+
+#: templates/listquery.html:68
+msgid "Download"
+msgstr ""
+
+#: templates/listquery.html:69
+msgid "double click on gene links to wikipedia page"
+msgstr ""
+
+#: templates/listquery.html:70
+msgid "Top"
+msgstr ""
+

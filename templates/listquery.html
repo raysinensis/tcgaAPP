@@ -9,10 +9,10 @@
 <meta http-equiv="pragma" content="no-cache" />
 <title>List Analysis</title>
 
-<a href="/static/sources.html"> Data Sources </a>&nbsp;
-<a href="/static/terms.html"> Terminology </a>&nbsp;
-<a href="/static/about.html"> Version </a>&nbsp;
-<a href="/index"> Home </a>
+<a href="/static/sources.html">{{ gettext('Data Sources') }} </a>&nbsp;
+<a href="/static/terms.html">{{ gettext('Terminology') }} </a>&nbsp;
+<a href="/static/about.html">{{ gettext('Version') }} </a>&nbsp;
+<a href="/index">{{ gettext('Home') }} </a>
 
 <link rel=stylesheet type=text/css href='/static/style.css'>
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -65,9 +65,9 @@ font: 16px sans-serif;
 </style></head>
 <hr>
 <body>
-<input type='button' value='Download' onClick="window.open('./static/listresult.txt')"/>
-<a>double click on gene links to wikipedia page</a>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<input type='button' value={{ gettext('Download') }} onClick="window.open('./static/listresult.txt')"/>
+<a>{{ gettext('double click on gene links to wikipedia page') }}</a>
+<button onclick="topFunction()" id="myBtn" title="Go to top">{{ gettext('Top') }}</button>
 <hr style='border-width: 0px'>
 <div id='loading2'></div>
 <div id="content">
