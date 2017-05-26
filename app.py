@@ -16,9 +16,7 @@ from flask import Flask, render_template, request, redirect, current_app, url_fo
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
-from flask_mail import Mail,Message
 from config import ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
-
 
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
 from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
