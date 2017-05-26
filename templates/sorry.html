@@ -1,5 +1,5 @@
 <!doctype html>
-<title>Version Updates</title>
+<title>Sorry...</title>
 <head>
 <style>
 #hidden {
@@ -17,7 +17,7 @@ $(document).ready(function(){
 <script>
 $(document).ready(function() {
         $.ajax({
-            url : "logs/latest.txt",
+            url : "/static/logs/latest.txt",
             dataType: "text",
             success : function (data) {
                 $("#div1").html(data);
@@ -27,14 +27,19 @@ $(document).ready(function() {
 </script>
 </head>
 <meta charset="utf-8"/>
-<link rel=stylesheet type=text/css href='/static/style.css'>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <a href="/static/sources.html"> Data Sources </a>&nbsp;
 <a href="/static/terms.html"> Terminology </a>&nbsp;
 <a href="/static/about.html"> Version </a>&nbsp;
 <a href="/index"> Home </a>
 <body>
-<form id='fdb' action="" method="post">
+<hr style='border-width: 0px'>
+<p></p>
+<h4>
+Hmmmm, something went wrong... :(</h4>
+Error has been logged and sent to admin. Any other feedback is welcome!
+<form id='fdb' action='/sorry' method="POST">
 <textarea name='text' rows="23" cols="340" id="div1"></textarea>
 <input type="submit" id='sendbutton' name="feedbackform" value="Send Feedback" title='Admin will be notified'>
 <p id='hidden' style="color:red;">Feedback sent! Thanks!</p>

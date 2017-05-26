@@ -16,6 +16,9 @@ from flask import Flask, render_template, request, redirect, current_app, url_fo
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
+from flask_mail import Mail,Message
+from config import ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+
 
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
 from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
@@ -418,7 +421,7 @@ def getsubgraph(gene):
 	d = json_graph.node_link_data(H)
 	json.dump(d, open('./static/onegene.json','w'))
 
-from config import ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+
 import smtplib
 import logging
 from logging.handlers import SMTPHandler
@@ -467,6 +470,34 @@ if not app.debug:
     file_handler.setLevel(logging.INFO)
     app.logger.addHandler(file_handler)
     app.logger.info('TCGAapp startup')
+
+@app.route('/static/about.html',methods=['POST'])
+def feedback():
+	textfb = '\n'+request.form['text']
+	server = smtplib.SMTP(MAIL_SERVER, MAIL_PORT)
+        server.ehlo()
+        server.starttls()
+        server.login(MAIL_USERNAME, MAIL_PASSWORD)
+        server.sendmail(MAIL_USERNAME, ADMINS, textfb)
+        server.close()
+	return ('', 204)
+
+@app.errorhandler(500)
+def page_not_found(e):
+	return redirect('/sorry')
+@app.route('/sorry',methods=['GET', 'POST'])
+def sorry():
+	if request.method == 'GET':
+		return render_template('sorry.html'), 500
+	else:
+		textfb = '\n'+request.form['text']
+		server = smtplib.SMTP(MAIL_SERVER, MAIL_PORT)
+		server.ehlo()
+		server.starttls()
+		server.login(MAIL_USERNAME, MAIL_PASSWORD)
+		server.sendmail(MAIL_USERNAME, ADMINS, textfb)
+		server.close()
+		return redirect('/index')
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507)

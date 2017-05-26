@@ -1,12 +1,15 @@
+Known Issues:
+! cannot calculate for some genes, throwing errors
+--------------------------------------------------------------------------------------------------
 DONE:
 - additional cancer types added, now 13 inn total (with available cox and normal tissue sample)
 - added look up of immediate interaction partners of each queried gene
 - moved some api calls to sql storage
 - quality of life html/javascript changes
-- implement query strings, error handling
+- implement query strings, error handling, reporting
 --------------------------------------------------------------------------------------------------
 ToDo:
 + more cancer types to be added, very computation heavy process
 + pubmed abstract processing to extract natural language info on relation of gene to cancer
 
-05-25-2017 RF
+05-26-2017 RF
