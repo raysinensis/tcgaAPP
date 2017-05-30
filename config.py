@@ -12,5 +12,5 @@ ADMINS = ['rf@raysinensis.com']
 # available languages
 LANGUAGES = {
     'en': 'English',
-    'zh': 'Chinese'
+    'zh_Hans_CN': 'Chinese'
 }

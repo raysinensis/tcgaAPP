@@ -1,37 +1,48 @@
 <!doctype html>
-<title>TCGA gene query</title>
+<title>{{ gettext('TCGA gene query') }}</title>
 <head>
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
   <link rel="shortcut icon" type="image/x-icon" href="./static/icon.ico" />
 </head>
 <meta charset="utf-8"/>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<a href="/static/sources.html"> Data Sources </a>&nbsp;
-<a href="/static/terms.html"> Terminology </a>&nbsp;
-<a href="/static/about.html"> Version </a>&nbsp;
-<a href="/index"> Home </a>
+<a href="/static/sources.html">{{ gettext('Data Sources') }} </a>&nbsp;
+<a href="/static/terms.html">{{ gettext('Terminology') }} </a>&nbsp;
+<a href="/static/about.html">{{ gettext('Version') }} </a>&nbsp;
+<a href="/index">{{ gettext('Home') }} </a>
+<form id='cn' method='post' action='Toggle'>
+<a style="float:right;font-size:80%;">&nbsp;中文</a>
+<label class="switch" style="float:right;">
+  <input type="checkbox" name="cnswitch" id="cnswitch" value='1' {{checked}} onclick="load2(event);">
+  <div class="slider round"></div></form>
+</label>
 <div id="loading"></div>
 <div class=page>
-  <h1>The Cancer Genome Atlas</h1>
+  <h1>{{ gettext('The Cancer Genome Atlas') }} </h1>
   <div class=metanav>
 
     <h4>
-      Enter Gene Symbol:
+      {{ gettext('Enter Gene Symbol:') }} 
     </h4>
 
     <form id='userinput' method='post' action='index' >
       <p>
-    <input type='text' name='name' placeholder="Gene of Interest"/>
+    <input type='text' name='name' placeholder={{ gettext('Gene of Interest') }} />
       </p>
       <p>
-    <input type='Submit' name='submit' value='Submit' onclick="load1(event);"/>
+    <input type='Submit' name='submit' value={{ gettext('Submit') }} onclick="load1(event);"/>
       </p>
     </form>
 
   </div>
 </div>
 <div class=page>
-  <h1>Tumor Associated Gene Prediction</h1>
+  <h1>{{ gettext('Tumor Associated Gene Prediction') }}</h1>
   <div class=metanav>
 
     <h4>
@@ -39,21 +50,21 @@
 
     <form id='userinput' method='get' action='genemap' >
       <p>
-      </p><h4>616 positive, curated by COSMIC
+      </p><h4>{{ gettext('616 positive, curated by COSMIC') }}
     </h4>
-	<h4>1989 predicted genes, out of 17458 total</h4>
+	<h4>{{ gettext('1989 predicted genes, out of 17458 total') }}</h4>
 	<h4>
-      (Random forest method modified for "Positive Unlabeled Classification")
+      {{ gettext('(Random forest method modified for "Positive Unlabeled Classification")') }}
     </h4>
       <p>
-    <input type='Submit' value='View in Interaction Network' />
+    <input type='Submit' value={{ gettext('View in Interaction Network') }} />
       </p>
     </form>
 
   </div>
 </div>
 <div class=page>
-  <h1>Query of Curation/Prediction</h1>
+  <h1>{{ gettext('Query of Curation/Prediction') }}</h1>
   <div class=metanav>
 
     <h4>
@@ -61,11 +72,11 @@
 
       <p>
       </p><h4>
-      .txt or .csv files accepted (all genes returned if left empty)
+      {{ gettext('.txt or .csv files accepted (all genes returned if left empty)') }}
     </h4>
 <form method=post enctype="multipart/form-data" action='listquery'>
-      <p><input type=file name='file'>
-         <input type=submit value='Upload' >
+      <p><input type=file name='file' value={{ gettext('Choose File') }}>
+         <input type=submit value={{ gettext('Upload') }} >
       </p></form>
 
   </div>
@@ -85,6 +96,12 @@ if (x==0){
 element.style.left = "200px";
 element.style.top = "100px";}
     setTimeout(loading, 0);
+}
+function load2(event) {
+    var form = $('<form></form>');
+    form.attr("method", "post");
+    form.attr("action", '/Toggle');
+	document.getElementById("cn").submit();	
 }
 // ]]></script>
 <footer>

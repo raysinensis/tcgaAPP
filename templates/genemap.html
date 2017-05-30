@@ -72,13 +72,13 @@
 </script>
 <form id='userinput' method='post' action='index' >
 <div class="floatdiv">
-    <button onclick="reset()">Home</button>&nbsp;
+    <button onclick="reset()">{{ gettext('Home')}}</button>&nbsp;
     <input id="search" name='name'>&nbsp;
-    <button title='highlight in plot' type="button" onclick="searchNode()">Search</button>&nbsp;
-<input title='go to report' type='Submit' name='submit' value='Gene Page' /></div></form>&nbsp;
-<button title='reset zoom/pan' onclick="reset()">Reset</button>
-<strong><font color="#ADD8E6">verified cancer association</font>
-<font color="#FF8C00">predicted association</font></strong>
+    <button title={{ gettext('highlight in plot')}} type="button" onclick="searchNode()">{{ gettext('Search')}}</button>&nbsp;
+<input title={{ gettext('go to report')}} type='Submit' name='submit' value={{ gettext('Gene Page')}} /></div></form>&nbsp;
+<button title={{gettext('reset zoom/pan')}} onclick="reset()">{{ gettext('Reset')}}</button>
+<strong><font color="#ADD8E6">{{ gettext('verified cancer association')}}</font>
+<font color="#FF8C00">{{gettext('predicted association')}}</font></strong>
   
 
 

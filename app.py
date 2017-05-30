@@ -11,7 +11,7 @@ import shutil
 import zipfile
 import numpy
 
-from flask import Flask, render_template, request, redirect, current_app, url_for
+from flask import Flask, render_template, request, redirect, current_app, url_for,session,g
 #from flask_weasyprint import HTML, render_pdf
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
@@ -43,8 +43,14 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///static/database/tcga.db'
 db = SQLAlchemy(app)
 babel = Babel(app)
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.lang='en'
 
 app.vars=''
+@babel.localeselector
+def get_locale():
+    lang = session.get('lang', app.lang)
+    setattr(g, 'lang', lang)
+    return lang
 
 @app.route('/')
 def main():
@@ -57,7 +63,10 @@ def static_page(page_name):
 @app.route('/index',methods=['GET','POST'])
 def index():
 	if request.method == 'GET':
-  		return render_template('entry.html')
+  		checked='?'
+		if app.lang!='en':
+			checked='checked'
+		return render_template('entry.html',checked=checked)
 	else:
 		app.vars=request.form['name']
 		app.vars=app.vars.upper()
@@ -68,7 +77,10 @@ def index():
 			f.close()
 			return redirect(url_for('trying',name=app.vars))
 		else:
-			return render_template('entry.html')
+			checked='?'
+			if app.lang!='en':
+				checked='checked'
+			return render_template('entry.html',checked=checked)
 
 def create_pdf(pdf_data):
     pdf = StringIO()
@@ -331,9 +343,9 @@ def get_splice(gname):
 	with open('./static/TCGA_alt_spl_g.txt','r') as slist:
 		rlist=slist.read().split('\n')
 		if app.vars in rlist:
-			splice="Significant Alternative Splicing"
+			splice=gettext(u"Significant Alternative Splicing")
 		else:
-			splice="No Significant Alternative Splicing"
+			splice=gettext(u"No Significant Alternative Splicing")
 		return splice
 
 def makejson(listof):
@@ -501,9 +513,15 @@ def sorry():
 		server.close()
 		return redirect('/index')
 
-@babel.localeselector
-def get_locale():
-    return 'zh'#request.accept_languages.best_match(LANGUAGES.keys())
+@app.route('/Toggle', methods=['POST'])
+def Toggle():
+	print request.form
+	test = request.form.get('cnswitch')
+	if test == '1' :
+		app.lang='zh_Hans_CN'
+	else :
+		app.lang='en'
+	return redirect('/index')
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507)
