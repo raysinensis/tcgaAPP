@@ -61,7 +61,7 @@
     }
   </style>
 
-  <title>Gene Network View</title>
+  <title>{{gettext('Gene Network View')}}</title>
 
   
 </head>
@@ -74,11 +74,11 @@
 <div class="floatdiv">
     <button onclick="reset()">{{ gettext('Home')}}</button>&nbsp;
     <input id="search" name='name'>&nbsp;
-    <button title={{ gettext('highlight in plot')}} type="button" onclick="searchNode()">{{ gettext('Search')}}</button>&nbsp;
-<input title={{ gettext('go to report')}} type='Submit' name='submit' value={{ gettext('Gene Page')}} /></div></form>&nbsp;
-<button title={{gettext('reset zoom/pan')}} onclick="reset()">{{ gettext('Reset')}}</button>
+    <button type="button" title="{{ gettext('highlight in plot')}}"  onclick="searchNode()">{{ gettext('Search')}}</button>&nbsp;
+<input title="{{ gettext('go to report')}}" type='Submit' name='submit' value="{{ gettext('Gene Page')}}" /></div>&nbsp;
+<button type="button" title="{{gettext('reset zoom/pan')}}" onclick="reset1()">{{ gettext('Reset')}}</button>
 <strong><font color="#ADD8E6">{{ gettext('verified cancer association')}}</font>
-<font color="#FF8C00">{{gettext('predicted association')}}</font></strong>
+<font color="#FF8C00">{{gettext('predicted association')}}</font></strong></form>
   
 
 
@@ -316,7 +316,7 @@ function tick() {
   node.attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; });
 }
-function reset() {
+function reset1() {
     container.attr("transform", "translate(0,0).scale(1)");
 }
 //]]> 

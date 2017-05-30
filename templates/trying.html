@@ -57,8 +57,8 @@ font: 16px sans-serif;
 
     </head>
     <body>
-<button onclick="topFunction()" id="myBtn" title={{gettext("Go to top")}}>{{gettext('Top')}}</button>
-    <h1>Results-{{gname}}</h1>
+<button onclick="topFunction()" id="myBtn" title="{{gettext('Go to top')}}">{{gettext('Top')}}</button>
+    <h1>{{gettext('Results')}}-{{gname}}</h1>
       <p>
     <input type='button' title='.zip' value={{ gettext('Download') }} onClick="window.location.href='{{filelink}}'" />
 <button onclick="location.href = 'index';">{{ gettext('Home') }}</button>
@@ -79,13 +79,13 @@ function goBack() {
 <table border=1 cellpaddings=7>
             <tr>
                 <th>{{gettext('Gene')}}</th>
-                <th title={{gettext('TCGA designation')}}>{{gettext('Tumor')}}</th>
-                <th title={{gettext('Cox Coefficient')}}>{{gettext('Cox')}}</th>
-                <th title={{gettext('Adjusted False Discovery Rate')}}>{{gettext('FDR')}}</th>
-		<th title={{gettext('MUT designates significance')}}>{{gettext('Mutations')}}</th>
-                <th title={{gettext('INS designates significance')}}>{{gettext('Insertions')}}</th>
-                <th title={{gettext('DEL designates significance')}}>{{gettext('Deletions')}}</th>
-		<th title={{gettext('Methylation to Survival')}}>{{gettext('Methylation')}}</th>
+                <th title="{{gettext('TCGA designation')}}">{{gettext('Tumor')}}</th>
+                <th title="{{gettext('Cox Coefficient')}}">{{gettext('Cox')}}</th>
+                <th title="{{gettext('Adjusted False Discovery Rate')}}">{{gettext('FDR')}}</th>
+		<th title="{{gettext('MUT designates significance')}}">{{gettext('Mutations')}}</th>
+                <th title="{{gettext('INS designates significance')}}">{{gettext('Insertions')}}</th>
+                <th title="{{gettext('DEL designates significance')}}">{{gettext('Deletions')}}</th>
+		<th title="{{gettext('Methylation to Survival')}}">{{gettext('Methylation')}}</th>
             </tr>
             {% for obj in object_list %}
             <tr>
@@ -102,7 +102,7 @@ function goBack() {
         </table>
  </div>
 <hr style='width: 60%;margin-left:0;border-width: 0px';>
-{{splicing}}: <a href='http://bioinformatics.mdanderson.org/TCGASpliceSeq/index.jsp' title={{gettext('Alternative Splicing Database')}} target="_blank">SpliceSeq</a>
+{{splicing}}: <a href='http://bioinformatics.mdanderson.org/TCGASpliceSeq/index.jsp' title="{{gettext('Alternative Splicing Database')}}" target="_blank">SpliceSeq</a>
 <hr style='width: 60%;margin-left:0';>
 <div class="bk-root">
     <h2>{{gettext('Expression Level')}} </h2>&nbsp;{{gettext('(click on cutoff point for KM plots)')}}
@@ -115,11 +115,11 @@ function goBack() {
 <div class="floatdiv">
     <button onclick="reset()">{{gettext('Home')}}</button>&nbsp;
     <input id="search" name='name'>&nbsp;
-    <button title={{gettext('highlight in plot')}}type="button" onclick="searchNode()">{{gettext('Search')}}</button>&nbsp;
-<input title={{gettext('go to report')}} type='Submit' name='submit' value={{gettext('Gene Page')}} /></div></form>&nbsp;
-<button title={{gettext('reset zoom/pan')}} onclick="reset()">{{gettext('Reset')}}</button>
+    <button type=button title="{{gettext('highlight in plot')}}" onclick="searchNode()">{{gettext('Search')}}</button>&nbsp;
+<input title="{{gettext('go to report')}}" type='Submit' name='submit' value={{ gettext('Gene Page' )}} /></div>&nbsp;
+<button type=button title="{{gettext('reset zoom/pan')}}" onclick="reset1()">{{gettext('Reset')}}</button>
 <strong><font color="#ADD8E6">{{gettext('verified cancer association')}}</font>
-<font color="#FF8C00">{{gettext('predicted association')}}</font></strong>
+<font color="#FF8C00">{{gettext('predicted association')}}</font></strong></form>
 <hr style='border-width: 0px'>
 <script type='text/javascript'>//<![CDATA[
 
@@ -359,7 +359,7 @@ function tick() {
 node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
         .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
 }
-function reset() {
+function reset1() {
     container.attr("transform", "translate(0,0).scale(1)");
 }
 //]]> 
