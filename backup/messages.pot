@@ -1,0 +1,240 @@
+# Translations template for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-05-30 13:50-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: app.py:346
+msgid "Significant Alternative Splicing"
+msgstr "显著选择性剪接"
+
+#: app.py:348
+msgid "No Significant Alternative Splicing"
+msgstr "无显著选择性剪接"
+
+#: templates/entry-err.html:3 templates/entry.html:3
+msgid "TCGA gene query"
+msgstr "癌症基因组图谱基因查寻"
+
+#: templates/entry-err.html:14 templates/entry.html:15
+#: templates/listquery.html:12
+msgid "Data Sources"
+msgstr "数据来源"
+
+#: templates/entry-err.html:15 templates/entry.html:16
+#: templates/listquery.html:13
+msgid "Terminology"
+msgstr "专业术语"
+
+#: templates/entry-err.html:16 templates/entry.html:17
+#: templates/listquery.html:14
+msgid "Version"
+msgstr "网页版本"
+
+#: templates/entry-err.html:17 templates/entry.html:18
+#: templates/genemap.html:75 templates/listquery.html:15
+#: templates/trying.html:64 templates/trying.html:116
+msgid "Home"
+msgstr "主页"
+
+#: templates/entry-err.html:26 templates/entry.html:27
+msgid "The Cancer Genome Atlas"
+msgstr "癌症基因组图谱"
+
+#: templates/entry-err.html:35 templates/entry.html:36
+msgid "Gene of Interest"
+msgstr "输入基因名"
+
+#: templates/entry-err.html:38 templates/entry.html:39
+msgid "Submit"
+msgstr "查寻"
+
+#: templates/entry-err.html:45 templates/entry.html:46
+msgid "Tumor Associated Gene Prediction"
+msgstr "癌症相关基因预测"
+
+#: templates/entry-err.html:53 templates/entry.html:54
+msgid "616 positive, curated by COSMIC"
+msgstr "已知基因616，由COSMIC收录"
+
+#: templates/entry-err.html:55 templates/entry.html:56
+msgid "1989 predicted genes, out of 17458 total"
+msgstr "从总共17458中预测基因1989"
+
+#: templates/entry-err.html:57 templates/entry.html:58
+msgid "(Random forest method modified for \"Positive Unlabeled Classification\")"
+msgstr "阳性未标记随机森林分类"
+
+#: templates/entry-err.html:60 templates/entry.html:61
+msgid "View in Interaction Network"
+msgstr "查看基因网络"
+
+#: templates/entry-err.html:67 templates/entry.html:68
+msgid "Query of Curation/Prediction"
+msgstr "查寻基因列表"
+
+#: templates/entry-err.html:75 templates/entry.html:76
+msgid ".txt or .csv files accepted (all genes returned if left empty)"
+msgstr "上传txt或csv文件,如果空缺则返回所有阳性基因"
+
+#: templates/entry-err.html:78 templates/entry.html:79
+msgid "Choose File"
+msgstr "选择文件"
+
+#: templates/entry-err.html:79 templates/entry.html:80
+msgid "Upload"
+msgstr "上传"
+
+#: templates/entry.html:31
+msgid "Enter Gene Symbol:"
+msgstr "输入基因名"
+
+#: templates/genemap.html:64
+msgid "Gene Network View"
+msgstr "基因相互作用网络"
+
+#: templates/genemap.html:77 templates/trying.html:118
+msgid "highlight in plot"
+msgstr "在图中标记"
+
+#: templates/genemap.html:77 templates/trying.html:118
+msgid "Search"
+msgstr "查寻"
+
+#: templates/genemap.html:78 templates/trying.html:119
+msgid "go to report"
+msgstr "具体基因报告"
+
+#: templates/genemap.html:78 templates/trying.html:119
+msgid "Gene Page"
+msgstr "基因报告"
+
+#: templates/genemap.html:79 templates/trying.html:120
+msgid "reset zoom/pan"
+msgstr "重置基因网络图"
+
+#: templates/genemap.html:79 templates/trying.html:120
+msgid "Reset"
+msgstr "重置"
+
+#: templates/genemap.html:80 templates/trying.html:121
+msgid "verified cancer association"
+msgstr "已知癌症相关"
+
+#: templates/genemap.html:81 templates/trying.html:122
+msgid "predicted association"
+msgstr "預測癌症相关"
+
+#: templates/listquery.html:10
+msgid "List Analysis"
+msgstr "列表分析"
+
+#: templates/listquery.html:68 templates/trying.html:63
+msgid "Download"
+msgstr "下载"
+
+#: templates/listquery.html:69
+msgid "double click on gene links to wikipedia page"
+msgstr "双击打开wiki网页"
+
+#: templates/listquery.html:70 templates/trying.html:60
+msgid "Go to top"
+msgstr "返回顶部"
+
+#: templates/listquery.html:70 templates/trying.html:60
+msgid "Top"
+msgstr "顶部"
+
+#: templates/trying.html:50 templates/trying.html:61
+msgid "Results"
+msgstr "结果"
+
+#: templates/trying.html:70
+msgid "links to"
+msgstr "基因链接"
+
+#: templates/trying.html:81
+msgid "Gene"
+msgstr "基因"
+
+#: templates/trying.html:82
+msgid "TCGA designation"
+msgstr "癌症"
+
+#: templates/trying.html:82
+msgid "Tumor"
+msgstr "癌症缩写"
+
+#: templates/trying.html:83
+msgid "Cox Coefficient"
+msgstr "存活分析Cox系数"
+
+#: templates/trying.html:83
+msgid "Cox"
+msgstr "Cox系数"
+
+#: templates/trying.html:84
+msgid "Adjusted False Discovery Rate"
+msgstr "错误发现率FDR"
+
+#: templates/trying.html:84
+msgid "FDR"
+msgstr "错误发现率"
+
+#: templates/trying.html:85
+msgid "MUT designates significance"
+msgstr "突变是否显着"
+
+#: templates/trying.html:85
+msgid "Mutations"
+msgstr "突变"
+
+#: templates/trying.html:86
+msgid "INS designates significance"
+msgstr "插入突变是否显着"
+
+#: templates/trying.html:86
+msgid "Insertions"
+msgstr "插入突变"
+
+#: templates/trying.html:87
+msgid "DEL designates significance"
+msgstr "缺失突变是否显着"
+
+#: templates/trying.html:87
+msgid "Deletions"
+msgstr "缺失突变"
+
+#: templates/trying.html:88
+msgid "Methylation to Survival"
+msgstr "甲基化对存活影响是否显着"
+
+#: templates/trying.html:88
+msgid "Methylation"
+msgstr "甲基化"
+
+#: templates/trying.html:105
+msgid "Alternative Splicing Database"
+msgstr "选择性剪接数据库"
+
+#: templates/trying.html:108
+msgid "Expression Level"
+msgstr "表达水平"
+
+#: templates/trying.html:108
+msgid "(click on cutoff point for KM plots)"
+msgstr "(单击分界点打开存活分析曲线)"
+

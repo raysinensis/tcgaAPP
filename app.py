@@ -134,7 +134,10 @@ def trying():
 	app.vars = request.args.get('name').upper()
 	gname=app.vars
 	if not validgene(app.vars):
-		return render_template('entry-err.html')
+		checked='?'
+		if app.lang!='en':
+			checked='checked'
+		return render_template('entry-err.html',checked=checked)
 	if os.path.exists('./static/zips/'+app.vars+'.zip'):
 		with zipfile.ZipFile("./static/zips/"+app.vars+".zip","r") as zip_ref:
 			zip_ref.extractall("./static/OUT/")

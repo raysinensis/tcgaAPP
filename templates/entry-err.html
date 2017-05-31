@@ -7,10 +7,11 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
   <link rel="shortcut icon" type="image/x-icon" href="./static/icon.ico" />
-</head>
 <meta charset="utf-8"/>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
 <a href="/static/sources.html">{{ gettext('Data Sources') }} </a>&nbsp;
 <a href="/static/terms.html">{{ gettext('Terminology') }} </a>&nbsp;
 <a href="/static/about.html">{{ gettext('Version') }} </a>&nbsp;
@@ -27,15 +28,15 @@
   <div class=metanav>
 
     <h4 style="color:red;">
-      Enter Valid Gene Symbol:
+      {{ gettext('Enter Gene Symbol:') }} 
     </h4>
 
     <form id='userinput' method='post' action='index' >
       <p>
-    <input type='text' name='name' placeholder={{ gettext('Gene of Interest') }} />
+    <input type='text' name='name' placeholder="{{ gettext('Gene of Interest') }}" />
       </p>
       <p>
-    <input type='Submit' name='submit' value={{ gettext('Submit') }} onclick="load1(event);"/>
+    <input type='Submit' name='submit' value="{{ gettext('Submit') }}" onclick="load1(event);"/>
       </p>
     </form>
 
@@ -75,7 +76,7 @@
       {{ gettext('.txt or .csv files accepted (all genes returned if left empty)') }}
     </h4>
 <form method=post enctype="multipart/form-data" action='listquery'>
-      <p><input type=file name='file' value={{ gettext('Choose File') }}>
+      <p><input type=file name='file' value="{{ gettext('Choose File') }}">
          <input type=submit value={{ gettext('Upload') }} >
       </p></form>
 
@@ -104,12 +105,12 @@ function load2(event) {
 	document.getElementById("cn").submit();	
 }
 // ]]></script>
+</body>
 <footer>
-<p>v0.9: 05-17-2017
+<p>v0.95: 05-30-2017
 <a href="mailto: rf@raysinensis.com">
   email</a>
 <a href="https://github.com/raysinensis/tcgaAPP">
   github</a></p>
 </footer>
 </html>
-

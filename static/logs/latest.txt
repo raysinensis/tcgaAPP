@@ -1,15 +1,21 @@
 Known Issues:
 ! cannot calculate for some genes, throwing errors
 --------------------------------------------------------------------------------------------------
+ToDo:
++ more cancer types to be added, very computation heavy process
++ pubmed abstract processing to extract natural language info on relation of gene to cancer
++ cookie support for language, search history
+--------------------------------------------------------------------------------------------------
 DONE:
-- additional cancer types added, now 13 inn total (with available cox and normal tissue sample)
+- now with Chinese version toggle
+- added loading indicator
+- bug fixes to gene network plot
+05-30-2017 RF
+--------------------------------------------------------------------------------------------------
+DONE:
+- additional cancer types added, now 13 in total (with available cox and normal tissue sample)
 - added look up of immediate interaction partners of each queried gene
 - moved some api calls to sql storage
 - quality of life html/javascript changes
 - implement query strings, error handling, reporting
---------------------------------------------------------------------------------------------------
-ToDo:
-+ more cancer types to be added, very computation heavy process
-+ pubmed abstract processing to extract natural language info on relation of gene to cancer
-
 05-26-2017 RF
