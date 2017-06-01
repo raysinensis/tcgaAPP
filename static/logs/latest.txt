@@ -4,7 +4,12 @@ Known Issues:
 ToDo:
 + more cancer types to be added, very computation heavy process
 + pubmed abstract processing to extract natural language info on relation of gene to cancer
-+ cookie support for language, search history
++ cookie support
+--------------------------------------------------------------------------------------------------
+DONE:
+- session language control
+- added timer to logger
+06-01-2017 RF
 --------------------------------------------------------------------------------------------------
 DONE:
 - now with Chinese version toggle

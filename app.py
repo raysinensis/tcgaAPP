@@ -10,6 +10,7 @@ import glob
 import shutil
 import zipfile
 import numpy
+import time
 
 from flask import Flask, render_template, request, redirect, current_app, url_for,session,g
 #from flask_weasyprint import HTML, render_pdf
@@ -19,6 +20,7 @@ from sqlalchemy import text
 from config import ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
 from config import LANGUAGES
 from flask_babel import Babel,gettext
+from werkzeug.serving import BaseRequestHandler
 
 from bokeh.charts import Line, show, output_file, save, Dot, ColumnDataSource
 from bokeh.models import Label,HoverTool,Range1d,TapTool,OpenURL
@@ -43,9 +45,25 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///static/database/tcga.db'
 db = SQLAlchemy(app)
 babel = Babel(app)
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.secret_key = 'testtesttest'
 app.lang='en'
-
 app.vars=''
+
+class MyFancyRequestHandler(BaseRequestHandler):
+    """Extend werkzeug request handler to suit our needs."""
+    def handle(self):
+        self.fancyStarted = time.time()
+        rv = super(MyFancyRequestHandler, self).handle()
+        return rv
+
+    def send_response(self, *args, **kw):
+        self.fancyProcessed = time.time()
+        super(MyFancyRequestHandler, self).send_response(*args, **kw)
+
+    def log_request(self, code='-', size='-'):
+        duration = int((self.fancyProcessed - self.fancyStarted) * 1000)
+        self.log('info', '"{0}" {1} {2} [{3}ms]'.format(self.requestline, code, size, duration))
+
 @babel.localeselector
 def get_locale():
     lang = session.get('lang', app.lang)
@@ -64,8 +82,11 @@ def static_page(page_name):
 def index():
 	if request.method == 'GET':
   		checked='?'
-		if app.lang!='en':
-			checked='checked'
+		try:
+			if session['lang']!='en':
+				checked='checked'
+		except:
+			session['lang']='en'
 		return render_template('entry.html',checked=checked)
 	else:
 		app.vars=request.form['name']
@@ -78,7 +99,7 @@ def index():
 			return redirect(url_for('trying',name=app.vars))
 		else:
 			checked='?'
-			if app.lang!='en':
+			if session['lang']!='en':
 				checked='checked'
 			return render_template('entry.html',checked=checked)
 
@@ -135,7 +156,7 @@ def trying():
 	gname=app.vars
 	if not validgene(app.vars):
 		checked='?'
-		if app.lang!='en':
+		if session['lang']!='en':
 			checked='checked'
 		return render_template('entry-err.html',checked=checked)
 	if os.path.exists('./static/zips/'+app.vars+'.zip'):
@@ -521,10 +542,10 @@ def Toggle():
 	print request.form
 	test = request.form.get('cnswitch')
 	if test == '1' :
-		app.lang='zh_Hans_CN'
+		session['lang']='zh_Hans_CN'
 	else :
-		app.lang='en'
+		session['lang']='en'
 	return redirect('/index')
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=33507)
+  app.run(host='0.0.0.0', port=33507,request_handler=MyFancyRequestHandler)
