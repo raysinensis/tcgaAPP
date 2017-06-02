@@ -21,21 +21,28 @@
     <script type="text/javascript">
 nv.addGraph(function() {
         var chart = nv.models.multiBarChart();
+	chart.reduceXTicks(false);
 	chart.yAxis.tickFormat(d3.format('.f'));
 	chart.tooltip.valueFormatter(d3.format('.f'));
+
 d3.select('#chart svg').datum([
   {
     key: "mut",
     color: "#51A351",
     values:
-    [      
-      { x : "BRCA", y : 596 },
-      { x : "COAD", y : 1825 },
+    [     
+      { x : "BLCA", y : 684 }, 
+      { x : "BRCA", y : 640 },
+      { x : "CESC", y : 440 },
+      { x : "COAD", y : 2580 },
       { x : "GBM", y : 478 },
-      { x : "KICH",   y : 967 },
-      { x : "LUAD",   y : 811 },
-      { x : "PAAD", y : 983},
-      { x : "SARC", y : 382 },
+      { x : "HNSC", y : 518 },
+      { x : "KIRC", y : 433 },
+      { x : "KIRP",   y : 344 },
+      { x : "LIHC",   y : 797 },
+      { x : "LUAD",   y : 901 },
+      { x : "LUSC",   y : 496 },
+      { x : "SKCM", y : 1119},
       { x : "STAD", y : 1917 }
          
     ]
@@ -45,14 +52,19 @@ d3.select('#chart svg').datum([
     color: "#BD362F",
     values:
     [      
-      { x : "BRCA", y : 344 },
-      { x : "COAD", y : 257 },
-      { x : "GBM", y : 218 },
-      { x : "KICH",   y : 1121 },
-      { x : "LUAD",   y : 662 },
-      { x : "PAAD", y : 2696},
-      { x : "SARC", y : 1955 },
-      { x : "STAD", y : 660}
+      { x : "BLCA", y : 2350 }, 
+      { x : "BRCA", y : 538 },
+      { x : "CESC", y : 1076 },
+      { x : "COAD", y : 380 },
+      { x : "GBM", y : 184 },
+      { x : "HNSC", y : 384 },
+      { x : "KIRC", y : 461},
+      { x : "KIRP",   y : 12 },
+      { x : "LIHC",   y : 853 },
+      { x : "LUAD",   y : 526 },
+      { x : "LUSC",   y : 822 },
+      { x : "SKCM", y : 1530},
+      { x : "STAD", y : 650 }
     ]
   },
   {
@@ -60,14 +72,19 @@ d3.select('#chart svg').datum([
     color: "#ADD8E6",
     values:
     [      
-      { x : "BRCA", y : 1488 },
-      { x : "COAD", y : 1695 },
-      { x : "GBM", y : 2531 },
-      { x : "KICH",   y : 2259 },
-      { x : "LUAD",   y : 3276 },
-      { x : "PAAD", y : 8694 },
-      { x : "SARC", y : 2927 },
-      { x : "STAD", y : 2568 }
+      { x : "BLCA", y : 4688 }, 
+      { x : "BRCA", y : 2176 },
+      { x : "CESC", y : 3801 },
+      { x : "COAD", y : 1614 },
+      { x : "GBM", y : 2208 },
+      { x : "HNSC", y : 2382 },
+      { x : "KIRC", y : 2950 },
+      { x : "KIRP",   y : 1445 },
+      { x : "LIHC",   y : 2288 },
+      { x : "LUAD",   y : 4338 },
+      { x : "LUSC",   y : 3491 },
+      { x : "SKCM", y : 2473},
+      { x : "STAD", y : 2066 }
         
     ]
   },
@@ -76,14 +93,19 @@ d3.select('#chart svg').datum([
     color: "#FFFF00",
     values:
     [      
-      { x : "BRCA", y : 1681 },
-      { x : "COAD", y : 990 },
-      { x : "GBM", y : 2458 },
-      { x : "KICH",   y : 2647 },
-      { x : "LUAD",   y : 1581 },
-      { x : "PAAD", y : 2458 },
-      { x : "SARC", y : 2020 },
-      { x : "STAD", y : 2108 }
+      { x : "BLCA", y : 2154 }, 
+      { x : "BRCA", y : 1820 },
+      { x : "CESC", y : 1654 },
+      { x : "COAD", y : 1065 },
+      { x : "GBM", y : 2558 },
+      { x : "HNSC", y : 1861 },
+      { x : "KIRC", y : 5013 },
+      { x : "KIRP",   y : 3910 },
+      { x : "LIHC",   y : 3300 },
+      { x : "LUAD",   y : 1693 },
+      { x : "LUSC",   y : 1000 },
+      { x : "SKCM", y : 2827},
+      { x : "STAD", y : 2208 }
     ]
   },
 ]).transition().duration(500).call(chart);
