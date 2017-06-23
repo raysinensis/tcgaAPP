@@ -12,7 +12,7 @@ import zipfile
 import numpy
 import time
 
-from flask import Flask, render_template, request, redirect, current_app, url_for,session,g
+from flask import Flask, render_template, request, redirect, current_app, url_for,session,g, send_from_directory, make_response
 #from flask_weasyprint import HTML, render_pdf
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
@@ -63,6 +63,8 @@ class MyFancyRequestHandler(BaseRequestHandler):
     def log_request(self, code='-', size='-'):
         duration = int((self.fancyProcessed - self.fancyStarted) * 1000)
         self.log('info', '"{0}" {1} {2} [{3}ms]'.format(self.requestline, code, size, duration))
+
+
 
 @babel.localeselector
 def get_locale():
@@ -528,7 +530,7 @@ def sorry():
 	if request.method == 'GET':
 		return render_template('sorry.html'), 500
 	else:
-		textfb = '\n'+request.form['text']
+		textfb = '\n'+request.form['text']+'\nVariable: '+app.vars
 		server = smtplib.SMTP(MAIL_SERVER, MAIL_PORT)
 		server.ehlo()
 		server.starttls()
@@ -546,6 +548,35 @@ def Toggle():
 	else :
 		session['lang']='en'
 	return redirect('/index')
+
+@app.route('/robots.txt')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),'icon.ico')
+
+def has_no_empty_params(rule):
+    defaults = rule.defaults if rule.defaults is not None else ()
+    arguments = rule.arguments if rule.arguments is not None else ()
+    return len(defaults) >= len(arguments)
+
+@app.route('/sitemap.xml', methods=['GET'])
+def sitemap():
+    """Generate sitemap.xml """
+    pages = []
+    # All pages registed with flask apps
+    for rule in app.url_map.iter_rules():
+        if "GET" in rule.methods and has_no_empty_params(rule):
+	    url = url_for(rule.endpoint, **(rule.defaults or {}))
+            pages.append((url, rule.endpoint))
+
+    sitemap_xml = render_template('sitemap_template.xml', pages=pages)
+    response = make_response(sitemap_xml)
+    response.headers["Content-Type"] = "application/xml"
+
+    return response
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507,request_handler=MyFancyRequestHandler)

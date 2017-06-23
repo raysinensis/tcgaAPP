@@ -5952,3 +5952,634 @@ TemplateNotFound: favicon.ico.html
 2017-06-02 18:21:09,342 INFO: TCGAapp startup [in app.py:510]
 2017-06-02 18:22:14,938 INFO: TCGAapp startup [in app.py:510]
 2017-06-02 18:23:46,394 INFO: TCGAapp startup [in app.py:510]
+2017-06-22 12:40:36,945 INFO: TCGAapp startup [in app.py:510]
+2017-06-22 12:41:03,417 ERROR: Exception on /trying [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 198, in trying
+    y=subprocess.check_output(cmd2, universal_newlines=True)
+  File "/usr/lib/python2.7/subprocess.py", line 574, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['Rscript', './static/expr_med.r']' returned non-zero exit status 1
+2017-06-22 12:41:05,983 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 79, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 12:42:40,723 INFO: TCGAapp startup [in app.py:510]
+2017-06-22 12:42:49,357 ERROR: Exception on /trying [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 198, in trying
+    y=subprocess.check_output(cmd2, universal_newlines=True)
+  File "/usr/lib/python2.7/subprocess.py", line 574, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['Rscript', './static/expr_med.r']' returned non-zero exit status 1
+2017-06-22 12:42:51,403 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 79, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 13:54:35,089 ERROR: Exception on /trying [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 198, in trying
+    y=subprocess.check_output(cmd2, universal_newlines=True)
+  File "/usr/lib/python2.7/subprocess.py", line 574, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['Rscript', './static/expr_med.r']' returned non-zero exit status 1
+2017-06-22 13:54:37,267 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 79, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 13:55:31,123 INFO: TCGAapp startup [in app.py:510]
+2017-06-22 18:18:09,365 INFO: TCGAapp startup [in app.py:510]
+2017-06-22 18:18:21,671 ERROR: Exception on /favicon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 79, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: favicon.ico.html
+2017-06-22 18:18:51,568 ERROR: Exception on /favicon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 79, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: favicon.ico.html
+2017-06-22 18:25:16,387 INFO: TCGAapp startup [in app.py:510]
+2017-06-22 18:33:15,219 INFO: TCGAapp startup [in app.py:511]
+2017-06-22 18:33:32,968 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 562, in sitemap
+    articles_qry = Articles.query()\
+NameError: global name 'Articles' is not defined
+2017-06-22 18:33:35,703 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 18:48:24,952 INFO: TCGAapp startup [in app.py:527]
+2017-06-22 18:48:27,507 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 96, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 18:48:38,895 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 578, in sitemap
+    articles_qry = Articles.query()\
+TypeError: 'BaseQuery' object is not callable
+2017-06-22 18:48:40,893 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 96, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 18:59:13,891 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 18:59:22,100 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 569, in sitemap
+    sitemap_xml = render_template('sitemap_template.xml', pages=pages)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: sitemap_template.xml
+2017-06-22 18:59:24,324 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 81, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 19:01:50,724 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:01:56,308 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 570, in sitemap
+    response = make_response(sitemap_xml)
+NameError: global name 'make_response' is not defined
+2017-06-22 19:01:58,261 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 81, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 19:03:54,771 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:09:32,417 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:09:35,485 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 566, in sitemap
+    if "GET" in rule.methods and has_no_empty_params(rule):
+NameError: global name 'has_no_empty_params' is not defined
+2017-06-22 19:09:37,784 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 81, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 19:10:47,249 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 566, in sitemap
+    if "GET" in rule.methods and has_no_empty_params(rule):
+NameError: global name 'has_no_empty_params' is not defined
+2017-06-22 19:10:49,168 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 81, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 19:11:53,491 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:11:58,897 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1740, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 885, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 57, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/test.py", line 884, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'list' object is not callable
+2017-06-22 19:12:00,997 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1740, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 885, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/test.py", line 884, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'list' object is not callable
+2017-06-22 19:12:02,875 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 81, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 19:12:39,680 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:13:34,924 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:15:16,076 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:17:54,237 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:18:01,081 ERROR: Exception on /sitemap.xml [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 572, in sitemap
+    pages.append((url, rule.endpoint))
+NameError: global name 'url' is not defined
+2017-06-22 19:18:03,285 ERROR: Exception on /icon.ico/ [GET] [in /usr/local/lib/python2.7/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 81, in static_page
+    return render_template('%s.html' % page_name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/dist-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: icon.ico.html
+2017-06-22 19:18:41,899 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:21:10,430 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:21:41,200 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:25:05,472 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:27:29,835 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:29:13,127 INFO: TCGAapp startup [in app.py:512]
+2017-06-22 19:30:02,869 INFO: TCGAapp startup [in app.py:512]
